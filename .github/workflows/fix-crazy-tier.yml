@@ -1,0 +1,65 @@
+name: Ensure six valuation tiers
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Normalize all holdings to six tiers
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          marker="function getHoldings(){try{let x=JSON.parse(localStorage.getItem(KEY));return Array.isArray(x)?x:D.h}catch(e){return D.h}}"
+          replacement=r'''function normalizeSixTiers(h){
+            if(!h)return h;
+            const wanted=["瘋狂價","昂貴價","合理價(上緣)","合理價(下緣)","便宜價","特價"];
+            let labels=Array.isArray(h.labels)?[...h.labels]:[];
+            let vals=Array.isArray(h.v)?[...h.v]:[];
+            let pes=Array.isArray(h.peBands)?[...h.peBands]:[];
+            if(labels.length===5 && labels[0]!=="瘋狂價"){
+              const crazyVal=vals.length?Number(vals[0])*1.0854:null;
+              const crazyPE=pes.length?Number(pes[0])*1.0854:null;
+              labels=["瘋狂價",...labels];
+              if(vals.length) vals=[crazyVal,...vals];
+              if(pes.length) pes=[crazyPE,...pes];
+            }
+            if(labels.length===5 && labels[0]==="瘋狂價"){
+              labels=["瘋狂價","昂貴價","合理價(上緣)","合理價(下緣)","便宜價","特價"];
+              if(vals.length===5){ const v=[...vals]; vals=[v[0],v[1],v[2],(v[2]+v[3])/2,v[3],v[4]]; }
+              if(pes.length===5){ const v=[...pes]; pes=[v[0],v[1],v[2],(v[2]+v[3])/2,v[3],v[4]]; }
+            }
+            if(labels.length!==6) labels=wanted;
+            h.labels=labels; h.v=vals; if(pes.length) h.peBands=pes;
+            return h;
+          }
+          function getHoldings(){try{let x=JSON.parse(localStorage.getItem(KEY));let h=Array.isArray(x)?x:D.h;h=h.map(normalizeSixTiers);localStorage.setItem(KEY,JSON.stringify(h));return h}catch(e){return D.h.map(normalizeSixTiers)}}'''
+          if marker in s:
+              s=s.replace(marker,replacement)
+          # Also normalize backend DB rows immediately after loading stocks.json.
+          old="stockDB=j.stocks||{};lookupStatus.textContent="
+          new="stockDB=j.stocks||{};Object.keys(stockDB).forEach(k=>{stockDB[k]=normalizeSixTiers(stockDB[k])});lookupStatus.textContent="
+          if old in s:
+              s=s.replace(old,new)
+          # Ensure PE table has six visible rows even before refreshed backend data arrives.
+          s=s.replace("(h.mults||h.peBands||[null,null,null,null,null])","(h.mults||h.peBands||[null,null,null,null,null,null])")
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Commit fix
+        run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add index.html
+          git commit -m "Fix six-tier valuation display"
+          git push
