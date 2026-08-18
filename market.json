@@ -1,0 +1,30 @@
+{
+  "date": "2026-08-13",
+  "updated": "2026-08-18 15:41:00",
+  "core": {
+    "idx": 46021.48,
+    "chg": 503.41,
+    "pct": 1.11,
+    "volTrillion": 1.05,
+    "fut": 46389,
+    "futChg": 364
+  },
+  "inst": {
+    "total": 907.56,
+    "foreign": 756.95,
+    "trust": 0.01,
+    "dealer": 150.60
+  },
+  "pc": {
+    "trade": 1.05,
+    "oi": 1.16
+  },
+  "breadth": {
+    "up": 800,
+    "down": 989
+  },
+  "fearGreed": 78,
+  "sources": {
+    "seed": true
+  }
+}
