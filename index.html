@@ -64,14 +64,36 @@ function fgs(v){return v<30?['市場恐懼','down']:v<50?['市場溫和','']:v<6
 function polar(cx,cy,r,a){let rad=(a-90)*Math.PI/180;return[cx+r*Math.cos(rad),cy+r*Math.sin(rad)]}
 function arcPath(cx,cy,r,a0,a1){let s=polar(cx,cy,r,a1),e=polar(cx,cy,r,a0);return`M ${s[0]} ${s[1]} A ${r} ${r} 0 0 0 ${e[0]} ${e[1]}`}
 function gaugeSVG(v,min,max,type){let cuts=type==='pc'?[.5,.7,1,1.2,1.35,1.45,2]:[0,30,50,65,80,100],cols=type==='pc'?['#2ca35c','#7dbd45','#52a9df','#f2c94c','#f47721','#df1f26']:['#2ca35c','#7dbd45','#f2c94c','#f47721','#df1f26'],paths='';for(let i=0;i<cuts.length-1;i++){let a0=-90+(cuts[i]-min)/(max-min)*180,a1=-90+(cuts[i+1]-min)/(max-min)*180;paths+=`<path d="${arcPath(180,150,105,a0,a1)}" stroke="${cols[i]}" stroke-width="26" fill="none"/>`}let vv=Math.max(min,Math.min(max,v)),ang=-90+(vv-min)/(max-min)*180,pt=polar(180,150,78,ang),st=type==='pc'?pcs(v):fgs(v),value=type==='pc'?F(v):F(v)+'/100';return`<svg class="gauge-svg" viewBox="0 0 360 220">${paths}<line x1="180" y1="150" x2="${pt[0]}" y2="${pt[1]}" stroke="#111" stroke-width="5"/><circle cx="180" cy="150" r="7"/><text x="180" y="182" text-anchor="middle" font-size="30" font-weight="900">${value}</text><text x="180" y="207" text-anchor="middle" font-size="16" font-weight="800">${st[0]}</text></svg>`}
-async function loadStockDB(){try{let r=await fetch('stocks.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error(r.status);let j=await r.json();stockDB=j.stocks||{};lookupStatus.textContent=`股票資料庫：${j.count||0} 檔｜更新 ${j.updated||'尚未完成第一次更新'}`;refreshHoldingsFromDB()}catch(e){lookupStatus.textContent='股票資料庫尚未就緒，請稍後再試。';}}
+async function loadStockDB(){try{let r=await fetch('stocks.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error(r.status);let j=await r.json();stockDB=j.stocks||{};Object.keys(stockDB).forEach(k=>{stockDB[k]=normalizeSixTiers(stockDB[k])});lookupStatus.textContent=`股票資料庫：${j.count||0} 檔｜更新 ${j.updated||'尚未完成第一次更新'}`;refreshHoldingsFromDB()}catch(e){lookupStatus.textContent='股票資料庫尚未就緒，請稍後再試。';}}
 function lookupStock(){let c=code.value.trim();if(!/^\d{4,6}$/.test(c)){lookupStatus.textContent='請輸入正確股票代碼';return}let x=stockDB[c];if(!x){lookupCache=null;lookupStatus.textContent=`資料庫目前找不到 ${c}。若剛建立後端，請等 GitHub Actions 第一次更新完成。`;return}
 let labels=x.labels||["瘋狂價","昂貴價","合理價(上緣)","合理價(下緣)","便宜價","特價"],vals=x.values||[],bands=x.peBands||[];
 lookupCache={c,n:x.name,desc:"上市公司｜自動資料",p:x.price,ch:0,pc:0,s:+shares.value||0,a:+avg.value||0,e:x.eps,pe:x.pe,ref:new Date().toLocaleDateString('zh-TW'),refLabel:"近4季EPS",basePE:x.basePE,peBands:bands,labels,v:vals,autoModel:true,historyDays:x.historyDays||0};
 name.value=x.name||'';price.value=F(x.price);eps.value=F(x.eps);pe60.value=F(x.basePE);
 lookupStatus.textContent=`完成：${c} ${x.name}｜股價 ${F(x.price)}｜EPS ${F(x.eps)}｜60日均價 ${F(x.avg60)}｜60日滾動PE ${F(x.basePE)}｜樣本 ${x.historyDays||0} 日`;
 }
-function getHoldings(){try{let x=JSON.parse(localStorage.getItem(KEY));return Array.isArray(x)?x:D.h}catch(e){return D.h}}
+function normalizeSixTiers(h){
+  if(!h)return h;
+  const wanted=["瘋狂價","昂貴價","合理價(上緣)","合理價(下緣)","便宜價","特價"];
+  let labels=Array.isArray(h.labels)?[...h.labels]:[];
+  let vals=Array.isArray(h.v)?[...h.v]:[];
+  let pes=Array.isArray(h.peBands)?[...h.peBands]:[];
+  if(labels.length===5 && labels[0]!=="瘋狂價"){
+    const crazyVal=vals.length?Number(vals[0])*1.0854:null;
+    const crazyPE=pes.length?Number(pes[0])*1.0854:null;
+    labels=["瘋狂價",...labels];
+    if(vals.length) vals=[crazyVal,...vals];
+    if(pes.length) pes=[crazyPE,...pes];
+  }
+  if(labels.length===5 && labels[0]==="瘋狂價"){
+    labels=["瘋狂價","昂貴價","合理價(上緣)","合理價(下緣)","便宜價","特價"];
+    if(vals.length===5){ const v=[...vals]; vals=[v[0],v[1],v[2],(v[2]+v[3])/2,v[3],v[4]]; }
+    if(pes.length===5){ const v=[...pes]; pes=[v[0],v[1],v[2],(v[2]+v[3])/2,v[3],v[4]]; }
+  }
+  if(labels.length!==6) labels=wanted;
+  h.labels=labels; h.v=vals; if(pes.length) h.peBands=pes;
+  return h;
+}
+function getHoldings(){try{let x=JSON.parse(localStorage.getItem(KEY));let h=Array.isArray(x)?x:D.h;h=h.map(normalizeSixTiers);localStorage.setItem(KEY,JSON.stringify(h));return h}catch(e){return D.h.map(normalizeSixTiers)}}
 function saveHoldings(h){localStorage.setItem(KEY,JSON.stringify(h))}
 function addHolding(){if(!lookupCache){lookupStatus.textContent='請先查詢股票';return}let h=getHoldings();if(h.some(x=>x.c===lookupCache.c)){lookupStatus.textContent='這檔股票已在持股清單';return}lookupCache.s=+shares.value||0;lookupCache.a=+avg.value||0;h.push(lookupCache);saveHoldings(h);renderHoldings(h);lookupStatus.textContent='已新增 '+lookupCache.c+' '+lookupCache.n;code.value=name.value=price.value=eps.value=pe60.value=shares.value=avg.value='';lookupCache=null}
 function editHoldingValue(i,key,val){let n=Number(String(val).replace(/,/g,''));if(!Number.isFinite(n)||n<0){renderHoldings(getHoldings());return}let h=getHoldings();if(!h[i])return;h[i][key]=n;if(key==='p'){h[i].manualPrice=true}saveHoldings(h);renderHoldings(h)}
@@ -85,7 +107,7 @@ let fs=fgs(D.fg);sent.innerHTML=`<div class="card"><div class="label">三大法�
 breadth.innerHTML=`<div class="card"><div class="label">上漲／下跌家數</div><div class="num"><span class="up">${F(D.b.u)}</span> / <span class="down">${F(D.b.d)}</span></div></div><div class="card"><div class="label">權值股觀察</div>${D.leaders.map(r=>`<div class="row"><span>${r[0]}</span><span>${F(r[1])}</span></div>`).join('')}</div><div class="card"><div class="label">市場結構</div><div class="num up">${D.market}</div></div>`;
 renderHoldings(getHoldings())}
 function bandClass(lab){if(lab==='瘋狂價')return 'band-crazy';if(lab==='昂貴價')return 'band-expensive';if(lab==='合理價(上緣)')return 'band-fair-upper';if(lab==='合理價(下緣)'||lab==='合理價')return 'band-fair';if(lab==='便宜價')return 'band-cheap';if(lab==='特價')return 'band-sale';return ''}
-function renderHoldings(hs){holdings.innerHTML=hs.map((h,i)=>{let cost=h.s*h.a,pnl=(h.p-h.a)*h.s,meaning=priceMeaning(h),bands=(h.labels||[]).map((lab,j)=>`<tr><td class="${bandClass(lab)}">${lab}</td><td>${h.v&&h.v[j]!=null?F(h.v[j]):'—'}</td></tr>`).join(''),peRows=(h.mults||h.peBands||[null,null,null,null,null]).map(x=>`<tr><td>${x==null?'—':F(x)}</td></tr>`).join('');
+function renderHoldings(hs){holdings.innerHTML=hs.map((h,i)=>{let cost=h.s*h.a,pnl=(h.p-h.a)*h.s,meaning=priceMeaning(h),bands=(h.labels||[]).map((lab,j)=>`<tr><td class="${bandClass(lab)}">${lab}</td><td>${h.v&&h.v[j]!=null?F(h.v[j]):'—'}</td></tr>`).join(''),peRows=(h.mults||h.peBands||[null,null,null,null,null,null]).map(x=>`<tr><td>${x==null?'—':F(x)}</td></tr>`).join('');
 return`<div class="holding-card"><div class="holding-title">${h.desc||''}</div><div class="valuation-grid"><div class="vg"><table class="stock-table"><tr><th>股號</th><th>股名</th><th>股價</th></tr><tr><td class="codecell">${h.c}</td><td>${h.n}</td><td><input class="inline-edit price-edit" type="number" step="0.01" value="${h.p??0}" onchange="editHoldingValue(${i},\'p\',this.value)" title="可直接輸入股價"></td></tr><tr><th>持有股數</th><th>成本均價</th><th>成本</th></tr><tr><td><input class="inline-edit shares-edit" type="number" step="1" value="${h.s??0}" onchange="editHoldingValue(${i},\'s\',this.value)" title="可直接輸入持有股數"></td><td class="costcell"><input class="inline-edit avg-edit" type="number" step="0.01" value="${h.a??0}" onchange="editHoldingValue(${i},\'a\',this.value)" title="可直接輸入成本均價"></td><td>${F(cost)}</td></tr><tr><th colspan="2">未實現損益</th><td class="${pnl>=0?'up':'down'}">${pnl>=0?'+':''}${F(pnl)}</td></tr></table></div><div class="vg meaningcell" style="display:flex;align-items:center;justify-content:center;text-align:center">${F(h.p)}<br><span style="font-size:12px">${meaning}</span></div><div class="vg"><div class="refbox"><div class="side-label">60日均價滾動本益比</div><div class="refcontent"><div class="caption">基準日期</div><div class="date">${h.ref||'—'}</div><div class="caption">${h.refLabel||'EPS'}</div><div class="eps">${F(h.e)}</div><div class="caption">即時本益比</div><div class="pe">${F(h.pe)}</div><div class="caption">60日滾動本益比</div><div class="pe">${F(h.basePE)}</div></div></div></div><div class="vg"><table class="pe-table"><tr><th>${h.mults?'倍數':'本益比倍數'}</th></tr>${peRows}</table></div><div class="vg"><table class="band-table"><tr><th>意義</th><th>價格</th></tr>${bands}</table></div></div><div class="hold-footer"><span class="small">${h.autoModel===false?'估值模型：自訂／預估 EPS':'估值模型：每日自動更新'}${h.historyDays?'｜歷史 '+h.historyDays+' 日':''}${h.manualPrice?'｜手動股價':''}</span><span>${h.manualPrice?`<button class="btn secondary" style="padding:5px 8px;margin-right:6px" onclick="restoreAutoPrice(${i})">恢復自動價</button>`:''}<button class="danger" onclick="delHolding(${i})">刪除／汰弱</button></span></div></div>`}).join('');
 let total=hs.reduce((a,h)=>a+h.p*h.s,0),pnl=hs.reduce((a,h)=>a+(h.p-h.a)*h.s,0);summary.innerHTML=[["總持股市值",F(total)+' 元'],["總未實現損益",(pnl>=0?'+':'')+F(pnl)+' 元',pnl>=0?'up':'down'],["持股檔數",hs.length+' 檔'],["估值核心","60日滾動本益比"]].map((x,i)=>`<div class="card"><div class="label">${x[0]}</div><div class="num ${x[2]||''}" style="font-size:${i===3?'18px':'25px'}">${x[1]}</div></div>`).join('')}
 code.addEventListener('keydown',e=>{if(e.key==='Enter')lookupStock()});
