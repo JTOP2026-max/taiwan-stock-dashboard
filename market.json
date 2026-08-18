@@ -1,18 +1,19 @@
 {
   "date": "2026-08-18",
-  "updated": "2026-08-18 16:19:36",
+  "updated": "2026-08-19 06:59:56",
   "core": {
     "idx": 45308.68,
     "chg": 548.59,
     "pct": 1.225623094144806,
-    "volTrillion": 0.99,
+    "volTrillion": 1.0,
     "fut": 46389,
-    "futChg": 76.0
+    "futChg": 76.0,
+    "basis": 1080.3199999999997
   },
   "inst": {
-    "total": -239.30215494,
-    "foreign": null,
-    "trust": 56.62738427,
+    "total": -257.65816314,
+    "foreign": 0.0,
+    "trust": 38.27137607,
     "dealer": -295.92953921
   },
   "pc": {
@@ -28,6 +29,6 @@
     "twse": true,
     "institutions": true,
     "taifexPC": true,
-    "taifexFutures": true
+    "taifexFutures": false
   }
 }
