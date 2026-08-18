@@ -121,8 +121,8 @@ def build_stocks(current, hist):
             series.setdefault(code, []).append(price)
     updated = datetime.now(TZ).strftime('%Y-%m-%d %H:%M')
     out = {'updated': updated, 'source':'TWSE official data', 'count':0, 'stocks':{}}
-    ratios = [1.382, 1.20, 1.00, 0.80, 0.618]
-    labels = ['昂貴價','合理價(上緣)','合理價(下緣)','便宜價','特價']
+    ratios = [1.50, 1.382, 1.20, 1.00, 0.80, 0.618]
+    labels = ['瘋狂價','昂貴價','合理價(上緣)','合理價(下緣)','便宜價','特價']
     for code, x in current.items():
         arr = [p for p in series.get(code, []) if isinstance(p,(int,float)) and p > 0][-60:]
         avg60 = sum(arr)/len(arr) if arr else None
