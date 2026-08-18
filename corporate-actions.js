@@ -41,14 +41,16 @@ async function run(){
     const r=await fetch('corporate_actions.json?ts='+Date.now(),{cache:'no-store'});
     if(r.ok){const j=await r.json();for(const h of hs){for(const a of (j.actions||[])){if(applyOne(h,a))changed=true;}}}
   }catch(e){console.warn('corporate actions unavailable',e)}
-  if(changed||hs.some(h=>h.origAvg==null)){saveHoldings(hs)}else saveHoldings(hs);
+  saveHoldings(hs);
   if(typeof renderHoldings==='function')renderHoldings(hs);
   setTimeout(addCorpInfo,0);
 }
 const oldRender=window.renderHoldings;
-if(typeof oldRender==='function'){
-  window.renderHoldings=function(hs){oldRender(hs);setTimeout(addCorpInfo,0)};
+if(typeof oldRender==='function')window.renderHoldings=function(hs){oldRender(hs);setTimeout(addCorpInfo,0)};
+window.addEventListener('load',run); setTimeout(run,300);
+
+// Load daily market backend without changing the main HTML again.
+if(!document.querySelector('script[data-market-loader]')){
+  const s=document.createElement('script');s.src='market-data.js';s.defer=true;s.dataset.marketLoader='1';document.head.appendChild(s);
 }
-window.addEventListener('load',run);
-setTimeout(run,300);
 })();
