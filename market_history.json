@@ -1,15 +1,68 @@
 {
-  "updated": "2026-08-18 15:41:00",
+  "updated": "2026-08-18 16:19:36",
   "records": [
     {
       "date": "2026-08-13",
       "updated": "2026-08-18 15:41:00",
-      "core": {"idx": 46021.48, "chg": 503.41, "pct": 1.11, "volTrillion": 1.05, "fut": 46389, "futChg": 364},
-      "inst": {"total": 907.56, "foreign": 756.95, "trust": 0.01, "dealer": 150.60},
-      "pc": {"trade": 1.05, "oi": 1.16},
-      "breadth": {"up": 800, "down": 989},
+      "core": {
+        "idx": 46021.48,
+        "chg": 503.41,
+        "pct": 1.11,
+        "volTrillion": 1.05,
+        "fut": 46389,
+        "futChg": 364
+      },
+      "inst": {
+        "total": 907.56,
+        "foreign": 756.95,
+        "trust": 0.01,
+        "dealer": 150.6
+      },
+      "pc": {
+        "trade": 1.05,
+        "oi": 1.16
+      },
+      "breadth": {
+        "up": 800,
+        "down": 989
+      },
       "fearGreed": 78,
-      "sources": {"seed": true}
+      "sources": {
+        "seed": true
+      }
+    },
+    {
+      "date": "2026-08-18",
+      "updated": "2026-08-18 16:19:36",
+      "core": {
+        "idx": 45308.68,
+        "chg": 548.59,
+        "pct": 1.225623094144806,
+        "volTrillion": 0.99,
+        "fut": 46389,
+        "futChg": 76.0
+      },
+      "inst": {
+        "total": -239.30215494,
+        "foreign": null,
+        "trust": 56.62738427,
+        "dealer": -295.92953921
+      },
+      "pc": {
+        "trade": 1.2634,
+        "oi": 1.1716
+      },
+      "breadth": {
+        "up": 263,
+        "down": 983
+      },
+      "fearGreed": 53,
+      "sources": {
+        "twse": true,
+        "institutions": true,
+        "taifexPC": true,
+        "taifexFutures": true
+      }
     }
   ]
 }
