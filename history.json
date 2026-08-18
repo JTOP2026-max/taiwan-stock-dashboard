@@ -1,0 +1,19 @@
+[
+  {
+    "date": "2026-08-13",
+    "index": 46021.48,
+    "indexChg": 503.41,
+    "indexPct": 1.11,
+    "turnoverTrillion": 1.05,
+    "institutional": 907.56,
+    "foreign": 756.95,
+    "pcTrade": 1.05,
+    "pcOI": 1.16,
+    "advancers": 800,
+    "decliners": 989,
+    "futuresNight": 46389,
+    "futuresNightChg": 364,
+    "sentiment": 78,
+    "sentimentLabel": "偏多但偏熱"
+  }
+]
