@@ -1,18 +1,18 @@
 {
   "date": "2026-08-19",
-  "updated": "2026-08-19 18:25:54",
+  "updated": "2026-08-19 18:33:36",
   "core": {
     "idx": 44719.35,
     "chg": -589.33,
-    "pct": -1.3006999983226173,
-    "volTrillion": 0.88,
-    "fut": 46389,
-    "futChg": 76,
-    "basis": 1669.6500000000015
+    "pct": -1.3,
+    "volTrillion": 0.89,
+    "fut": null,
+    "futChg": null,
+    "basis": null
   },
   "inst": {
     "total": -708.48383976,
-    "foreign": 0,
+    "foreign": 0.0,
     "trust": -120.90647514,
     "dealer": -587.57736462
   },
