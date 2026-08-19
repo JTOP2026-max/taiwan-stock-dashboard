@@ -120,6 +120,11 @@ def parse_futures():
                 nk=norm(k)
                 if any(name in nk for name in names): return v
             return None
+        def pick_exact(row,names):
+            wanted={norm(name) for name in names}
+            for k,v in row.items():
+                if norm(k) in wanted:return v
+            return None
         def signed(v):
             if v is None:return None
             s=str(v).strip()
@@ -135,7 +140,7 @@ def parse_futures():
             price=num(pick(r,['closingprice','closeprice','lastprice','最後成交價','收盤價']))
             if price is None or price<=0:continue
             chg=signed(pick(r,['changepercent','漲跌%']))
-            raw_change=signed(pick(r,['change','漲跌價','漲跌點數']))
+            raw_change=signed(pick_exact(r,['Change','ChangeValue','漲跌價','漲跌點數']))
             if raw_change is not None:chg=raw_change
             date=str(pick(r,['tradedate','date','交易日期','日期']) or '')
             month=str(pick(r,['contractmonth','deliverymonth','到期月份']) or '')
