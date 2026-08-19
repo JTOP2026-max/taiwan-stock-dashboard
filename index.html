@@ -30,13 +30,39 @@ header{background:#fff;border-bottom:1px solid var(--line);padding:16px 22px;pos
 .band-table td:first-child{font-weight:800}.band-crazy{background:#e57373!important}.band-expensive{background:#f3c8c4!important}.band-fair-upper{background:#8fb8ef!important}.band-fair{background:#dceafa!important}.band-cheap{background:#dcedbd!important}.band-sale{background:#8fcf7b!important}
 .hold-footer{display:flex;justify-content:space-between;gap:10px;padding:7px 10px;background:#fafbfc;border-top:1px solid #e1e6ec;align-items:center}.danger{background:#fee2e2;color:#991b1b;border:0;border-radius:6px;padding:5px 8px;cursor:pointer}
 .advice{background:#fff9e8;border-color:#f0d27b}footer{text-align:center;color:#7b8794;font-size:12px;padding:20px}
+.tv-panel{margin-top:10px;padding:0;overflow:hidden}.tv-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line)}.tv-title{font-weight:900}.tv-note{font-size:12px;color:var(--muted)}.tv-chart{height:430px}.tv-chart .tradingview-widget-container,.tv-chart .tradingview-widget-container__widget{height:100%;width:100%}.tv-link{color:var(--blue);font-weight:800;text-decoration:none;white-space:nowrap}
 @media(max-width:1200px){.g4,.g3,.summary6{grid-template-columns:1fr 1fr}.gaugebox{grid-template-columns:1fr}.valuation-grid{grid-template-columns:1.5fr .55fr 1fr 1fr 1fr}}
-@media(max-width:820px){header{position:static}.top{align-items:flex-start;flex-direction:column}.g4,.g3,.summary6{grid-template-columns:1fr}.title{font-size:21px}.wrap{padding:9px}.toolbar input,.toolbar .btn{width:100%}.holding-card{overflow:auto}.valuation-grid,.holding-title,.hold-footer{min-width:900px}}
+@media(max-width:820px){header{position:static}.top{align-items:flex-start;flex-direction:column}.g4,.g3,.summary6{grid-template-columns:1fr}.title{font-size:21px}.wrap{padding:9px}.toolbar input,.toolbar .btn{width:100%}.holding-card{overflow:auto}.valuation-grid,.holding-title,.hold-footer{min-width:900px}.tv-head{align-items:flex-start;flex-direction:column}.tv-chart{height:360px}}
 </style></head>
 <body>
 <header><div class="top"><div><div class="title">台股智慧市場儀表板 V2</div><div class="sub">大盤＋籌碼＋情緒＋60日均價滾動本益比估值｜紅漲綠跌｜手機／桌機</div></div><div><a href="history.html" class="btn secondary" style="text-decoration:none">歷史紀錄</a></div></div></header>
 <main class="wrap">
 <div class="sec">① 大盤核心</div><div class="g4" id="core"></div>
+<section class="card tv-panel" aria-labelledby="tv-title">
+  <div class="tv-head">
+    <div><div class="tv-title" id="tv-title">台指期日盤／夜盤｜TradingView</div><div class="tv-note">連續近月 TAIFEX:TXF1!・行情可能延遲，實際成交以期交所與券商為準</div></div>
+    <a class="tv-link" href="https://tw.tradingview.com/chart/?symbol=TAIFEX%3ATXF1%21" target="_blank" rel="noopener noreferrer">開啟完整圖表 ↗</a>
+  </div>
+  <div class="tv-chart">
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+      {
+        "autosize": true,
+        "symbol": "TAIFEX:TXF1!",
+        "interval": "5",
+        "timezone": "Asia/Taipei",
+        "theme": "light",
+        "style": "1",
+        "locale": "zh_TW",
+        "allow_symbol_change": false,
+        "calendar": false,
+        "support_host": "https://www.tradingview.com"
+      }
+      </script>
+    </div>
+  </div>
+</section>
 <div class="sec">② 籌碼與市場情緒</div><div class="g3" id="sent"></div>
 <div class="sec">③ 盤面強弱</div><div class="g3" id="breadth"></div>
 <div class="sec">④ 我的持股｜估值模組</div>
@@ -105,7 +131,7 @@ function priceMeaning(h){if(!h.v||h.v.length<5)return'尚未設定';let a=[...h.
 function signed(v,suffix=''){let n=Number(v)||0;return(n>0?'+':'')+F(n)+suffix}
 function trendClass(v){return Number(v)>0?'up':Number(v)<0?'down':''}
 function trendArrow(v){return Number(v)>0?'▲':Number(v)<0?'▼':'—'}
-function render(){let c=D.core;core.innerHTML=[["加權指數",F(c.idx),`${trendArrow(c.chg)} ${signed(c.chg)}　${P(c.pct)}`,trendClass(c.chg)],["成交值",c.vol,`較昨日 ${P(c.volPct)}`,''],["台指期夜盤（官方最近資料）",F(c.fut),c.fut==null?'<a href="https://mis.taifex.com.tw/futures/" target="_blank" rel="noopener" style="color:#2166d1">資料未取得｜查看期交所即時夜盤 ↗</a>':`${trendArrow(c.futChg)} ${signed(c.futChg)}　${P(c.futPct)}`,trendClass(c.futChg)],["台指期正逆價差",c.basis==null?'—':signed(c.basis),c.basis==null?'等待期貨資料':c.basis>=0?'正價差':'逆價差',c.basis==null?'':trendClass(c.basis)]].map(x=>`<div class="card"><div class="label">${x[0]}</div><div class="num ${x[3]}">${x[1]}</div><div class="${x[3]}">${x[2]}</div></div>`).join('');
+function render(){let c=D.core;core.innerHTML=[["加權指數",F(c.idx),`${trendArrow(c.chg)} ${signed(c.chg)}　${P(c.pct)}`,trendClass(c.chg)],["成交值",c.vol,`較昨日 ${P(c.volPct)}`,''],["台指期日盤／夜盤","TradingView",'<a href="#tv-title" style="color:#2166d1;font-weight:800">查看下方官方圖表 ↓</a>',''],["行情提醒","可能延遲",'<a href="https://mis.taifex.com.tw/futures/" target="_blank" rel="noopener noreferrer" style="color:#2166d1">期交所行情 ↗</a>','']].map(x=>`<div class="card"><div class="label">${x[0]}</div><div class="num ${x[3]}">${x[1]}</div><div class="${x[3]}">${x[2]}</div></div>`).join('');
 let fs=fgs(D.fg);sent.innerHTML=`<div class="card"><div class="label">三大法人</div><div class="num ${trendClass(D.inst.t)}">${signed(D.inst.t)} 億</div><div class="row"><span>外資</span><b class="${trendClass(D.inst.f)}">${signed(D.inst.f)} 億</b></div></div><div class="card"><div class="label">P/C Ratio（每日盤後）</div><div class="gaugebox">${gaugeSVG(D.pc.oi,.5,2,'pc')}<div class="legend">成交比 ${F(D.pc.trade)}<br>未平倉比 ${F(D.pc.oi)}</div></div></div><div class="card"><div class="label">台股 Fear & Greed（每日盤後）</div><div class="gaugebox">${gaugeSVG(D.fg,0,100,'fg')}<div class="legend">${fs[0]}</div></div></div>`;
 breadth.innerHTML=`<div class="card"><div class="label">上漲／下跌家數</div><div class="num"><span class="up">${F(D.b.u)}</span> / <span class="down">${F(D.b.d)}</span></div></div><div class="card"><div class="label">權值股觀察</div>${D.leaders.map(r=>`<div class="row"><span>${r[0]}</span><span>${F(r[1])}</span></div>`).join('')}</div><div class="card"><div class="label">市場結構</div><div class="num up">${D.market}</div></div>`;
 renderHoldings(getHoldings())}
