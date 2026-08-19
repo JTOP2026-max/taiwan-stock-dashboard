@@ -8,7 +8,7 @@ TZ = timezone(timedelta(hours=8))
 OUT = 'corporate_actions.json'
 EVENT_OUT = 'company_events.json'
 S = requests.Session()
-S.headers.update({'User-Agent':'Mozilla/5.0 TaiwanStockDashboard/1.1'})
+S.headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/151 Safari/537.36','Accept':'application/json,text/plain,*/*','Referer':'https://openapi.twse.com.tw/','Accept-Language':'zh-TW,zh;q=0.9,en;q=0.8'})
 
 
 def num(v):
