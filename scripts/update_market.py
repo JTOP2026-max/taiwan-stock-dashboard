@@ -46,7 +46,17 @@ def parse_twse(mi):
             for r in data:
                 if any('發行量加權股價指數' in str(x) for x in r):
                     def val(name): return num(r[fields.index(name)]) if name in fields and fields.index(name)<len(r) else None
-                    out['index']=val('收盤指數') or val('收盤價'); out['chg']=val('漲跌點數'); out['pct']=val('漲跌百分比')
+                    out['index']=val('收盤指數') or val('收盤價')
+                    raw_chg=val('漲跌點數')
+                    raw_pct=val('漲跌百分比') if '漲跌百分比' in fields else val('漲跌百分比(%)')
+                    sign=''
+                    for sign_name in ('漲跌(+/-)','漲跌'):
+                        if sign_name in fields and fields.index(sign_name)<len(r):
+                            sign=str(r[fields.index(sign_name)]).lower()
+                            break
+                    direction=-1 if ('-' in sign or 'green' in sign) else 1
+                    out['chg']=(abs(raw_chg)*direction) if raw_chg is not None else None
+                    out['pct']=(abs(raw_pct)*direction) if raw_pct is not None else None
         if '證券代號' in fields and '收盤價' in fields:
             sign_i=fields.index('漲跌(+/-)') if '漲跌(+/-)' in fields else None; amt_i=fields.index('成交金額') if '成交金額' in fields else None; total=0.0
             for r in data:
