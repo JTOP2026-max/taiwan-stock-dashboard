@@ -7,7 +7,7 @@ STOCKS_PATH = os.path.join(ROOT, 'stocks.json')
 HISTORY_PATH = os.path.join(ROOT, 'stock_history.json')
 TZ = timezone(timedelta(hours=8))
 S = requests.Session()
-S.headers.update({'User-Agent':'Mozilla/5.0 TaiwanStockDashboard/2.1'})
+S.headers.update({'User-Agent':'Mozilla/5.0 TaiwanStockDashboard/2.2'})
 
 
 def jget(url, params=None, timeout=35):
@@ -56,18 +56,19 @@ def tpex_current():
     perows = jget('https://www.tpex.org.tw/openapi/v1/tpex_mainboard_peratio_analysis')
     pe_map = {}
     for x in perows if isinstance(perows, list) else []:
-        code = str(pick(x, ['SecuritiesCompanyCode','SecuritiesCode','股票代號','代號','Code']) or '').strip()
+        code = str(pick(x, ['SecuritiesCompanyCode','SecuritiesCode','股票代號','證券代號','代號','Code']) or '').strip()
         p = num(pick(x, ['PriceEarningRatio','PERatio','本益比']))
         if code: pe_map[code] = p
     out = {}
     for x in quotes if isinstance(quotes, list) else []:
-        code = str(pick(x, ['SecuritiesCompanyCode','SecuritiesCode','股票代號','代號','Code']) or '').strip()
+        code = str(pick(x, ['SecuritiesCompanyCode','SecuritiesCode','股票代號','證券代號','代號','Code']) or '').strip()
         name = pick(x, ['CompanyName','SecuritiesName','股票名稱','證券名稱','Name']) or code
         price = num(pick(x, ['Close','ClosingPrice','收盤價','ClosePrice']))
         if not code or price is None or price <= 0: continue
         p = pe_map.get(code)
         eps = (price / p) if p and p > 0 else None
         out[code] = {'code':code,'name':str(name).strip(),'market':'TPEX','price':price,'pe':p,'eps':eps}
+    print('TPEx current', len(out))
     return out
 
 
@@ -107,7 +108,6 @@ def parse_tpex_rows(obj):
 
 
 def tpex_daily_all(d):
-    # New TPEx website JSON endpoint; fallback to legacy endpoint for compatibility.
     urls = [
       ('https://www.tpex.org.tw/www/zh-tw/afterTrading/dailyQuotes', {'date':d.strftime('%Y/%m/%d'),'id':'','response':'json'}),
       ('https://www.tpex.org.tw/web/stock/aftertrading/daily_close_quotes/stk_quote_result.php', {'l':'zh-tw','o':'json','d':f'{d.year-1911}/{d.month:02d}/{d.day:02d}','s':'0,asc,0'})
@@ -118,7 +118,7 @@ def tpex_daily_all(d):
             rows = parse_tpex_rows(obj)
             if len(rows) > 100: return rows
         except Exception as e:
-            print('tpex daily endpoint failed', d.isoformat(), url, e)
+            print('TPEx daily failed', d.isoformat(), e)
     return {}
 
 
@@ -141,6 +141,8 @@ def ensure_60_days(hist):
     hist.setdefault('meta', {})
     known = {x.get('date') for x in hist['days']}
     today = datetime.now(TZ).date()
+
+    # TWSE bootstrap remains capped at 60 trading days.
     if len(hist['days']) < 60:
         d = today; scanned = 0
         while len(hist['days']) < 60 and scanned < 130:
@@ -151,26 +153,30 @@ def ensure_60_days(hist):
                     if len(rows) > 300:
                         hist['days'].append({'date':ds,'prices':{k:v['price'] for k,v in rows.items()}})
                         known.add(ds); print('TWSE bootstrap', ds, len(rows))
-                    time.sleep(0.12)
                 except Exception as e: print('TWSE skip', ds, e)
             d -= timedelta(days=1); scanned += 1
 
-    # One-time TPEx backfill into the same 60 trading-day records.
-    if not hist['meta'].get('tpexBackfilled'):
-        ok = 0
-        for day in sorted(hist['days'], key=lambda x:x.get('date','')):
-            try:
-                d = datetime.strptime(day['date'], '%Y-%m-%d').date()
-                rows = tpex_daily_all(d)
-                if len(rows) > 100:
-                    day.setdefault('prices', {}).update({k:v['price'] for k,v in rows.items()})
-                    ok += 1; print('TPEx backfill', day['date'], len(rows))
-                time.sleep(0.12)
-            except Exception as e: print('TPEx skip', day.get('date'), e)
-        if ok >= max(10, len(hist['days'])//2): hist['meta']['tpexBackfilled'] = True
-        hist['meta']['tpexBackfillDays'] = ok
+    # Incremental TPEx backfill: at most 5 trading days per workflow run.
+    completed = set(hist['meta'].get('tpexCompletedDates', []))
+    pending = [x for x in sorted(hist['days'], key=lambda x:x.get('date','')) if x.get('date') not in completed]
+    processed = 0
+    for day in pending[:5]:
+        try:
+            d = datetime.strptime(day['date'], '%Y-%m-%d').date()
+            rows = tpex_daily_all(d)
+            if len(rows) > 100:
+                day.setdefault('prices', {}).update({k:v['price'] for k,v in rows.items()})
+                completed.add(day['date'])
+                processed += 1
+                print('TPEx incremental backfill', day['date'], len(rows))
+        except Exception as e:
+            print('TPEx incremental skip', day.get('date'), e)
+    hist['meta']['tpexCompletedDates'] = sorted(completed)[-60:]
+    hist['meta']['tpexBackfillDays'] = len(completed)
+    hist['meta']['tpexBackfilled'] = len(completed) >= min(60, len(hist['days']))
+    print('TPEx backfill progress', len(completed), '/', len(hist['days']), 'processed this run', processed)
 
-    # Refresh today's completed session from both markets.
+    # Refresh current trading date from both markets.
     ds = today.isoformat(); merged = {}
     try:
         rows = twse_daily_all(today); merged.update({k:v['price'] for k,v in rows.items()})
@@ -181,6 +187,8 @@ def ensure_60_days(hist):
     if len(merged) > 300:
         hist['days'] = [x for x in hist['days'] if x.get('date') != ds]
         hist['days'].append({'date':ds,'prices':merged})
+        if len([k for k in merged if str(k).isdigit()]) > 300:
+            completed.add(ds)
     hist['days'] = sorted(hist['days'], key=lambda x:x.get('date',''))[-60:]
     return hist
 
@@ -205,7 +213,8 @@ def build_stocks(current, hist):
 
 def main():
     twse = twse_current()
-    try: tpex = tpex_current()
+    try:
+        tpex = tpex_current()
     except Exception as e:
         print('TPEx current unavailable', e); tpex = {}
     current = {**twse, **tpex}
@@ -213,5 +222,6 @@ def main():
     stocks = build_stocks(current, hist)
     save_json(HISTORY_PATH, hist); save_json(STOCKS_PATH, stocks)
     print('stocks',stocks['count'],stocks.get('marketCounts'),'history days',len(hist['days']))
+    print('6274 present', '6274' in stocks['stocks'])
 
 if __name__ == '__main__': main()
