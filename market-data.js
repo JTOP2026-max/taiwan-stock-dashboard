@@ -6,7 +6,7 @@ function addFreshness(j){
   if(!el){el=document.createElement('div');el.id='marketFreshness';el.style.cssText='max-width:1500px;margin:8px auto 0;padding:7px 14px;font-size:12px;color:#475467';const m=document.querySelector('main');if(m)m.parentNode.insertBefore(el,m);}
   const s=j.sources||{};
   const status=`TWSE ${s.twse?'✓':'×'}｜法人 ${s.institutions?'✓':'×'}｜P/C ${s.taifexPC?'✓':'×'}｜期貨 ${s.taifexFutures?'✓':'×'}`;
-  if(el)el.textContent=`市場資料：${j.date||'—'}｜後端更新 ${j.updated||'—'}｜${status}｜每日自動紀錄已啟用`;
+  if(el)el.textContent=`市場資料：${j.date||'—'}｜後端更新 ${j.updated||'—'}｜${status}｜P/C、Fear & Greed 每日盤後更新｜頁面每 5 分鐘自動檢查`;
 }
 async function runMarket(){
   if(typeof D==='undefined'||typeof render!=='function')return;
@@ -22,5 +22,5 @@ async function runMarket(){
     render(); addFreshness(j);
   }catch(e){console.warn('market data unavailable',e)}
 }
-window.addEventListener('load',runMarket); setTimeout(runMarket,450);
+window.addEventListener('load',runMarket); setTimeout(runMarket,450); setInterval(runMarket,5*60*1000);
 })();
