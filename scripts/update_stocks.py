@@ -1,4 +1,4 @@
-import json, os, time, math
+import json, os, math
 from datetime import datetime, timedelta, timezone
 import requests
 
@@ -7,10 +7,13 @@ STOCKS_PATH = os.path.join(ROOT, 'stocks.json')
 HISTORY_PATH = os.path.join(ROOT, 'stock_history.json')
 TZ = timezone(timedelta(hours=8))
 S = requests.Session()
-S.headers.update({'User-Agent':'Mozilla/5.0 TaiwanStockDashboard/2.2'})
+S.headers.update({'User-Agent':'Mozilla/5.0 TaiwanStockDashboard/2.3'})
+
+SEED_DAYS = 15
+MAX_DAYS = 60
 
 
-def jget(url, params=None, timeout=35):
+def jget(url, params=None, timeout=25):
     r = S.get(url, params=params, timeout=timeout)
     r.raise_for_status()
     return r.json()
@@ -31,8 +34,10 @@ def pick(row, aliases):
     if not isinstance(row, dict): return None
     for k, v in row.items():
         kk = str(k).lower().replace(' ', '').replace('_','').replace('/','')
-        if any(a.lower().replace(' ','').replace('_','').replace('/','') in kk for a in aliases):
-            if v not in (None, '', '--', '---'): return v
+        for a in aliases:
+            aa = a.lower().replace(' ','').replace('_','').replace('/','')
+            if aa == kk or aa in kk:
+                if v not in (None, '', '--', '---'): return v
     return None
 
 
@@ -46,7 +51,7 @@ def twse_current():
         price = num(x.get('ClosingPrice'))
         if not code or price is None or price <= 0: continue
         p = pe_map.get(code)
-        eps = (price / p) if p and p > 0 else None
+        eps = price / p if p and p > 0 else None
         out[code] = {'code':code,'name':x.get('Name') or code,'market':'TWSE','price':price,'pe':p,'eps':eps}
     return out
 
@@ -66,9 +71,9 @@ def tpex_current():
         price = num(pick(x, ['Close','ClosingPrice','收盤價','ClosePrice']))
         if not code or price is None or price <= 0: continue
         p = pe_map.get(code)
-        eps = (price / p) if p and p > 0 else None
+        eps = price / p if p and p > 0 else None
         out[code] = {'code':code,'name':str(name).strip(),'market':'TPEX','price':price,'pe':p,'eps':eps}
-    print('TPEx current', len(out))
+    print('TPEx current', len(out), '6274', '6274' in out)
     return out
 
 
@@ -137,46 +142,45 @@ def save_json(path, obj):
         json.dump(obj, f, ensure_ascii=False, indent=2)
 
 
-def ensure_60_days(hist):
+def ensure_history(hist):
     hist.setdefault('meta', {})
-    known = {x.get('date') for x in hist['days']}
     today = datetime.now(TZ).date()
+    known = {x.get('date') for x in hist.get('days', [])}
 
-    # TWSE bootstrap remains capped at 60 trading days.
-    if len(hist['days']) < 60:
+    # TWSE: only seed 15 trading days when starting from empty; thereafter append daily.
+    if len(hist.get('days', [])) < SEED_DAYS:
         d = today; scanned = 0
-        while len(hist['days']) < 60 and scanned < 130:
+        while len(hist['days']) < SEED_DAYS and scanned < 40:
             ds = d.isoformat()
             if ds not in known and d.weekday() < 5:
                 try:
                     rows = twse_daily_all(d)
                     if len(rows) > 300:
                         hist['days'].append({'date':ds,'prices':{k:v['price'] for k,v in rows.items()}})
-                        known.add(ds); print('TWSE bootstrap', ds, len(rows))
-                except Exception as e: print('TWSE skip', ds, e)
+                        known.add(ds); print('TWSE seed', ds, len(rows))
+                except Exception as e: print('TWSE seed skip', ds, e)
             d -= timedelta(days=1); scanned += 1
 
-    # Incremental TPEx backfill: at most 5 trading days per workflow run.
-    completed = set(hist['meta'].get('tpexCompletedDates', []))
-    pending = [x for x in sorted(hist['days'], key=lambda x:x.get('date','')) if x.get('date') not in completed]
-    processed = 0
-    for day in pending[:5]:
+    # TPEx: seed only the most recent 15 trading dates. No 60-day historical backfill.
+    seeded = set(hist['meta'].get('tpexSeedDates', []))
+    recent = sorted(hist.get('days', []), key=lambda x:x.get('date',''), reverse=True)[:SEED_DAYS]
+    for day in recent:
+        ds = day.get('date')
+        if not ds or ds in seeded: continue
         try:
-            d = datetime.strptime(day['date'], '%Y-%m-%d').date()
+            d = datetime.strptime(ds, '%Y-%m-%d').date()
             rows = tpex_daily_all(d)
             if len(rows) > 100:
                 day.setdefault('prices', {}).update({k:v['price'] for k,v in rows.items()})
-                completed.add(day['date'])
-                processed += 1
-                print('TPEx incremental backfill', day['date'], len(rows))
+                seeded.add(ds)
+                print('TPEx seed', ds, len(rows))
         except Exception as e:
-            print('TPEx incremental skip', day.get('date'), e)
-    hist['meta']['tpexCompletedDates'] = sorted(completed)[-60:]
-    hist['meta']['tpexBackfillDays'] = len(completed)
-    hist['meta']['tpexBackfilled'] = len(completed) >= min(60, len(hist['days']))
-    print('TPEx backfill progress', len(completed), '/', len(hist['days']), 'processed this run', processed)
+            print('TPEx seed skip', ds, e)
 
-    # Refresh current trading date from both markets.
+    hist['meta']['tpexSeedDates'] = sorted(seeded)[-SEED_DAYS:]
+    hist['meta']['tpexSeedComplete'] = len(seeded) >= min(SEED_DAYS, len(recent))
+
+    # Daily append/refresh for both markets. From now on history naturally grows to 60 days.
     ds = today.isoformat(); merged = {}
     try:
         rows = twse_daily_all(today); merged.update({k:v['price'] for k,v in rows.items()})
@@ -187,9 +191,11 @@ def ensure_60_days(hist):
     if len(merged) > 300:
         hist['days'] = [x for x in hist['days'] if x.get('date') != ds]
         hist['days'].append({'date':ds,'prices':merged})
-        if len([k for k in merged if str(k).isdigit()]) > 300:
-            completed.add(ds)
-    hist['days'] = sorted(hist['days'], key=lambda x:x.get('date',''))[-60:]
+        if len(merged) > 1000: seeded.add(ds)
+
+    hist['days'] = sorted(hist['days'], key=lambda x:x.get('date',''))[-MAX_DAYS:]
+    hist['meta']['targetDays'] = MAX_DAYS
+    hist['meta']['seedDays'] = SEED_DAYS
     return hist
 
 
@@ -197,18 +203,29 @@ def build_stocks(current, hist):
     series = {}
     for day in hist.get('days', []):
         for code, price in (day.get('prices') or {}).items():
-            if isinstance(price,(int,float)) and price > 0: series.setdefault(code, []).append(price)
+            if isinstance(price,(int,float)) and price > 0:
+                series.setdefault(code, []).append(price)
     updated = datetime.now(TZ).strftime('%Y-%m-%d %H:%M')
-    out = {'updated':updated,'source':'TWSE + TPEx official data','count':0,'marketCounts':{},'stocks':{}}
+    out = {'updated':updated,'source':'TWSE + TPEx official data','count':0,'marketCounts':{},'seedDays':SEED_DAYS,'targetDays':MAX_DAYS,'stocks':{}}
     ratios = [1.50,1.382,1.20,1.00,0.80,0.618]
     labels = ['瘋狂價','昂貴價','合理價(上緣)','合理價(下緣)','便宜價','特價']
     for code,x in current.items():
-        arr = series.get(code, [])[-60:]; avg60 = sum(arr)/len(arr) if arr else None
-        eps=x.get('eps'); base_pe=(avg60/eps) if avg60 and eps and eps>0 else None
-        pe_bands=[base_pe*r for r in ratios] if base_pe else []; values=[eps*p for p in pe_bands] if eps and pe_bands else []
-        out['stocks'][code]={**x,'avg60':avg60,'historyDays':len(arr),'basePE':base_pe,'peBands':pe_bands,'labels':labels,'values':values,'modelReady':bool(base_pe and len(arr)>=20)}
+        arr = series.get(code, [])[-MAX_DAYS:]
+        avg = sum(arr)/len(arr) if arr else None
+        eps=x.get('eps')
+        base_pe=(avg/eps) if avg and eps and eps>0 else None
+        pe_bands=[base_pe*r for r in ratios] if base_pe else []
+        values=[eps*p for p in pe_bands] if eps and pe_bands else []
+        out['stocks'][code]={
+            **x,'avg60':avg,'historyDays':len(arr),'basePE':base_pe,
+            'peBands':pe_bands,'labels':labels,'values':values,
+            'modelReady':bool(base_pe and len(arr)>=SEED_DAYS),
+            'historyTarget':MAX_DAYS,
+            'historyStatus':'ready60' if len(arr)>=MAX_DAYS else f'building {len(arr)}/{MAX_DAYS}'
+        }
         m=x.get('market','UNKNOWN'); out['marketCounts'][m]=out['marketCounts'].get(m,0)+1
-    out['count']=len(out['stocks']); return out
+    out['count']=len(out['stocks'])
+    return out
 
 
 def main():
@@ -218,10 +235,12 @@ def main():
     except Exception as e:
         print('TPEx current unavailable', e); tpex = {}
     current = {**twse, **tpex}
-    hist = ensure_60_days(load_history())
+    hist = ensure_history(load_history())
     stocks = build_stocks(current, hist)
-    save_json(HISTORY_PATH, hist); save_json(STOCKS_PATH, stocks)
+    save_json(HISTORY_PATH, hist)
+    save_json(STOCKS_PATH, stocks)
     print('stocks',stocks['count'],stocks.get('marketCounts'),'history days',len(hist['days']))
     print('6274 present', '6274' in stocks['stocks'])
 
-if __name__ == '__main__': main()
+if __name__ == '__main__':
+    main()
