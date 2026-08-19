@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19 06:59:56",
+  "updated": "2026-08-19 16:07:43",
   "records": [
     {
       "date": "2026-08-13",
@@ -58,6 +58,40 @@
         "down": 983
       },
       "fearGreed": 53,
+      "sources": {
+        "twse": true,
+        "institutions": true,
+        "taifexPC": true,
+        "taifexFutures": false
+      }
+    },
+    {
+      "date": "2026-08-19",
+      "updated": "2026-08-19 16:07:43",
+      "core": {
+        "idx": 44719.35,
+        "chg": 589.33,
+        "pct": 1.3354401380284895,
+        "volTrillion": 0.88,
+        "fut": 46389,
+        "futChg": 76.0,
+        "basis": 1669.6500000000015
+      },
+      "inst": {
+        "total": -708.48383976,
+        "foreign": 0.0,
+        "trust": -120.90647514,
+        "dealer": -587.57736462
+      },
+      "pc": {
+        "trade": 1.2634,
+        "oi": 1.1716
+      },
+      "breadth": {
+        "up": 439,
+        "down": 786
+      },
+      "fearGreed": 58,
       "sources": {
         "twse": true,
         "institutions": true,
