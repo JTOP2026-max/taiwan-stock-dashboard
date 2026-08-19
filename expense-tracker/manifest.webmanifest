@@ -1,0 +1,15 @@
+{
+  "name": "大學生生活費記帳",
+  "short_name": "生活費記帳",
+  "description": "每週與每月生活費管理，快速記帳、分類統計與赤字提醒。",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#3b82f6",
+  "lang": "zh-Hant-TW",
+  "orientation": "portrait-primary",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
