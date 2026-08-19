@@ -1,5 +1,5 @@
 (()=>{
-const n=v=>Number.isFinite(Number(v))?Number(v):null;
+const n=v=>(v===null||v===undefined||v==='')?null:Number.isFinite(Number(v))?Number(v):null;
 function set(obj,key,v){if(v!==null&&v!==undefined)obj[key]=v}
 function addFreshness(j){
   let el=document.getElementById('marketFreshness');
