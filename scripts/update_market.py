@@ -112,21 +112,44 @@ def parse_pc():
 
 def parse_futures():
     try:
-        j=jget('https://openapi.taifex.com.tw/v1/DailyMarketReportFut'); rows=j if isinstance(j,list) else j.get('data',[]) if isinstance(j,dict) else []
+        j=jget('https://openapi.taifex.com.tw/v1/DailyMarketReportFut')
+        rows=j if isinstance(j,list) else j.get('data',[]) if isinstance(j,dict) else []
+        def norm(k): return str(k).lower().replace('_','').replace(' ','').replace('/','')
+        def pick(row,names):
+            for k,v in row.items():
+                nk=norm(k)
+                if any(name in nk for name in names): return v
+            return None
+        def signed(v):
+            if v is None:return None
+            s=str(v).strip()
+            direction=-1 if ('▼' in s or s.startswith('-')) else 1
+            s=s.replace('▲','').replace('▼','').replace('%','').replace(',','').strip()
+            try:return abs(float(s))*direction
+            except:return None
         cand=[]
         for r in rows:
-            text=' '.join(str(v) for v in r.values())
-            # Prefer TX/臺股期貨; keep rows with a valid close.
-            if '臺股期貨' in text or 'TAIEX Futures' in text or any(str(v).strip()=='TX' for v in r.values()):
-                price=chg=None
-                for k,v in r.items():
-                    kk=str(k).lower()
-                    if price is None and any(x in kk for x in ['closingprice','close','收盤價']): price=num(v)
-                    if chg is None and any(x in kk for x in ['change','漲跌']): chg=num(v)
-                if price is not None: cand.append((r,price,chg))
+            code=str(pick(r,['contractcode','commodityid','productid','商品代號','契約']) or '').strip().upper()
+            name=str(pick(r,['contractname','commodityname','商品名稱']) or '').strip()
+            if code!='TX' and '臺股期貨' not in name and 'TAIEXFUTURES' not in name.upper().replace(' ',''):continue
+            price=num(pick(r,['closingprice','closeprice','lastprice','最後成交價','收盤價']))
+            if price is None or price<=0:continue
+            chg=signed(pick(r,['changepercent','漲跌%']))
+            raw_change=signed(pick(r,['change','漲跌價','漲跌點數']))
+            if raw_change is not None:chg=raw_change
+            date=str(pick(r,['tradedate','date','交易日期','日期']) or '')
+            month=str(pick(r,['contractmonth','deliverymonth','到期月份']) or '')
+            session=str(pick(r,['tradingsession','session','交易時段']) or '')
+            volume=num(pick(r,['volume','成交量'])) or 0
+            night=1 if any(x in session.lower() for x in ['盤後','夜盤','after','night']) else 0
+            cand.append((date,night,month,volume,price,chg,session))
         if not cand:return {}
-        r,price,chg=cand[0]
-        return {'price':price,'chg':chg}
+        latest_date=max(x[0] for x in cand)
+        same=[x for x in cand if x[0]==latest_date]
+        if any(x[1] for x in same):same=[x for x in same if x[1]]
+        same.sort(key=lambda x:(x[2] or '999999',-x[3]))
+        row=same[0]
+        return {'price':row[4],'chg':row[5],'date':row[0],'session':row[6] or ('盤後' if row[1] else '一般')}
     except Exception as e:
         print('futures unavailable',e); return {}
 
@@ -146,7 +169,7 @@ def main():
     if pct is None and idx and chg and idx-chg: pct=chg/(idx-chg)*100
     turnover=tw.get('turnover'); vol=(round(turnover/1e12,2) if turnover else prev.get('core',{}).get('volTrillion'))
     breadth={'up':tw.get('up') or prev.get('breadth',{}).get('up'),'down':tw.get('down') or prev.get('breadth',{}).get('down')}; fg=sentiment(pc,breadth,inst)
-    fut_price=fut.get('price') or prev.get('core',{}).get('fut'); fut_chg=fut.get('chg') if fut.get('chg') is not None else prev.get('core',{}).get('futChg'); basis=(fut_price-idx) if fut_price is not None and idx is not None else None
+    fut_price=fut.get('price'); fut_chg=fut.get('chg'); basis=(fut_price-idx) if fut_price is not None and idx is not None else None
     out={'date':d.isoformat(),'updated':datetime.now(TZ).strftime('%Y-%m-%d %H:%M:%S'),'core':{'idx':idx,'chg':chg,'pct':pct,'volTrillion':vol,'fut':fut_price,'futChg':fut_chg,'basis':basis},'inst':{'total':inst.get('total'),'foreign':inst.get('foreign'),'trust':inst.get('trust'),'dealer':inst.get('dealer')},'pc':{'trade':pc.get('trade'),'oi':pc.get('oi')},'breadth':breadth,'fearGreed':fg,'sources':{'twse':bool(mi),'institutions':bool(inst),'taifexPC':bool(pc),'taifexFutures':bool(fut)}}
     save(MARKET,out); hist=load(HIST,{'records':[]}); recs=[x for x in hist.get('records',[]) if x.get('date')!=out['date']]; recs.append(out); recs=sorted(recs,key=lambda x:x.get('date',''))[-400:]; save(HIST,{'updated':out['updated'],'records':recs}); print(json.dumps(out,ensure_ascii=False))
 
