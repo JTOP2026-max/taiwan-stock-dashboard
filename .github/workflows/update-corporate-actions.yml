@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/update_corporate_actions.py'
+      - 'manual_company_events.json'
       - '.github/workflows/update-corporate-actions.yml'
   schedule:
     - cron: '20 0 * * 1-5'   # 08:20 Taiwan time
@@ -24,6 +25,28 @@ jobs:
           python-version: '3.12'
       - run: pip install requests
       - run: python scripts/update_corporate_actions.py
+      - name: Merge verified supplemental events
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone, timedelta
+          p='company_events.json'
+          with open(p,encoding='utf-8') as f: base=json.load(f)
+          try:
+              with open('manual_company_events.json',encoding='utf-8') as f: extra=json.load(f).get('events',[])
+          except Exception:
+              extra=[]
+          events=base.get('events',[])
+          seen={e.get('id') for e in events}
+          for e in extra:
+              if e.get('id') not in seen:
+                  events.append(e); seen.add(e.get('id'))
+          events.sort(key=lambda x:(x.get('date') or '9999-12-31',x.get('code',''),x.get('kind','')))
+          base['events']=events
+          base['count']=len(events)
+          base['updated']=datetime.now(timezone(timedelta(hours=8))).strftime('%Y-%m-%d %H:%M')
+          with open(p,'w',encoding='utf-8') as f: json.dump(base,f,ensure_ascii=False,indent=2)
+          PY
       - name: Commit data
         run: |
           git config user.name "github-actions[bot]"
