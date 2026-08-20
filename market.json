@@ -1,30 +1,30 @@
 {
-  "date": "2026-08-19",
-  "updated": "2026-08-20 07:02:18",
+  "date": "2026-08-20",
+  "updated": "2026-08-20 16:19:08",
   "core": {
-    "idx": 44719.35,
-    "chg": -589.33,
-    "pct": -1.3,
-    "volTrillion": 0.89,
+    "idx": 44933.74,
+    "chg": 214.39,
+    "pct": 0.48,
+    "volTrillion": 0.82,
     "fut": null,
     "futChg": null,
     "basis": null
   },
   "inst": {
-    "total": -753.58679861,
+    "total": -35.37477529,
     "foreign": 0.0,
-    "trust": -166.00943399,
-    "dealer": -587.57736462
+    "trust": -12.1114606,
+    "dealer": -23.26331469
   },
   "pc": {
-    "trade": 1.2634,
-    "oi": 1.1716
+    "trade": 1.1506,
+    "oi": 1.0227
   },
   "breadth": {
-    "up": 439,
-    "down": 786
+    "up": 957,
+    "down": 303
   },
-  "fearGreed": 58,
+  "fearGreed": 63,
   "sources": {
     "twse": true,
     "institutions": true,
