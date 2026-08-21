@@ -80,3 +80,14 @@
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(render,350));else setTimeout(render,350);
   window.addEventListener('market-data-updated',render);
 })();
+(function(){
+  function loadRichHoldings(){
+    if(document.querySelector('script[data-rich-holdings]')) return;
+    const s=document.createElement('script');
+    s.src='rich-holdings-ui.js?v=20260821d';
+    s.async=false;
+    s.dataset.richHoldings='1';
+    document.head.appendChild(s);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',loadRichHoldings); else loadRichHoldings();
+})();
