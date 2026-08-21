@@ -5,6 +5,7 @@ import requests
 ROOT=os.path.dirname(os.path.dirname(__file__))
 MARKET=os.path.join(ROOT,'market.json')
 HIST=os.path.join(ROOT,'market_history.json')
+CNN_HIST=os.path.join(ROOT,'cnn_fear_greed.json')
 TZ=timezone(timedelta(hours=8))
 S=requests.Session(); S.headers.update({'User-Agent':'Mozilla/5.0 TaiwanStockDashboard/2.1'})
 
@@ -202,6 +203,26 @@ def parse_futures():
     except Exception as e:
         print('futures unavailable',e); return {}
 
+
+def parse_cnn_fear_greed():
+    try:
+        r=S.get('https://production.dataviz.cnn.io/index/fearandgreed/graphdata',timeout=30,headers={'Referer':'https://edition.cnn.com/markets/fear-and-greed','Accept':'application/json'})
+        r.raise_for_status(); j=r.json(); fg=j.get('fear_and_greed') or {}
+        score=num(fg.get('score')); timestamp=fg.get('timestamp'); rating=str(fg.get('rating') or '').strip().lower(); records=[]
+        for row in (j.get('fear_and_greed_historical') or {}).get('data') or []:
+            x=num(row.get('x')); y=num(row.get('y'))
+            if x is None or y is None:continue
+            dt=datetime.fromtimestamp(x/1000,timezone.utc).date().isoformat()
+            records.append({'date':dt,'score':round(y,2),'rating':str(row.get('rating') or '').strip().lower()})
+        if score is not None and timestamp:
+            try:current_date=datetime.fromisoformat(str(timestamp).replace('Z','+00:00')).date().isoformat()
+            except:current_date=None
+            if current_date and not any(x.get('date')==current_date for x in records):records.append({'date':current_date,'score':round(score,2),'rating':rating})
+        records=sorted({x['date']:x for x in records}.values(),key=lambda x:x['date'])[-500:]
+        return {'score':score,'rating':rating,'timestamp':timestamp,'previousClose':num(fg.get('previous_close')),'previousWeek':num(fg.get('previous_1_week')),'previousMonth':num(fg.get('previous_1_month')),'records':records}
+    except Exception as e:
+        print('cnn fear & greed unavailable',e); return {}
+
 def sentiment(pc,breadth,inst):
     score=50.0; oi=pc.get('oi'); trade=pc.get('trade')
     if oi is not None: score += max(-18,min(18,(oi-1.0)*45))
@@ -214,6 +235,7 @@ def sentiment(pc,breadth,inst):
 
 def main():
     d,mi=latest_trading_day(); tw=parse_twse(mi); inst=parse_institutions(d); prev=load(MARKET,{})
+    cnn=parse_cnn_fear_greed()
     pc=parse_pc(d)
     if not pc and prev.get('date')==d.isoformat():
         old_pc=prev.get('pc',{})
@@ -224,9 +246,15 @@ def main():
     idx=tw.get('index') or prev.get('core',{}).get('idx'); chg=tw.get('chg') if tw.get('chg') is not None else prev.get('core',{}).get('chg'); pct=tw.get('pct')
     if pct is None and idx and chg and idx-chg: pct=chg/(idx-chg)*100
     turnover=tw.get('turnover'); vol=(round(turnover/1e12,2) if turnover else prev.get('core',{}).get('volTrillion'))
-    breadth={'up':tw.get('up') or prev.get('breadth',{}).get('up'),'down':tw.get('down') or prev.get('breadth',{}).get('down')}; fg=sentiment(pc,breadth,inst)
+    breadth={'up':tw.get('up') or prev.get('breadth',{}).get('up'),'down':tw.get('down') or prev.get('breadth',{}).get('down')}
+    taiwan_sentiment=sentiment(pc,breadth,inst)
+    cnn_score=cnn.get('score') if cnn.get('score') is not None else prev.get('cnnFearGreed',{}).get('score')
+    cnn_snapshot={'score':cnn_score,'rating':cnn.get('rating') or prev.get('cnnFearGreed',{}).get('rating'),'timestamp':cnn.get('timestamp') or prev.get('cnnFearGreed',{}).get('timestamp'),'previousClose':cnn.get('previousClose'),'previousWeek':cnn.get('previousWeek'),'previousMonth':cnn.get('previousMonth')}
     fut_price=fut.get('price'); fut_chg=fut.get('chg'); basis=(fut_price-idx) if fut_price is not None and idx is not None else None
-    out={'date':d.isoformat(),'updated':datetime.now(TZ).strftime('%Y-%m-%d %H:%M:%S'),'core':{'idx':idx,'chg':chg,'pct':pct,'volTrillion':vol,'fut':fut_price,'futChg':fut_chg,'basis':basis},'inst':{'total':inst.get('total'),'foreign':inst.get('foreign'),'trust':inst.get('trust'),'dealer':inst.get('dealer')},'pc':{'trade':pc.get('trade'),'oi':pc.get('oi')},'breadth':breadth,'fearGreed':fg,'sources':{'twse':bool(mi),'institutions':bool(inst),'taifexPC':bool(pc),'taifexFutures':bool(fut)}}
-    save(MARKET,out); hist=load(HIST,{'records':[]}); recs=[x for x in hist.get('records',[]) if x.get('date')!=out['date']]; recs.append(out); recs=sorted(recs,key=lambda x:x.get('date',''))[-400:]; save(HIST,{'updated':out['updated'],'records':recs}); print(json.dumps(out,ensure_ascii=False))
+    out={'date':d.isoformat(),'updated':datetime.now(TZ).strftime('%Y-%m-%d %H:%M:%S'),'core':{'idx':idx,'chg':chg,'pct':pct,'volTrillion':vol,'fut':fut_price,'futChg':fut_chg,'basis':basis},'inst':{'total':inst.get('total'),'foreign':inst.get('foreign'),'trust':inst.get('trust'),'dealer':inst.get('dealer')},'pc':{'trade':pc.get('trade'),'oi':pc.get('oi')},'breadth':breadth,'taiwanSentiment':taiwan_sentiment,'cnnFearGreed':cnn_snapshot,'fearGreed':cnn_score,'sources':{'twse':bool(mi),'institutions':bool(inst),'taifexPC':bool(pc),'taifexFutures':bool(fut),'cnnFearGreed':cnn.get('score') is not None}}
+    save(MARKET,out)
+    old_cnn=load(CNN_HIST,{'records':[]}); cnn_records=cnn.get('records') or old_cnn.get('records',[])
+    save(CNN_HIST,{'updated':out['updated'],'source':'CNN Fear & Greed','records':cnn_records})
+    hist=load(HIST,{'records':[]}); recs=[x for x in hist.get('records',[]) if x.get('date')!=out['date']]; recs.append(out); recs=sorted(recs,key=lambda x:x.get('date',''))[-400:]; save(HIST,{'updated':out['updated'],'records':recs}); print(json.dumps(out,ensure_ascii=False))
 
 if __name__=='__main__':main()
