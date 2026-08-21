@@ -237,7 +237,7 @@ def main():
     d,mi=latest_trading_day(); tw=parse_twse(mi); inst=parse_institutions(d); prev=load(MARKET,{})
     cnn=parse_cnn_fear_greed()
     pc=parse_pc(d)
-    if not pc and prev.get('date')==d.isoformat():
+    if (pc.get('trade') is None or pc.get('oi') is None) and prev.get('date')==d.isoformat():
         old_pc=prev.get('pc',{})
         if old_pc.get('trade') is not None and old_pc.get('oi') is not None:
             pc={'trade':old_pc.get('trade'),'oi':old_pc.get('oi'),'date':d.isoformat()}
@@ -251,7 +251,7 @@ def main():
     cnn_score=cnn.get('score') if cnn.get('score') is not None else prev.get('cnnFearGreed',{}).get('score')
     cnn_snapshot={'score':cnn_score,'rating':cnn.get('rating') or prev.get('cnnFearGreed',{}).get('rating'),'timestamp':cnn.get('timestamp') or prev.get('cnnFearGreed',{}).get('timestamp'),'previousClose':cnn.get('previousClose'),'previousWeek':cnn.get('previousWeek'),'previousMonth':cnn.get('previousMonth')}
     fut_price=fut.get('price'); fut_chg=fut.get('chg'); basis=(fut_price-idx) if fut_price is not None and idx is not None else None
-    out={'date':d.isoformat(),'updated':datetime.now(TZ).strftime('%Y-%m-%d %H:%M:%S'),'core':{'idx':idx,'chg':chg,'pct':pct,'volTrillion':vol,'fut':fut_price,'futChg':fut_chg,'basis':basis},'inst':{'total':inst.get('total'),'foreign':inst.get('foreign'),'trust':inst.get('trust'),'dealer':inst.get('dealer')},'pc':{'trade':pc.get('trade'),'oi':pc.get('oi')},'breadth':breadth,'taiwanSentiment':taiwan_sentiment,'cnnFearGreed':cnn_snapshot,'fearGreed':cnn_score,'sources':{'twse':bool(mi),'institutions':bool(inst),'taifexPC':bool(pc),'taifexFutures':bool(fut),'cnnFearGreed':cnn.get('score') is not None}}
+    out={'date':d.isoformat(),'updated':datetime.now(TZ).strftime('%Y-%m-%d %H:%M:%S'),'core':{'idx':idx,'chg':chg,'pct':pct,'volTrillion':vol,'fut':fut_price,'futChg':fut_chg,'basis':basis},'inst':{'total':inst.get('total'),'foreign':inst.get('foreign'),'trust':inst.get('trust'),'dealer':inst.get('dealer')},'pc':{'trade':pc.get('trade'),'oi':pc.get('oi')},'breadth':breadth,'taiwanSentiment':taiwan_sentiment,'cnnFearGreed':cnn_snapshot,'fearGreed':cnn_score,'sources':{'twse':bool(mi),'institutions':bool(inst),'taifexPC':pc.get('trade') is not None and pc.get('oi') is not None,'taifexFutures':bool(fut),'cnnFearGreed':cnn.get('score') is not None}}
     save(MARKET,out)
     old_cnn=load(CNN_HIST,{'records':[]}); cnn_records=cnn.get('records') or old_cnn.get('records',[])
     save(CNN_HIST,{'updated':out['updated'],'source':'CNN Fear & Greed','records':cnn_records})
