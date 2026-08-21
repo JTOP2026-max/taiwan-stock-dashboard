@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21 07:12:41",
+  "updated": "2026-08-21 11:02:09",
   "records": [
     {
       "date": "2026-08-13",
@@ -101,7 +101,7 @@
     },
     {
       "date": "2026-08-20",
-      "updated": "2026-08-21 07:12:41",
+      "updated": "2026-08-21 11:02:09",
       "core": {
         "idx": 44933.74,
         "chg": 214.39,
@@ -118,18 +118,18 @@
         "dealer": 12.09424071
       },
       "pc": {
-        "trade": 1.1506,
-        "oi": 1.0227
+        "trade": null,
+        "oi": null
       },
       "breadth": {
         "up": 957,
         "down": 303
       },
-      "fearGreed": 63,
+      "fearGreed": 59,
       "sources": {
         "twse": true,
         "institutions": true,
-        "taifexPC": true,
+        "taifexPC": false,
         "taifexFutures": false
       }
     }
