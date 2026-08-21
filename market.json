@@ -1,6 +1,6 @@
 {
   "date": "2026-08-21",
-  "updated": "2026-08-21 17:12:28",
+  "updated": "2026-08-21 17:36:00",
   "core": {
     "idx": 45224.29,
     "chg": 290.55,
@@ -17,8 +17,9 @@
     "dealer": 312.27988636
   },
   "pc": {
-    "trade": null,
-    "oi": null
+    "trade": 1.1065,
+    "oi": 1.0378,
+    "date": "2026-08-21"
   },
   "breadth": {
     "up": 706,
@@ -37,7 +38,7 @@
   "sources": {
     "twse": true,
     "institutions": true,
-    "taifexPC": false,
+    "taifexPC": true,
     "taifexFutures": false,
     "cnnFearGreed": true
   }
