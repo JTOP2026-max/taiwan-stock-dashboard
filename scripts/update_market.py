@@ -213,7 +213,14 @@ def sentiment(pc,breadth,inst):
     return round(max(0,min(100,score)))
 
 def main():
-    d,mi=latest_trading_day(); tw=parse_twse(mi); inst=parse_institutions(d); pc=parse_pc(d); fut=parse_futures(); prev=load(MARKET,{})
+    d,mi=latest_trading_day(); tw=parse_twse(mi); inst=parse_institutions(d); prev=load(MARKET,{})
+    pc=parse_pc(d)
+    if not pc and prev.get('date')==d.isoformat():
+        old_pc=prev.get('pc',{})
+        if old_pc.get('trade') is not None and old_pc.get('oi') is not None:
+            pc={'trade':old_pc.get('trade'),'oi':old_pc.get('oi'),'date':d.isoformat()}
+            print('pc unavailable; preserving validated same-day values')
+    fut=parse_futures()
     idx=tw.get('index') or prev.get('core',{}).get('idx'); chg=tw.get('chg') if tw.get('chg') is not None else prev.get('core',{}).get('chg'); pct=tw.get('pct')
     if pct is None and idx and chg and idx-chg: pct=chg/(idx-chg)*100
     turnover=tw.get('turnover'); vol=(round(turnover/1e12,2) if turnover else prev.get('core',{}).get('volTrillion'))
