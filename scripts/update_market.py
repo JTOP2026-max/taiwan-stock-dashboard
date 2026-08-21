@@ -120,14 +120,23 @@ def parse_pc(target_date):
         exact=[row for rd,row in dated if rd==target_date]
         if not exact:
             available=[(rd,row) for rd,row in dated if rd is not None and rd<=target_date]
-            if not available:
-                print('pc unavailable: no dated row for',target_date)
-                return {}
-            latest=max(rd for rd,_ in available)
-            if latest!=target_date:
-                print('pc date mismatch:',latest,'!=',target_date)
-                return {}
-            exact=[row for rd,row in available if rd==latest]
+            if available:
+                latest=max(rd for rd,_ in available)
+                if latest!=target_date:
+                    print('pc date mismatch:',latest,'!=',target_date)
+                    return {}
+                exact=[row for rd,row in available if rd==latest]
+            else:
+                # Some TAIFEX payload versions omit a usable date column.
+                # Only trust the first (latest) row after the publication window;
+                # never do this during the early-morning refresh that caused stale P/C.
+                now=datetime.now(TZ)
+                safe_fallback=(now.hour>=18) or (target_date<now.date() and now.hour>=10)
+                if not safe_fallback:
+                    print('pc unavailable: undated payload before publication window')
+                    return {}
+                print('pc date unavailable; using latest row after publication window')
+                exact=[rows[0]]
 
         r=exact[0]
         def pick(keys):
