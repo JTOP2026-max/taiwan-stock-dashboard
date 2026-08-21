@@ -6,6 +6,7 @@ on:
     branches: [ main ]
     paths:
       - 'scripts/update_market.py'
+      - 'scripts/fix_pc_ratio.py'
       - '.github/workflows/update-market.yml'
   schedule:
     - cron: '45 6 * * 1-5'   # 14:45 Taiwan, TWSE day-session data
@@ -30,6 +31,8 @@ jobs:
         run: pip install requests
       - name: Update Taiwan market data
         run: python scripts/update_market.py
+      - name: Fix TAIFEX Put Call Ratio
+        run: python scripts/fix_pc_ratio.py
       - name: Commit generated market data
         run: |
           git config user.name "github-actions[bot]"
