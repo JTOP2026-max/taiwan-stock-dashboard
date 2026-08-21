@@ -6,6 +6,7 @@ on:
     branches: [ main ]
     paths:
       - 'scripts/update_stocks.py'
+      - 'scripts/backfill_tracked_history.py'
       - '.github/workflows/update-stocks.yml'
   schedule:
     - cron: '45 6 * * 1-5'
@@ -26,11 +27,13 @@ jobs:
         run: pip install requests
       - name: Update TWSE and TPEx stock data
         run: python scripts/update_stocks.py
+      - name: Backfill tracked stock history
+        run: python scripts/backfill_tracked_history.py
       - name: Commit generated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add stocks.json stock_history.json
+          git add stocks.json stock_history.json stock_ohlcv.json
           if git diff --cached --quiet; then
             echo "No data changes"
           else
