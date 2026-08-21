@@ -9,7 +9,9 @@ on:
       - '.github/workflows/update-market.yml'
   schedule:
     - cron: '45 6 * * 1-5'   # 14:45 Taiwan, TWSE day-session data
-    - cron: '30 10 * * 1-5'  # 18:30 Taiwan, refresh TAIFEX P/C and CNN Fear & Greed
+    - cron: '20 9 * * 1-5'   # 17:20 Taiwan, first TAIFEX P/C refresh after publication window
+    - cron: '30 10 * * 1-5'  # 18:30 Taiwan, retry TAIFEX P/C and CNN Fear & Greed
+    - cron: '0 12 * * 1-5'   # 20:00 Taiwan, final P/C retry if official data was delayed
     - cron: '15 22 * * 0-4'  # 06:15 Taiwan Mon-Fri, refresh night-session fields
 
 permissions:
@@ -31,11 +33,12 @@ jobs:
       - name: Commit generated market data
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add market.json market_history.json cnn_fear_greed.json
           if git diff --cached --quiet; then
             echo "No market data changes"
           else
             git commit -m "chore: update market data"
+            git pull --rebase origin main
             git push
           fi
