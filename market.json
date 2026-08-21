@@ -1,6 +1,6 @@
 {
   "date": "2026-08-20",
-  "updated": "2026-08-21 11:05:00",
+  "updated": "2026-08-21 11:10:00",
   "core": {
     "idx": 44933.74,
     "chg": 214.39,
@@ -24,11 +24,21 @@
     "up": 957,
     "down": 303
   },
-  "fearGreed": 61,
+  "fearGreed": 52,
   "sources": {
     "twse": true,
     "institutions": true,
     "taifexPC": true,
-    "taifexFutures": false
+    "taifexFutures": false,
+    "cnnFearGreed": true
+  },
+  "taiwanSentiment": 61,
+  "cnnFearGreed": {
+    "score": 52,
+    "rating": "neutral",
+    "timestamp": "2026-08-20T23:59:00-04:00",
+    "previousClose": 56,
+    "previousWeek": 66,
+    "previousMonth": 37
   }
 }
