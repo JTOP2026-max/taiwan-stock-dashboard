@@ -92,23 +92,50 @@ def parse_institutions(d):
     except Exception as e:
         print('institution unavailable',e); return {}
 
-def parse_pc():
+def parse_pc(target_date):
     try:
-        j=jget('https://openapi.taifex.com.tw/v1/PutCallRatio'); rows=j if isinstance(j,list) else j.get('data',[]) if isinstance(j,dict) else []
+        j=jget('https://openapi.taifex.com.tw/v1/PutCallRatio')
+        rows=j if isinstance(j,list) else j.get('data',[]) if isinstance(j,dict) else []
         if not rows:return {}
-        r=rows[0]
+
+        def row_date(row):
+            for k,v in row.items():
+                kk=str(k).lower().replace('_','').replace(' ','')
+                if kk in ('date','tradedate','交易日期','日期'):
+                    s=str(v).strip().replace('/','-')
+                    for fmt in ('%Y-%m-%d','%Y%m%d'):
+                        try:return datetime.strptime(s,fmt).date()
+                        except:pass
+            return None
+
+        dated=[(row_date(row),row) for row in rows]
+        exact=[row for rd,row in dated if rd==target_date]
+        if not exact:
+            available=[(rd,row) for rd,row in dated if rd is not None and rd<=target_date]
+            if not available:
+                print('pc unavailable: no dated row for',target_date)
+                return {}
+            latest=max(rd for rd,_ in available)
+            if latest!=target_date:
+                print('pc date mismatch:',latest,'!=',target_date)
+                return {}
+            exact=[row for rd,row in available if rd==latest]
+
+        r=exact[0]
         def pick(keys):
             for k,v in r.items():
                 kk=str(k).lower().replace('/','').replace(' ','')
                 if any(x in kk for x in keys):
-                    n=num(v)
-                    if n is not None:return n
-        trade=pick(['putcallvolumeratio','成交量比率','成交比率','volumeratio']); oi=pick(['putcalloiratio','未平倉量比率','未平倉比率','oiratio'])
-        if trade and trade>10: trade/=100
-        if oi and oi>10: oi/=100
-        return {'trade':trade,'oi':oi}
+                    value=num(v)
+                    if value is not None:return value
+        trade=pick(['putcallvolumeratio','成交量比率','成交比率','volumeratio'])
+        oi=pick(['putcalloiratio','未平倉量比率','未平倉比率','oiratio'])
+        if trade is not None and trade>10:trade/=100
+        if oi is not None and oi>10:oi/=100
+        return {'trade':trade,'oi':oi,'date':target_date.isoformat()}
     except Exception as e:
-        print('pc unavailable',e); return {}
+        print('pc unavailable',e)
+        return {}
 
 def parse_futures():
     try:
@@ -169,7 +196,7 @@ def sentiment(pc,breadth,inst):
     return round(max(0,min(100,score)))
 
 def main():
-    d,mi=latest_trading_day(); tw=parse_twse(mi); inst=parse_institutions(d); pc=parse_pc(); fut=parse_futures(); prev=load(MARKET,{})
+    d,mi=latest_trading_day(); tw=parse_twse(mi); inst=parse_institutions(d); pc=parse_pc(d); fut=parse_futures(); prev=load(MARKET,{})
     idx=tw.get('index') or prev.get('core',{}).get('idx'); chg=tw.get('chg') if tw.get('chg') is not None else prev.get('core',{}).get('chg'); pct=tw.get('pct')
     if pct is None and idx and chg and idx-chg: pct=chg/(idx-chg)*100
     turnover=tw.get('turnover'); vol=(round(turnover/1e12,2) if turnover else prev.get('core',{}).get('volTrillion'))
