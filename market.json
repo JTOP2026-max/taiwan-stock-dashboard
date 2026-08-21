@@ -1,6 +1,6 @@
 {
   "date": "2026-08-20",
-  "updated": "2026-08-21 11:03:59",
+  "updated": "2026-08-21 11:05:00",
   "core": {
     "idx": 44933.74,
     "chg": 214.39,
@@ -12,23 +12,23 @@
   },
   "inst": {
     "total": -8.38251506,
-    "foreign": 0.0,
+    "foreign": 0,
     "trust": -20.47675577,
     "dealer": 12.09424071
   },
   "pc": {
-    "trade": null,
-    "oi": null
+    "trade": 1.1181,
+    "oi": 0.9937
   },
   "breadth": {
     "up": 957,
     "down": 303
   },
-  "fearGreed": 59,
+  "fearGreed": 61,
   "sources": {
     "twse": true,
     "institutions": true,
-    "taifexPC": false,
+    "taifexPC": true,
     "taifexFutures": false
   }
 }
