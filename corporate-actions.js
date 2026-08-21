@@ -55,4 +55,9 @@ const oldRender=window.renderHoldings;
 if(typeof oldRender==='function')window.renderHoldings=function(hs){oldRender(hs);setTimeout(addCorpInfo,0)};
 window.addEventListener('load',run);setTimeout(run,300);setInterval(loadEvents,30*60*1000);
 if(!document.querySelector('script[data-market-loader]')){const s=document.createElement('script');s.src='market-data.js';s.defer=true;s.dataset.marketLoader='1';document.head.appendChild(s);}
+function loadDashboardEnhancers(){
+  const load=(src,key,onload)=>{if(document.querySelector(`script[data-${key}]`)){if(onload)onload();return}const s=document.createElement('script');s.src=src;s.defer=true;s.dataset[key]='1';if(onload)s.onload=onload;document.body.appendChild(s)};
+  load('rich-holdings-ui.js?v=20260821e','richHoldings',()=>load('chart-enhancer.js?v=20260821a','chartEnhancer'));
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(loadDashboardEnhancers,500));else setTimeout(loadDashboardEnhancers,500);
 })();
