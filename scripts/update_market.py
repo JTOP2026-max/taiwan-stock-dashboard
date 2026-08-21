@@ -99,12 +99,20 @@ def parse_pc(target_date):
         if not rows:return {}
 
         def row_date(row):
+            # TAIFEX has changed the date column label across payload versions.
+            # Detect the YYYYMMDD value itself instead of trusting a field name.
+            preferred=[]
+            other=[]
             for k,v in row.items():
                 kk=str(k).lower().replace('_','').replace(' ','')
-                if kk in ('date','tradedate','交易日期','日期'):
-                    s=str(v).strip().replace('/','-')
-                    for fmt in ('%Y-%m-%d','%Y%m%d'):
-                        try:return datetime.strptime(s,fmt).date()
+                (preferred if any(x in kk for x in ('date','日期')) else other).append(v)
+            for v in preferred+other:
+                s=str(v).strip()
+                digits=''.join(ch for ch in s if ch.isdigit())
+                if len(digits)>=8:
+                    digits=digits[:8]
+                    if digits.startswith('20'):
+                        try:return datetime.strptime(digits,'%Y%m%d').date()
                         except:pass
             return None
 
