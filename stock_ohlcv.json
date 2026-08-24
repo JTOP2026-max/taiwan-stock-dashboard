@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24 16:27:40",
+  "updated": "2026-08-24 18:23:53",
   "stocks": {
     "2449": [
       {
@@ -2339,7 +2339,7 @@
         "high": 243.0,
         "low": 231.0,
         "close": 239.0,
-        "volume": 13269160.0,
+        "volume": 13529160.0,
         "market": "TWSE"
       }
     ],
@@ -7028,6 +7028,501 @@
       }
     ],
     "3044": [
+      {
+        "date": "2026-01-02",
+        "open": 320.0,
+        "high": 321.0,
+        "low": 311.5,
+        "close": 312.5,
+        "volume": 4633069.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-05",
+        "open": 313.0,
+        "high": 315.5,
+        "low": 307.5,
+        "close": 312.0,
+        "volume": 3516967.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-06",
+        "open": 314.0,
+        "high": 318.0,
+        "low": 311.0,
+        "close": 318.0,
+        "volume": 2397993.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-07",
+        "open": 318.5,
+        "high": 318.5,
+        "low": 311.0,
+        "close": 317.5,
+        "volume": 3360934.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-08",
+        "open": 320.0,
+        "high": 324.5,
+        "low": 316.0,
+        "close": 317.0,
+        "volume": 3576309.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-09",
+        "open": 316.5,
+        "high": 320.5,
+        "low": 314.0,
+        "close": 318.5,
+        "volume": 2031511.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-12",
+        "open": 322.0,
+        "high": 326.5,
+        "low": 313.5,
+        "close": 313.5,
+        "volume": 3834170.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-13",
+        "open": 320.0,
+        "high": 322.0,
+        "low": 309.5,
+        "close": 311.0,
+        "volume": 4924607.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-14",
+        "open": 314.0,
+        "high": 321.5,
+        "low": 312.5,
+        "close": 319.0,
+        "volume": 3007344.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-15",
+        "open": 321.0,
+        "high": 322.0,
+        "low": 317.5,
+        "close": 319.5,
+        "volume": 3119179.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-16",
+        "open": 322.0,
+        "high": 322.0,
+        "low": 314.0,
+        "close": 317.0,
+        "volume": 2914135.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-19",
+        "open": 317.0,
+        "high": 319.0,
+        "low": 312.0,
+        "close": 312.0,
+        "volume": 2874147.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-20",
+        "open": 309.0,
+        "high": 318.0,
+        "low": 308.5,
+        "close": 314.5,
+        "volume": 1848120.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-21",
+        "open": 313.0,
+        "high": 320.0,
+        "low": 311.0,
+        "close": 315.0,
+        "volume": 3327556.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-22",
+        "open": 320.0,
+        "high": 346.5,
+        "low": 318.0,
+        "close": 346.5,
+        "volume": 9298713.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-23",
+        "open": 359.5,
+        "high": 366.5,
+        "low": 346.5,
+        "close": 360.5,
+        "volume": 12357026.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-26",
+        "open": 368.0,
+        "high": 376.0,
+        "low": 354.0,
+        "close": 369.5,
+        "volume": 10297862.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-27",
+        "open": 384.5,
+        "high": 389.0,
+        "low": 374.0,
+        "close": 384.0,
+        "volume": 7734247.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-28",
+        "open": 386.0,
+        "high": 397.0,
+        "low": 379.0,
+        "close": 393.5,
+        "volume": 7082903.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-29",
+        "open": 404.0,
+        "high": 404.0,
+        "low": 386.0,
+        "close": 387.0,
+        "volume": 5145929.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-01-30",
+        "open": 384.0,
+        "high": 385.0,
+        "low": 372.0,
+        "close": 374.5,
+        "volume": 5206049.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-02-02",
+        "open": 378.5,
+        "high": 399.5,
+        "low": 377.0,
+        "close": 390.5,
+        "volume": 9049168.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-02-03",
+        "open": 402.0,
+        "high": 423.0,
+        "low": 401.5,
+        "close": 407.0,
+        "volume": 8715971.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-02-04",
+        "open": 404.0,
+        "high": 417.0,
+        "low": 402.5,
+        "close": 417.0,
+        "volume": 3755553.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-02-05",
+        "open": 410.0,
+        "high": 415.0,
+        "low": 391.0,
+        "close": 395.0,
+        "volume": 4381731.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-02-06",
+        "open": 384.0,
+        "high": 386.5,
+        "low": 373.5,
+        "close": 379.5,
+        "volume": 3430523.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-02-09",
+        "open": 395.0,
+        "high": 395.0,
+        "low": 378.0,
+        "close": 382.5,
+        "volume": 2561291.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-02-10",
+        "open": 384.0,
+        "high": 385.5,
+        "low": 374.0,
+        "close": 375.0,
+        "volume": 4017707.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-02-11",
+        "open": 393.0,
+        "high": 396.5,
+        "low": 385.5,
+        "close": 388.0,
+        "volume": 5490180.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-02-23",
+        "open": 392.0,
+        "high": 392.0,
+        "low": 378.5,
+        "close": 385.5,
+        "volume": 3269577.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-02-24",
+        "open": 385.5,
+        "high": 392.0,
+        "low": 385.5,
+        "close": 392.0,
+        "volume": 2303869.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-02-25",
+        "open": 394.0,
+        "high": 401.5,
+        "low": 389.5,
+        "close": 397.0,
+        "volume": 3074160.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-02-26",
+        "open": 401.0,
+        "high": 404.5,
+        "low": 387.0,
+        "close": 389.5,
+        "volume": 4147989.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-02",
+        "open": 374.0,
+        "high": 394.0,
+        "low": 372.5,
+        "close": 387.5,
+        "volume": 2851528.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-03",
+        "open": 387.5,
+        "high": 393.0,
+        "low": 372.0,
+        "close": 377.5,
+        "volume": 3185189.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-04",
+        "open": 366.0,
+        "high": 371.5,
+        "low": 345.0,
+        "close": 350.0,
+        "volume": 3375914.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-05",
+        "open": 380.0,
+        "high": 380.0,
+        "low": 361.0,
+        "close": 367.5,
+        "volume": 2666611.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-06",
+        "open": 377.0,
+        "high": 380.0,
+        "low": 364.5,
+        "close": 378.0,
+        "volume": 2238260.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-09",
+        "open": 349.5,
+        "high": 360.0,
+        "low": 348.5,
+        "close": 357.5,
+        "volume": 3153623.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-10",
+        "open": 378.5,
+        "high": 378.5,
+        "low": 357.0,
+        "close": 361.5,
+        "volume": 2423920.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-11",
+        "open": 360.5,
+        "high": 369.0,
+        "low": 355.0,
+        "close": 357.5,
+        "volume": 5357919.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-12",
+        "open": 355.5,
+        "high": 362.0,
+        "low": 352.5,
+        "close": 359.0,
+        "volume": 2329790.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-13",
+        "open": 353.5,
+        "high": 392.0,
+        "low": 352.5,
+        "close": 380.0,
+        "volume": 7891977.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-16",
+        "open": 380.5,
+        "high": 380.5,
+        "low": 361.5,
+        "close": 362.0,
+        "volume": 6275034.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-17",
+        "open": 363.0,
+        "high": 372.5,
+        "low": 361.0,
+        "close": 365.5,
+        "volume": 3742629.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-18",
+        "open": 370.5,
+        "high": 375.0,
+        "low": 368.0,
+        "close": 373.5,
+        "volume": 2337034.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-19",
+        "open": 372.0,
+        "high": 381.0,
+        "low": 366.0,
+        "close": 366.0,
+        "volume": 5279793.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-20",
+        "open": 366.0,
+        "high": 371.5,
+        "low": 363.0,
+        "close": 363.0,
+        "volume": 9018685.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-23",
+        "open": 349.0,
+        "high": 360.5,
+        "low": 343.0,
+        "close": 355.0,
+        "volume": 3209974.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-24",
+        "open": 360.0,
+        "high": 362.0,
+        "low": 339.0,
+        "close": 341.0,
+        "volume": 3815931.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-25",
+        "open": 358.0,
+        "high": 363.0,
+        "low": 354.0,
+        "close": 357.0,
+        "volume": 3651978.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-26",
+        "open": 359.0,
+        "high": 368.0,
+        "low": 356.0,
+        "close": 356.0,
+        "volume": 1981398.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-27",
+        "open": 348.0,
+        "high": 360.5,
+        "low": 348.0,
+        "close": 359.0,
+        "volume": 1323225.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-30",
+        "open": 348.5,
+        "high": 351.0,
+        "low": 343.0,
+        "close": 348.0,
+        "volume": 2148575.0,
+        "market": "TWSE"
+      },
+      {
+        "date": "2026-03-31",
+        "open": 348.0,
+        "high": 354.5,
+        "low": 337.0,
+        "close": 338.5,
+        "volume": 4751325.0,
+        "market": "TWSE"
+      },
       {
         "date": "2026-04-01",
         "open": 350.5,
