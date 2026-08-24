@@ -1,4 +1,4 @@
-name: Update market data
+name: Update market core
 
 on:
   workflow_dispatch:
@@ -6,20 +6,17 @@ on:
     branches: [ main ]
     paths:
       - 'scripts/update_market.py'
-      - 'scripts/fix_pc_ratio.py'
       - '.github/workflows/update-market.yml'
   schedule:
-    - cron: '45 6 * * 1-5'   # 14:45 Taiwan, TWSE day-session data
-    - cron: '20 9 * * 1-5'   # 17:20 Taiwan, first TAIFEX P/C refresh after publication window
-    - cron: '30 10 * * 1-5'  # 18:30 Taiwan, retry TAIFEX P/C and CNN Fear & Greed
-    - cron: '0 12 * * 1-5'   # 20:00 Taiwan, final P/C retry if official data was delayed
-    - cron: '15 22 * * 0-4'  # 06:15 Taiwan Mon-Fri, refresh night-session fields
+    - cron: '45 6 * * 1-5'   # 14:45 Taiwan, day-session market data
+    - cron: '30 10 * * 1-5'  # 18:30 Taiwan, refresh daily sentiment fields
+    - cron: '15 22 * * 0-4'  # 06:15 Taiwan Mon-Fri, night-session fields
 
 permissions:
   contents: write
 
 jobs:
-  update:
+  market:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -29,11 +26,9 @@ jobs:
           python-version: '3.12'
       - name: Install dependency
         run: pip install requests
-      - name: Update Taiwan market data
+      - name: Update Taiwan market core data
         run: python scripts/update_market.py
-      - name: Fix TAIFEX Put Call Ratio
-        run: python scripts/fix_pc_ratio.py
-      - name: Commit generated market data
+      - name: Commit market core only
         run: |
           git config user.name "github-actions[bot]"
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
@@ -41,7 +36,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No market data changes"
           else
-            git commit -m "chore: update market data"
+            git commit -m "chore: update market core"
             git pull --rebase origin main
             git push
           fi
