@@ -1,4 +1,4 @@
-name: Update stock data
+name: Update stock quotes
 
 on:
   workflow_dispatch:
@@ -6,20 +6,17 @@ on:
     branches: [ main ]
     paths:
       - 'scripts/update_stocks.py'
-      - 'scripts/backfill_tracked_history.py'
       - '.github/workflows/update-stocks.yml'
   schedule:
-    - cron: '45 6 * * 1-5'
+    - cron: '45 6 * * 1-5'  # 14:45 Taiwan
 
 permissions:
   contents: write
 
 jobs:
-  update:
+  quotes:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    env:
-      HISTORY_BACKFILL_VERSION: '20260822-2449'
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -27,33 +24,17 @@ jobs:
           python-version: '3.12'
       - name: Install dependency
         run: pip install requests
-      - name: Update TWSE and TPEx stock data
+      - name: Update TWSE and TPEx stock quotes
         run: python scripts/update_stocks.py
-      - name: Backfill tracked stock history
-        run: |
-          echo "Backfill version: $HISTORY_BACKFILL_VERSION"
-          python scripts/backfill_tracked_history.py
-      - name: Verify 2449 history exists
-        run: |
-          python - <<'PY'
-          import json
-          with open('stock_ohlcv.json', encoding='utf-8') as f:
-              j=json.load(f)
-          rows=(j.get('stocks') or {}).get('2449') or []
-          print('2449 rows:', len(rows))
-          if len(rows) < 20:
-              raise SystemExit('2449 history backfill failed')
-          print('2449 latest:', rows[-1])
-          PY
-      - name: Commit generated data
+      - name: Commit quote data only
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add stocks.json stock_history.json stock_ohlcv.json
+          git add stocks.json stock_history.json
           if git diff --cached --quiet; then
-            echo "No data changes"
+            echo "No quote changes"
           else
-            git commit -m "chore: update stock data"
+            git commit -m "chore: update stock quotes"
             git pull --rebase origin main
             git push
           fi
