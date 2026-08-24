@@ -1,89 +1,9 @@
 {
-  "updated": "2026-08-21 11:34",
+  "updated": "2026-08-24 11:38",
   "trackingStart": "2026-08-18",
-  "count": 114,
+  "count": 110,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-00731-2026-08-19-0.00000000-1.45800000",
-      "market": "TWSE",
-      "code": "00731",
-      "name": "復華富時高息低波",
-      "exDate": "2026-08-19",
-      "stockRatio": 0.0,
-      "cashDividend": 1.458,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00929-2026-08-19-0.00000000-0.38000000",
-      "market": "TWSE",
-      "code": "00929",
-      "name": "復華台灣科技優息",
-      "exDate": "2026-08-19",
-      "stockRatio": 0.0,
-      "cashDividend": 0.38,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-1537-2026-08-19-0.00000000-7.20000000",
-      "market": "TWSE",
-      "code": "1537",
-      "name": "廣隆",
-      "exDate": "2026-08-19",
-      "stockRatio": 0.0,
-      "cashDividend": 7.2,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-2301-2026-08-19-0.00000000-2.50000000",
-      "market": "TWSE",
-      "code": "2301",
-      "name": "光寶科",
-      "exDate": "2026-08-19",
-      "stockRatio": 0.0,
-      "cashDividend": 2.5,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-2363-2026-08-19-0.00000000-0.60588200",
-      "market": "TWSE",
-      "code": "2363",
-      "name": "矽統",
-      "exDate": "2026-08-19",
-      "stockRatio": 0.0,
-      "cashDividend": 0.605882,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-2374-2026-08-19-0.00000000-1.99166400",
-      "market": "TWSE",
-      "code": "2374",
-      "name": "佳能",
-      "exDate": "2026-08-19",
-      "stockRatio": 0.0,
-      "cashDividend": 1.991664,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-2496-2026-08-19-0.05000000-1.50000000",
-      "market": "TWSE",
-      "code": "2496",
-      "name": "卓越",
-      "exDate": "2026-08-19",
-      "stockRatio": 0.05,
-      "cashDividend": 1.5,
-      "type": "權息"
-    },
-    {
-      "id": "TWSE-3017-2026-08-19-0.00000000-20.88160400",
-      "market": "TWSE",
-      "code": "3017",
-      "name": "奇鋐",
-      "exDate": "2026-08-19",
-      "stockRatio": 0.0,
-      "cashDividend": 20.881604,
-      "type": "息"
-    },
     {
       "id": "TWSE-1597-2026-08-20-0.00000000-0.70000000",
       "market": "TWSE",
@@ -302,6 +222,16 @@
       "exDate": "2026-08-24",
       "stockRatio": 0.0,
       "cashDividend": 3.0,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00907-2026-08-25-0.00000000-0.24000000",
+      "market": "TWSE",
+      "code": "00907",
+      "name": "永豐優息存股",
+      "exDate": "2026-08-25",
+      "stockRatio": 0.0,
+      "cashDividend": 0.24,
       "type": "息"
     },
     {
@@ -1045,6 +975,16 @@
       "type": "息"
     },
     {
+      "id": "TWSE-1466-2026-09-07-0.00000000-0.20000000",
+      "market": "TWSE",
+      "code": "1466",
+      "name": "聚隆",
+      "exDate": "2026-09-07",
+      "stockRatio": 0.0,
+      "cashDividend": 0.2,
+      "type": "息"
+    },
+    {
       "id": "TWSE-2706-2026-09-08-0.00000000-0.35000000",
       "market": "TWSE",
       "code": "2706",
@@ -1052,6 +992,16 @@
       "exDate": "2026-09-08",
       "stockRatio": 0.0,
       "cashDividend": 0.35,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-3622-2026-09-08-0.00000000-3.20000000",
+      "market": "TWSE",
+      "code": "3622",
+      "name": "洋華",
+      "exDate": "2026-09-08",
+      "stockRatio": 0.0,
+      "cashDividend": 3.2,
       "type": "息"
     },
     {
@@ -1063,6 +1013,16 @@
       "stockRatio": 0.0,
       "cashDividend": 1.0,
       "type": "息"
+    },
+    {
+      "id": "TWSE-5906-2026-09-10-0.05000001-0.20000000",
+      "market": "TWSE",
+      "code": "5906",
+      "name": "台南-KY",
+      "exDate": "2026-09-10",
+      "stockRatio": 0.05000001,
+      "cashDividend": 0.2,
+      "type": "權息"
     },
     {
       "id": "TWSE-6504-2026-09-10-0.00000000-1.00000000",

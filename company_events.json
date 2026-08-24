@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-21 11:34",
-  "count": 1317,
+  "updated": "2026-08-24 11:38",
+  "count": 1313,
   "errors": [],
   "events": [
     {
@@ -10873,17 +10873,6 @@
     },
     {
       "kind": "dividend_policy",
-      "code": "4137",
-      "name": "麗豐-KY",
-      "date": "2026-05-11",
-      "cash": 0.0,
-      "stock": 0.0,
-      "title": "股利政策：現金 0.00 元/股、股票 0.00 元/股",
-      "status": "董事會決議",
-      "source": "TWSE t187ap45_L"
-    },
-    {
-      "kind": "dividend_policy",
       "code": "1736",
       "name": "喬山",
       "date": "2026-05-12",
@@ -10956,17 +10945,6 @@
       "cash": 3.6369916,
       "stock": 0.0,
       "title": "股利政策：現金 3.64 元/股、股票 0.00 元/股",
-      "status": "董事會決議",
-      "source": "TWSE t187ap45_L"
-    },
-    {
-      "kind": "dividend_policy",
-      "code": "4912",
-      "name": "聯德控股-KY",
-      "date": "2026-05-13",
-      "cash": 1.0,
-      "stock": 0.0,
-      "title": "股利政策：現金 1.00 元/股、股票 0.00 元/股",
       "status": "董事會決議",
       "source": "TWSE t187ap45_L"
     },
@@ -12055,39 +12033,6 @@
       "source": "TWSE t187ap45_L"
     },
     {
-      "id": "EV-TWSE-00731-2026-08-19-0.00000000-1.45800000",
-      "kind": "dividend",
-      "code": "00731",
-      "name": "復華富時高息低波",
-      "date": "2026-08-19",
-      "cash": 1.458,
-      "stock": 0.0,
-      "title": "除權息：現金 1.46 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
-      "id": "EV-TWSE-00929-2026-08-19-0.00000000-0.38000000",
-      "kind": "dividend",
-      "code": "00929",
-      "name": "復華台灣科技優息",
-      "date": "2026-08-19",
-      "cash": 0.38,
-      "stock": 0.0,
-      "title": "除權息：現金 0.38 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
-      "id": "EV-TWSE-1537-2026-08-19-0.00000000-7.20000000",
-      "kind": "dividend",
-      "code": "1537",
-      "name": "廣隆",
-      "date": "2026-08-19",
-      "cash": 7.2,
-      "stock": 0.0,
-      "title": "除權息：現金 7.20 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-2028-conference-2026-08-19-19b3264ab0",
       "kind": "conference",
       "code": "2028",
@@ -12108,17 +12053,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-2301-2026-08-19-0.00000000-2.50000000",
-      "kind": "dividend",
-      "code": "2301",
-      "name": "光寶科",
-      "date": "2026-08-19",
-      "cash": 2.5,
-      "stock": 0.0,
-      "title": "除權息：現金 2.50 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-2313-conference-2026-08-19-6b071f242c",
       "kind": "conference",
       "code": "2313",
@@ -12129,17 +12063,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-2363-2026-08-19-0.00000000-0.60588200",
-      "kind": "dividend",
-      "code": "2363",
-      "name": "矽統",
-      "date": "2026-08-19",
-      "cash": 0.605882,
-      "stock": 0.0,
-      "title": "除權息：現金 0.61 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-2373-conference-2026-08-19-1254c82e17",
       "kind": "conference",
       "code": "2373",
@@ -12148,17 +12071,6 @@
       "published": "2026-08-18",
       "title": "本公司舉辦線上法人說明會",
       "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "EV-TWSE-2374-2026-08-19-0.00000000-1.99166400",
-      "kind": "dividend",
-      "code": "2374",
-      "name": "佳能",
-      "date": "2026-08-19",
-      "cash": 1.991664,
-      "stock": 0.0,
-      "title": "除權息：現金 1.99 元/股、配股率 0.00%",
-      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-2413-conference-2026-08-19-19f569394f",
@@ -12191,17 +12103,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-2496-2026-08-19-0.05000000-1.50000000",
-      "kind": "dividend",
-      "code": "2496",
-      "name": "卓越",
-      "date": "2026-08-19",
-      "cash": 1.5,
-      "stock": 0.05,
-      "title": "除權息：現金 1.50 元/股、配股率 5.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-2882-capital_increase-2026-08-19-667ef86e70",
       "kind": "capital_increase",
       "code": "2882",
@@ -12220,17 +12121,6 @@
       "published": "2026-08-18",
       "title": "公告本公司於8月19日召開法人說明會",
       "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "EV-TWSE-3017-2026-08-19-0.00000000-20.88160400",
-      "kind": "dividend",
-      "code": "3017",
-      "name": "奇鋐",
-      "date": "2026-08-19",
-      "cash": 20.881604,
-      "stock": 0.0,
-      "title": "除權息：現金 20.88 元/股、配股率 0.00%",
-      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-3673-capital_increase-2026-08-19-73d93d5709",
@@ -13019,6 +12909,28 @@
       "source": "TWSE t187ap04_L"
     },
     {
+      "kind": "dividend_policy",
+      "code": "4137",
+      "name": "麗豐-KY",
+      "date": "2026-08-21",
+      "cash": 0.0,
+      "stock": 0.0,
+      "title": "股利政策：現金 0.00 元/股、股票 0.00 元/股",
+      "status": "董事會決議",
+      "source": "TWSE t187ap45_L"
+    },
+    {
+      "kind": "dividend_policy",
+      "code": "4912",
+      "name": "聯德控股-KY",
+      "date": "2026-08-21",
+      "cash": 0.8,
+      "stock": 0.0,
+      "title": "股利政策：現金 0.80 元/股、股票 0.00 元/股",
+      "status": "董事會決議",
+      "source": "TWSE t187ap45_L"
+    },
+    {
       "id": "TWSE-MOPS-6285-conference-2026-08-21-4e83f7ec7c",
       "kind": "conference",
       "code": "6285",
@@ -13163,6 +13075,17 @@
       "cash": 3.0,
       "stock": 0.0,
       "title": "除權息：現金 3.00 元/股、配股率 0.00%",
+      "source": "TWSE"
+    },
+    {
+      "id": "EV-TWSE-00907-2026-08-25-0.00000000-0.24000000",
+      "kind": "dividend",
+      "code": "00907",
+      "name": "永豐優息存股",
+      "date": "2026-08-25",
+      "cash": 0.24,
+      "stock": 0.0,
+      "title": "除權息：現金 0.24 元/股、配股率 0.00%",
       "source": "TWSE"
     },
     {
@@ -14230,6 +14153,17 @@
       "source": "TWSE"
     },
     {
+      "id": "EV-TWSE-1466-2026-09-07-0.00000000-0.20000000",
+      "kind": "dividend",
+      "code": "1466",
+      "name": "聚隆",
+      "date": "2026-09-07",
+      "cash": 0.2,
+      "stock": 0.0,
+      "title": "除權息：現金 0.20 元/股、配股率 0.00%",
+      "source": "TWSE"
+    },
+    {
       "id": "EV-TWSE-2706-2026-09-08-0.00000000-0.35000000",
       "kind": "dividend",
       "code": "2706",
@@ -14238,6 +14172,17 @@
       "cash": 0.35,
       "stock": 0.0,
       "title": "除權息：現金 0.35 元/股、配股率 0.00%",
+      "source": "TWSE"
+    },
+    {
+      "id": "EV-TWSE-3622-2026-09-08-0.00000000-3.20000000",
+      "kind": "dividend",
+      "code": "3622",
+      "name": "洋華",
+      "date": "2026-09-08",
+      "cash": 3.2,
+      "stock": 0.0,
+      "title": "除權息：現金 3.20 元/股、配股率 0.00%",
       "source": "TWSE"
     },
     {
@@ -14259,6 +14204,17 @@
       "cash": 1.0,
       "stock": 0.0,
       "title": "除權息：現金 1.00 元/股、配股率 0.00%",
+      "source": "TWSE"
+    },
+    {
+      "id": "EV-TWSE-5906-2026-09-10-0.05000001-0.20000000",
+      "kind": "dividend",
+      "code": "5906",
+      "name": "台南-KY",
+      "date": "2026-09-10",
+      "cash": 0.2,
+      "stock": 0.05000001,
+      "title": "除權息：現金 0.20 元/股、配股率 5.00%",
       "source": "TWSE"
     },
     {
