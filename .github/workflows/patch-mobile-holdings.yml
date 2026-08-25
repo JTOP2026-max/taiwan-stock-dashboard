@@ -1,35 +1,10 @@
-name: Patch mobile holdings support
+name: Legacy paused - Patch mobile holdings
+
 on:
-  push:
-    paths:
-      - 'mobile-holdings-fix.js'
-      - '.github/workflows/patch-mobile-holdings.yml'
   workflow_dispatch:
-permissions:
-  contents: write
+
 jobs:
-  patch:
+  paused:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Inject mobile fix script
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          p=Path('index.html')
-          s=p.read_text(encoding='utf-8')
-          tag='<script src="mobile-holdings-fix.js"></script>'
-          if tag not in s:
-              if '<script src="corporate-actions.js"></script>' in s:
-                  s=s.replace('<script src="corporate-actions.js"></script>', tag+'\n<script src="corporate-actions.js"></script>')
-              else:
-                  s=s.replace('</body>', tag+'\n</body>')
-              p.write_text(s,encoding='utf-8')
-          PY
-      - name: Commit patch
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add index.html
-          git diff --cached --quiet || git commit -m "Enable mobile holding add"
-          git push
+      - run: echo "Legacy workflow paused. V5 production automation does not use this workflow."
