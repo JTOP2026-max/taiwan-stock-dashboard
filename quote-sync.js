@@ -75,7 +75,6 @@
     }catch(e){console.warn('holding quote sync failed',e)}finally{syncing=false}
   }
 
-  // Existing saved holdings used manualPrice as a permanent lock. Replace that with an explicit priceLocked flag.
   const oldEdit=window.editHoldingValue;
   if(typeof oldEdit==='function'){
     window.editHoldingValue=function(i,key,val){
@@ -94,6 +93,15 @@
   };
   window.syncHoldingQuotes=()=>syncHoldings(true);
 
-  function start(){setTimeout(()=>syncHoldings(true),900);setInterval(()=>syncHoldings(false),SYNC_MS);document.addEventListener('visibilitychange',()=>{if(!document.hidden)syncHoldings(true)});window.addEventListener('focus',()=>syncHoldings(true));}
+  function loadMarketStructure(){
+    if(document.querySelector('script[data-market-structure]'))return;
+    const s=document.createElement('script');
+    s.src='market-structure.js?v=20260825a';
+    s.async=false;
+    s.dataset.marketStructure='1';
+    document.head.appendChild(s);
+  }
+
+  function start(){loadMarketStructure();setTimeout(()=>syncHoldings(true),900);setInterval(()=>syncHoldings(false),SYNC_MS);document.addEventListener('visibilitychange',()=>{if(!document.hidden)syncHoldings(true)});window.addEventListener('focus',()=>syncHoldings(true));}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
 })();
