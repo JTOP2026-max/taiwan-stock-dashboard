@@ -8,9 +8,11 @@ on:
       - 'scripts/fix_pc_ratio.py'
       - '.github/workflows/update-pc-ratio.yml'
   schedule:
-    - cron: '20 9 * * 1-5'   # 17:20 Taiwan
-    - cron: '30 10 * * 1-5'  # 18:30 Taiwan retry
-    - cron: '0 12 * * 1-5'   # 20:00 Taiwan final retry
+    - cron: '20 7 * * 1-5'   # 15:20 Taiwan - first attempt
+    - cron: '20 8 * * 1-5'   # 16:20 Taiwan - retry after TAIFEX publishing
+    - cron: '20 9 * * 1-5'   # 17:20 Taiwan - retry
+    - cron: '30 10 * * 1-5'  # 18:30 Taiwan - retry
+    - cron: '0 12 * * 1-5'   # 20:00 Taiwan - final retry
 
 permissions:
   contents: write
