@@ -102,6 +102,15 @@
     document.head.appendChild(s);
   }
 
-  function start(){loadMarketStructure();setTimeout(()=>syncHoldings(true),900);setInterval(()=>syncHoldings(false),SYNC_MS);document.addEventListener('visibilitychange',()=>{if(!document.hidden)syncHoldings(true)});window.addEventListener('focus',()=>syncHoldings(true));}
+  function loadPeScale(){
+    if(document.querySelector('script[data-pe-scale]'))return;
+    const s=document.createElement('script');
+    s.src='pe-scale-ui.js?v=20260825a';
+    s.async=false;
+    s.dataset.peScale='1';
+    document.head.appendChild(s);
+  }
+
+  function start(){loadMarketStructure();loadPeScale();setTimeout(()=>syncHoldings(true),900);setInterval(()=>syncHoldings(false),SYNC_MS);document.addEventListener('visibilitychange',()=>{if(!document.hidden)syncHoldings(true)});window.addEventListener('focus',()=>syncHoldings(true));}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
 })();
