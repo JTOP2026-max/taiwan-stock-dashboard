@@ -1,34 +1,10 @@
-name: Fix valuation band colors
+name: Legacy paused - Fix band colors
 
 on:
-  push:
-    paths:
-      - '.github/workflows/fix-band-colors.yml'
-
-permissions:
-  contents: write
+  workflow_dispatch:
 
 jobs:
-  fix-colors:
+  paused:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Correct valuation band colors
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          p = Path('index.html')
-          s = p.read_text(encoding='utf-8')
-          old = '.band-table td:first-child{font-weight:800}.band-table tr:nth-child(2) td:first-child{background:#cfe7ae}.band-table tr:nth-child(3) td:first-child{background:#dcebc3}.band-table tr:nth-child(4) td:first-child{background:#dceafa}.band-table tr:nth-child(5) td:first-child{background:#f3c8c4}.band-table tr:nth-child(6) td:first-child{background:#e79c9c}'
-          new = '.band-table td:first-child{font-weight:800}.band-table tr:nth-child(2) td:first-child{background:#cfe7ae}.band-table tr:nth-child(3) td:first-child{background:#fff3b0}.band-table tr:nth-child(4) td:first-child{background:#dceafa}.band-table tr:nth-child(5) td:first-child{background:#f3c8c4}.band-table tr:nth-child(6) td:first-child{background:#e79c9c}'
-          if old not in s:
-              raise SystemExit('Target CSS not found')
-          p.write_text(s.replace(old,new),encoding='utf-8')
-          PY
-      - name: Commit correction
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html
-          git commit -m 'Correct valuation band color order' || exit 0
-          git push
+      - run: echo "Legacy workflow paused. V5 production automation does not use this workflow."
