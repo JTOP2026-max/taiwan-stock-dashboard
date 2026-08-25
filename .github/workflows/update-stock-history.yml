@@ -1,14 +1,13 @@
-name: Update stock history
+name: V5 - Stock OHLCV history
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ main ]
-    paths:
-      - 'scripts/backfill_tracked_history.py'
-      - '.github/workflows/update-stock-history.yml'
   schedule:
-    - cron: '30 8 * * 1-5'  # 16:30 Taiwan, separate from quote update
+    - cron: '40 8 * * 1-5'  # 16:40 Asia/Taipei
+
+concurrency:
+  group: v5-stock-history
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -19,35 +18,37 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Install dependency
         run: pip install requests
-      - name: Backfill OHLCV history
+      - name: Update tracked OHLCV history
         run: python scripts/backfill_tracked_history.py
       - name: Verify generated history
         run: |
           python - <<'PY'
           import json
           with open('stock_ohlcv.json', encoding='utf-8') as f:
-              j=json.load(f)
-          stocks=j.get('stocks') or {}
-          good={k:len(v or []) for k,v in stocks.items() if len(v or []) >= 20}
-          print('symbols with >=20 rows:', len(good))
+              data = json.load(f)
+          stocks = data.get('stocks') or {}
+          valid = {code: rows for code, rows in stocks.items() if len(rows or []) >= 20}
+          if not valid:
+              raise SystemExit('No symbol has at least 20 OHLCV records')
+          print('valid symbols:', len(valid))
           print('2449 rows:', len(stocks.get('2449') or []))
-          if not good:
-              raise SystemExit('No valid OHLCV history generated')
           PY
-      - name: Commit history only
+      - name: Commit history data only
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add stock_ohlcv.json
+          git add -- stock_ohlcv.json
           if git diff --cached --quiet; then
-            echo "No history changes"
-          else
-            git commit -m "chore: update stock history"
-            git pull --rebase origin main
-            git push
+            echo "No OHLCV changes"
+            exit 0
           fi
+          git commit -m "data(v5): update stock OHLCV"
+          git pull --rebase origin main
+          git push origin HEAD:main
