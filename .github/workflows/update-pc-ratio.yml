@@ -1,18 +1,16 @@
-name: Update P C ratio
+name: V5 - Put Call ratio
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ main ]
-    paths:
-      - 'scripts/fix_pc_ratio.py'
-      - '.github/workflows/update-pc-ratio.yml'
   schedule:
-    - cron: '20 7 * * 1-5'   # 15:20 Taiwan - first attempt
-    - cron: '20 8 * * 1-5'   # 16:20 Taiwan - retry after TAIFEX publishing
-    - cron: '20 9 * * 1-5'   # 17:20 Taiwan - retry
-    - cron: '30 10 * * 1-5'  # 18:30 Taiwan - retry
-    - cron: '0 12 * * 1-5'   # 20:00 Taiwan - final retry
+    - cron: '20 8 * * 1-5'   # 16:20 Asia/Taipei
+    - cron: '20 9 * * 1-5'   # 17:20 Asia/Taipei
+    - cron: '30 10 * * 1-5'  # 18:30 Asia/Taipei
+    - cron: '0 12 * * 1-5'   # 20:00 Asia/Taipei
+
+concurrency:
+  group: v5-pc-ratio
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -23,6 +21,8 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -30,15 +30,15 @@ jobs:
         run: pip install requests
       - name: Update TAIFEX Put Call Ratio
         run: python scripts/fix_pc_ratio.py
-      - name: Commit P C data only
+      - name: Commit P C fields only
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add market.json market_history.json
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- market.json market_history.json
           if git diff --cached --quiet; then
-            echo "No P C ratio changes"
-          else
-            git commit -m "chore: update P C ratio"
-            git pull --rebase origin main
-            git push
+            echo "No P/C changes"
+            exit 0
           fi
+          git commit -m "data(v5): update put call ratio"
+          git pull --rebase origin main
+          git push origin HEAD:main
