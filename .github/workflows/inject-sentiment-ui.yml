@@ -1,37 +1,10 @@
-name: Inject sentiment UI
+name: Legacy paused - Inject sentiment UI
+
 on:
-  push:
-    paths:
-      - 'sentiment-ui.js'
-      - '.github/workflows/inject-sentiment-ui.yml'
   workflow_dispatch:
-permissions:
-  contents: write
+
 jobs:
-  patch:
+  paused:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Inject sentiment UI script
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          p=Path('index.html')
-          s=p.read_text(encoding='utf-8')
-          tag='<script src="sentiment-ui.js"></script>'
-          if tag not in s:
-              anchor='<script src="mobile-holdings-fix.js"></script>'
-              if anchor in s:
-                  s=s.replace(anchor, anchor+'\n'+tag)
-              else:
-                  s=s.replace('</body>', tag+'\n</body>')
-              p.write_text(s,encoding='utf-8')
-          PY
-      - name: Commit patch
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add index.html
-          git diff --cached --quiet || git commit -m "feat: use white tech sentiment gauges"
-          git pull --rebase origin main
-          git push
+      - run: echo "Legacy workflow paused. V5 production automation does not use this workflow."
