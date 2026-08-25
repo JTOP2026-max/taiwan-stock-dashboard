@@ -1,16 +1,14 @@
-name: Update market core
+name: V5 - Market core
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ main ]
-    paths:
-      - 'scripts/update_market.py'
-      - '.github/workflows/update-market.yml'
   schedule:
-    - cron: '45 6 * * 1-5'   # 14:45 Taiwan, day-session market data
-    - cron: '30 10 * * 1-5'  # 18:30 Taiwan, refresh daily sentiment fields
-    - cron: '15 22 * * 0-4'  # 06:15 Taiwan Mon-Fri, night-session fields
+    - cron: '40 10 * * 1-5'  # 18:40 Asia/Taipei
+    - cron: '15 22 * * 0-4'  # 06:15 Asia/Taipei Mon-Fri
+
+concurrency:
+  group: v5-market-core
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -21,6 +19,8 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -28,15 +28,15 @@ jobs:
         run: pip install requests
       - name: Update Taiwan market core data
         run: python scripts/update_market.py
-      - name: Commit market core only
+      - name: Commit market core files only
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add market.json market_history.json cnn_fear_greed.json
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- market.json market_history.json cnn_fear_greed.json
           if git diff --cached --quiet; then
-            echo "No market data changes"
-          else
-            git commit -m "chore: update market core"
-            git pull --rebase origin main
-            git push
+            echo "No market core changes"
+            exit 0
           fi
+          git commit -m "data(v5): update market core"
+          git pull --rebase origin main
+          git push origin HEAD:main
