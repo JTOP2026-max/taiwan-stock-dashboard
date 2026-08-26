@@ -2,7 +2,7 @@
   const DB_URL='stocks.json';
   const SYNC_MS=60000;
   const MIGRATION_KEY='tw_quote_sync_migrated_20260821';
-  let syncing=false, dbCache=null, dbLoadedAt=0;
+  let syncing=false, dbCache=null, dbLoadedAt=0, dbUpdated='';
   const num=v=>{const n=Number(String(v??'').replace(/,/g,''));return Number.isFinite(n)?n:null};
   const nowText=()=>new Date().toLocaleTimeString('zh-TW',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
 
@@ -11,7 +11,7 @@
     try{
       const r=await fetch(DB_URL+'?ts='+Date.now(),{cache:'no-store'});
       if(!r.ok)throw new Error('stocks '+r.status);
-      const j=await r.json();dbCache=j.stocks||{};dbLoadedAt=Date.now();return dbCache;
+      const j=await r.json();dbCache=j.stocks||{};dbUpdated=j.updated||'';dbLoadedAt=Date.now();return dbCache;
     }catch(e){return dbCache||{}}
   }
 
@@ -25,7 +25,7 @@
         const price=num(row.z), prev=num(row.y);
         if(!(price>0))continue;
         const ch=prev!=null?price-prev:0, pc=prev?ch/prev*100:0;
-        return {price,prev,ch,pc,open:num(row.o),high:num(row.h),low:num(row.l),name:row.n||row.nf||'',time:row.t||'',date:row.d||'',source:'TWSE MIS 最新成交'};
+        return {price,prev,ch,pc,open:num(row.o),high:num(row.h),low:num(row.l),name:row.n||row.nf||'',time:row.t||'',date:row.d||'',source:'TWSE MIS 最新成交',kind:'live'};
       }catch(e){}
     }
     return null;
@@ -33,7 +33,7 @@
 
   function dbQuote(code,db){
     const x=db?.[code];if(!x||!(num(x.price)>0))return null;
-    return {price:num(x.price),prev:null,ch:null,pc:null,name:x.name||'',time:'',date:'',source:(x.market==='TPEX'?'TPEx':'TWSE')+' 官方盤後資料'};
+    return {price:num(x.price),prev:null,ch:null,pc:null,name:x.name||'',time:'',date:dbUpdated||'',source:(x.market==='TPEX'?'TPEx':'TWSE')+' 官方盤後資料（非即時）',kind:'close'};
   }
 
   function migrateLegacyLocks(hs){
@@ -52,26 +52,26 @@
     syncing=true;
     try{
       const hs=window.getHoldings();if(!Array.isArray(hs)||!hs.length)return;
-      let changed=migrateLegacyLocks(hs), db=await loadDB(force), ok=0;
+      let changed=migrateLegacyLocks(hs), db=await loadDB(force), ok=0, liveCount=0;
       for(const h of hs){
         if(!h?.c||h.priceLocked===true)continue;
         let q=await misQuote(String(h.c));
         if(!q)q=dbQuote(String(h.c),db);
         if(!q?.price)continue;
-        ok++;
+        ok++;if(q.kind==='live')liveCount++;
         const old=Number(h.p), next=Number(q.price);
         if(old!==next)changed=true;
         h.p=next;
         if(q.name)h.n=q.name;
         if(q.prev!=null){h.prev=q.prev;h.ch=q.ch||0;h.pc=q.pc||0;}
         h.open=q.open??h.open;h.high=q.high??h.high;h.low=q.low??h.low;
-        h.quoteTime=q.time||nowText();h.quoteDate=q.date||'';h.quoteSource=q.source;
+        h.quoteTime=q.time||'';h.quoteDate=q.date||'';h.quoteSource=q.source;h.quoteKind=q.kind||'';
         h.manualPrice=false;
       }
       if(changed)window.saveHoldings(hs);
       if(typeof window.renderHoldings==='function')window.renderHoldings(hs);
       const st=document.getElementById('lookupStatus');
-      if(st&&ok)st.textContent=`持股行情已同步 ${ok}/${hs.length} 檔｜${nowText()}｜MIS 優先，官方盤後資料備援`;
+      if(st&&ok)st.textContent=`持股行情已同步 ${ok}/${hs.length} 檔｜${nowText()}｜即時 ${liveCount} 檔，其餘為官方盤後備援`;
     }catch(e){console.warn('holding quote sync failed',e)}finally{syncing=false}
   }
 
@@ -105,7 +105,7 @@
   function loadPeScale(){
     if(document.querySelector('script[data-pe-scale]'))return;
     const s=document.createElement('script');
-    s.src='pe-scale-ui.js?v=20260825a';
+    s.src='pe-scale-ui.js?v=20260826b';
     s.async=false;
     s.dataset.peScale='1';
     document.head.appendChild(s);
