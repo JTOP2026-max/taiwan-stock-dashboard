@@ -30,6 +30,14 @@ This document defines the single supported automated data architecture.
    - Script: `scripts/update_corporate_actions.py`
    - Owns: `corporate_actions.json`, `company_events.json`
 
+6. LINE valuation alerts
+   - Workflow: `.github/workflows/line-valuation-alerts.yml`
+   - Script: `scripts/check_line_valuation_alerts.py`
+   - Config: `line_alert_config.json`
+   - Owns: `line_alert_state.json`
+   - Sends only on a fresh transition into `便宜價` or `特價`.
+   - Requires repository secrets `LINE_CHANNEL_ACCESS_TOKEN` and `LINE_TARGET_ID`.
+
 ## Rules
 
 - One module failing must not block any other module.
@@ -38,11 +46,13 @@ This document defines the single supported automated data architecture.
 - Legacy workflows may remain in the repository for audit/history, but should not contain schedules.
 - All scheduled workflows support `workflow_dispatch` for manual recovery.
 - Data commits pull/rebase before push to reduce collisions between independent jobs.
+- LINE alert state is advanced only after a successful push when an alert is due, so missing credentials cannot silently consume an alert.
 
 ## Taiwan schedule
 
 - Corporate actions: 08:20 and 14:20 weekdays.
 - Stock quotes: 14:45 weekdays.
+- LINE valuation alerts: 15:05 weekdays.
 - P/C ratio: 16:20, 17:20, 18:30 and 20:00 weekdays.
 - Stock OHLCV history: 16:40 weekdays.
 - Market core: 18:40 weekdays, plus 06:15 weekdays for night-session fields.
