@@ -1,0 +1,4 @@
+name = "taiwan-stock-quote-proxy"
+main = "src/index.js"
+compatibility_date = "2026-08-26"
+workers_dev = true
