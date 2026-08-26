@@ -1,0 +1,28 @@
+{
+  "updated": "2026-08-26T12:08:00+08:00",
+  "timezone": "Asia/Taipei",
+  "window_hours": 72,
+  "events": [
+    {
+      "id": "taifex-weekly-wed-2026-08-26",
+      "date": "2026-08-26",
+      "time": "13:30",
+      "title": "台指選擇權週三結算",
+      "category": "settlement",
+      "importance": "high",
+      "market": "TW",
+      "note": "結算日前後留意期現貨與選擇權部位調整造成的短線波動。"
+    },
+    {
+      "id": "nvda-earnings-2026-08-26",
+      "date": "2026-08-26",
+      "time": "美股盤後",
+      "title": "NVIDIA 財報",
+      "category": "earnings",
+      "importance": "high",
+      "market": "US",
+      "note": "AI／半導體大型權值股財報，留意美股盤後、台指夜盤與隔日台灣 AI 供應鏈波動。",
+      "verification": "manual-calendar-entry"
+    }
+  ]
+}
