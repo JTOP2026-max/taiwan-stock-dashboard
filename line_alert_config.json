@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "watchlist": ["3008", "6510", "3044", "2454"],
+  "alertStates": ["便宜價", "特價"],
+  "dashboardUrl": "https://jtop2026-max.github.io/taiwan-stock-dashboard/",
+  "note": "LINE alerts are sent only when a watched stock newly enters 便宜價 or 特價. Edit watchlist to match the holdings you want monitored."
+}
