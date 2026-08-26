@@ -1,79 +1,9 @@
 {
-  "updated": "2026-08-26 11:39",
+  "updated": "2026-08-26 16:24",
   "trackingStart": "2026-08-18",
-  "count": 105,
+  "count": 99,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-1454-2026-08-24-0.00000000-0.10000000",
-      "market": "TWSE",
-      "code": "1454",
-      "name": "台富",
-      "exDate": "2026-08-24",
-      "stockRatio": 0.0,
-      "cashDividend": 0.1,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-1737-2026-08-24-0.00000000-1.40000000",
-      "market": "TWSE",
-      "code": "1737",
-      "name": "臺鹽",
-      "exDate": "2026-08-24",
-      "stockRatio": 0.0,
-      "cashDividend": 1.4,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-2413-2026-08-24-0.00000000-0.50000000",
-      "market": "TWSE",
-      "code": "2413",
-      "name": "環科",
-      "exDate": "2026-08-24",
-      "stockRatio": 0.0,
-      "cashDividend": 0.5,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-2468-2026-08-24-0.00000000-1.00000000",
-      "market": "TWSE",
-      "code": "2468",
-      "name": "華經",
-      "exDate": "2026-08-24",
-      "stockRatio": 0.0,
-      "cashDividend": 1.0,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-2484-2026-08-24-0.00000000-0.70000000",
-      "market": "TWSE",
-      "code": "2484",
-      "name": "希華",
-      "exDate": "2026-08-24",
-      "stockRatio": 0.0,
-      "cashDividend": 0.7,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-2527-2026-08-24-0.00000000-1.50000000",
-      "market": "TWSE",
-      "code": "2527",
-      "name": "宏璟",
-      "exDate": "2026-08-24",
-      "stockRatio": 0.0,
-      "cashDividend": 1.5,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-4746-2026-08-24-0.00000000-3.00000000",
-      "market": "TWSE",
-      "code": "4746",
-      "name": "台耀",
-      "exDate": "2026-08-24",
-      "stockRatio": 0.0,
-      "cashDividend": 3.0,
-      "type": "息"
-    },
     {
       "id": "TWSE-00907-2026-08-25-0.00000000-0.24000000",
       "market": "TWSE",
@@ -963,6 +893,16 @@
       "stockRatio": 0.0,
       "cashDividend": 1.0,
       "type": "息"
+    },
+    {
+      "id": "TWSE-9906-2026-09-10-0.00848624-0.00000000",
+      "market": "TWSE",
+      "code": "9906",
+      "name": "欣巴巴",
+      "exDate": "2026-09-10",
+      "stockRatio": 0.00848624,
+      "cashDividend": 0.0,
+      "type": "權"
     },
     {
       "id": "TWSE-5243-2026-09-14-0.00000000-2.20000000",

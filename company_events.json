@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-26 11:39",
-  "count": 1360,
+  "updated": "2026-08-26 16:25",
+  "count": 1354,
   "errors": [],
   "events": [
     {
@@ -12696,17 +12696,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-1454-2026-08-24-0.00000000-0.10000000",
-      "kind": "dividend",
-      "code": "1454",
-      "name": "台富",
-      "date": "2026-08-24",
-      "cash": 0.1,
-      "stock": 0.0,
-      "title": "除權息：現金 0.10 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-1717-capital_increase-2026-08-24-cbcbc321da",
       "kind": "capital_increase",
       "code": "1717",
@@ -12715,17 +12704,6 @@
       "published": "2026-08-24",
       "title": "公告本公司115年現金增資催繳期限因豪雨影響延長。",
       "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "EV-TWSE-1737-2026-08-24-0.00000000-1.40000000",
-      "kind": "dividend",
-      "code": "1737",
-      "name": "臺鹽",
-      "date": "2026-08-24",
-      "cash": 1.4,
-      "stock": 0.0,
-      "title": "除權息：現金 1.40 元/股、配股率 0.00%",
-      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-2347-capital_increase-2026-08-24-1e83f586ab",
@@ -12748,39 +12726,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-2413-2026-08-24-0.00000000-0.50000000",
-      "kind": "dividend",
-      "code": "2413",
-      "name": "環科",
-      "date": "2026-08-24",
-      "cash": 0.5,
-      "stock": 0.0,
-      "title": "除權息：現金 0.50 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
-      "id": "EV-TWSE-2468-2026-08-24-0.00000000-1.00000000",
-      "kind": "dividend",
-      "code": "2468",
-      "name": "華經",
-      "date": "2026-08-24",
-      "cash": 1.0,
-      "stock": 0.0,
-      "title": "除權息：現金 1.00 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
-      "id": "EV-TWSE-2484-2026-08-24-0.00000000-0.70000000",
-      "kind": "dividend",
-      "code": "2484",
-      "name": "希華",
-      "date": "2026-08-24",
-      "cash": 0.7,
-      "stock": 0.0,
-      "title": "除權息：現金 0.70 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-2498-capital_increase-2026-08-24-e6822a362e",
       "kind": "capital_increase",
       "code": "2498",
@@ -12799,17 +12744,6 @@
       "published": "2026-08-24",
       "title": "代重要子公司High Tech Computer Asia Pacific Pte. Ltd.\r\n公告投資Andreessen Horowitz基金",
       "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "EV-TWSE-2527-2026-08-24-0.00000000-1.50000000",
-      "kind": "dividend",
-      "code": "2527",
-      "name": "宏璟",
-      "date": "2026-08-24",
-      "cash": 1.5,
-      "stock": 0.0,
-      "title": "除權息：現金 1.50 元/股、配股率 0.00%",
-      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-2883-capital_reduction-2026-08-24-7121ca19f3",
@@ -12870,17 +12804,6 @@
       "published": "2026-08-24",
       "title": "代子公司中旋實業有限公司依「公開發行公司資金貸與及背書保證\r\n處理準則」第二十二條第一項第三款之規定公告",
       "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "EV-TWSE-4746-2026-08-24-0.00000000-3.00000000",
-      "kind": "dividend",
-      "code": "4746",
-      "name": "台耀",
-      "date": "2026-08-24",
-      "cash": 3.0,
-      "stock": 0.0,
-      "title": "除權息：現金 3.00 元/股、配股率 0.00%",
-      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-5269-capital_reduction-2026-08-24-a9013e8999",
@@ -14669,6 +14592,17 @@
       "cash": 1.0,
       "stock": 0.0,
       "title": "除權息：現金 1.00 元/股、配股率 0.00%",
+      "source": "TWSE"
+    },
+    {
+      "id": "EV-TWSE-9906-2026-09-10-0.00848624-0.00000000",
+      "kind": "dividend",
+      "code": "9906",
+      "name": "欣巴巴",
+      "date": "2026-09-10",
+      "cash": 0.0,
+      "stock": 0.00848624,
+      "title": "除權息：現金 0.00 元/股、配股率 0.85%",
       "source": "TWSE"
     },
     {
