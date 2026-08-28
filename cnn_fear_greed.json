@@ -1,17 +1,7 @@
 {
-  "updated": "2026-08-26 19:59:30",
+  "updated": "2026-08-28 13:36:14",
   "source": "CNN Fear & Greed",
   "records": [
-    {
-      "date": "2025-08-26",
-      "score": 55.4,
-      "rating": "greed"
-    },
-    {
-      "date": "2025-08-27",
-      "score": 59.11,
-      "rating": "greed"
-    },
     {
       "date": "2025-08-28",
       "score": 64.43,
@@ -1244,12 +1234,22 @@
     },
     {
       "date": "2026-08-25",
-      "score": 59.09,
+      "score": 56.77,
       "rating": "greed"
     },
     {
       "date": "2026-08-26",
-      "score": 59.09,
+      "score": 53.94,
+      "rating": "neutral"
+    },
+    {
+      "date": "2026-08-27",
+      "score": 57.91,
+      "rating": "greed"
+    },
+    {
+      "date": "2026-08-28",
+      "score": 57.91,
       "rating": "greed"
     }
   ]
