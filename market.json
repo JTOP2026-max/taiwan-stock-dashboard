@@ -17,8 +17,9 @@
     "dealer": 460.24801352
   },
   "pc": {
-    "trade": null,
-    "oi": null
+    "trade": 1.0072,
+    "oi": 1.0144,
+    "date": "2026-08-28"
   },
   "breadth": {
     "up": 507,
@@ -37,7 +38,7 @@
   "sources": {
     "twse": true,
     "institutions": true,
-    "taifexPC": false,
+    "taifexPC": true,
     "taifexFutures": false,
     "cnnFearGreed": true
   }
