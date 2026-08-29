@@ -1,6 +1,6 @@
 (function(){
   const DB_URL='stocks.json';
-  const PROXY_URL=''; // Cloudflare Worker deployed URL, e.g. https://taiwan-stock-quote-proxy.<subdomain>.workers.dev
+  const PROXY_URL='https://taiwan-stock-quote-proxy.safecar7249.workers.dev';
   const SYNC_MS=30000;
   const MIGRATION_KEY='tw_quote_sync_migrated_20260821';
   let syncing=false, dbCache=null, dbLoadedAt=0, dbUpdated='';
