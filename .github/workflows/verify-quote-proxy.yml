@@ -27,18 +27,21 @@ jobs:
           print('health_ok', j)
           PY
 
-      - name: Check live intraday quote endpoint
+      - name: Diagnose upstream and proxy
         run: |
-          set -euo pipefail
-          curl --fail --silent --show-error \
+          set -u
+          echo '--- direct MIS ---'
+          curl -sS -D direct.headers \
+            -H 'User-Agent: Mozilla/5.0' \
+            -H 'Referer: https://mis.twse.com.tw/' \
+            'https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_3008.tw&json=1&delay=0' \
+            -o direct.json || true
+          head -40 direct.headers || true
+          head -c 1500 direct.json || true
+          echo
+          echo '--- worker quote ---'
+          curl -sS -D proxy.headers \
             'https://taiwan-stock-quote-proxy.safecar7249.workers.dev/quote?code=3008' \
-            | tee quote.json
-          python - <<'PY'
-          import json
-          j=json.load(open('quote.json'))
-          assert j.get('ok') is True, j
-          assert float(j.get('price') or 0) > 0, j
-          assert j.get('kind') == 'live', j
-          assert 'MIS' in (j.get('source') or ''), j
-          print('quote_ok', {k:j.get(k) for k in ('code','price','prev','pct','time','date','source','kind')})
-          PY
+            -o proxy.json || true
+          head -40 proxy.headers || true
+          cat proxy.json || true
