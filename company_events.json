@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-29 05:31",
-  "count": 1339,
+  "updated": "2026-08-31 08:26",
+  "count": 1340,
   "errors": [],
   "events": [
     {
@@ -8167,17 +8167,6 @@
     },
     {
       "kind": "dividend_policy",
-      "code": "2939",
-      "name": "永邑-KY",
-      "date": "2026-03-12",
-      "cash": 0.0,
-      "stock": 0.0,
-      "title": "股利政策：現金 0.00 元/股、股票 0.00 元/股",
-      "status": "董事會決議",
-      "source": "TWSE t187ap45_L"
-    },
-    {
-      "kind": "dividend_policy",
       "code": "3003",
       "name": "健和興",
       "date": "2026-03-12",
@@ -13096,6 +13085,16 @@
       "source": "TWSE"
     },
     {
+      "id": "TWSE-MOPS-2239-capital_increase-2026-08-28-107748d819",
+      "kind": "capital_increase",
+      "code": "2239",
+      "name": "英利-KY",
+      "date": "2026-08-28",
+      "published": "2026-08-30",
+      "title": "代子公司長春英利汽車工業股份有限公司依「公開發行公司資金\r\n貸與及背書保證處理準則」第二十二條第一項第三款規定公告",
+      "source": "TWSE t187ap04_L"
+    },
+    {
       "id": "EV-TWSE-2250-2026-08-28-0.00000000-3.00000000",
       "kind": "dividend",
       "code": "2250",
@@ -13227,6 +13226,17 @@
       "published": "2026-08-28",
       "title": "公告本公司董事會決議通過不分派115年上半年度股利",
       "source": "TWSE t187ap04_L"
+    },
+    {
+      "kind": "dividend_policy",
+      "code": "2939",
+      "name": "永邑-KY",
+      "date": "2026-08-28",
+      "cash": 0.0,
+      "stock": 0.0,
+      "title": "股利政策：現金 0.00 元/股、股票 0.00 元/股",
+      "status": "董事會決議",
+      "source": "TWSE t187ap45_L"
     },
     {
       "id": "TWSE-MOPS-3576-conference-2026-08-28-04db2c2b12",
