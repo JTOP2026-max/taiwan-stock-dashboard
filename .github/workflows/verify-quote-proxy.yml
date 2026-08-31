@@ -1,0 +1,44 @@
+name: Verify Quote Proxy
+
+on:
+  push:
+    paths:
+      - '.github/workflows/verify-quote-proxy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check health endpoint
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error \
+            https://taiwan-stock-quote-proxy.safecar7249.workers.dev/health \
+            | tee health.json
+          python - <<'PY'
+          import json
+          j=json.load(open('health.json'))
+          assert j.get('ok') is True, j
+          assert j.get('service') == 'taiwan-stock-quote-proxy', j
+          print('health_ok', j)
+          PY
+
+      - name: Check live intraday quote endpoint
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error \
+            'https://taiwan-stock-quote-proxy.safecar7249.workers.dev/quote?code=3008' \
+            | tee quote.json
+          python - <<'PY'
+          import json
+          j=json.load(open('quote.json'))
+          assert j.get('ok') is True, j
+          assert float(j.get('price') or 0) > 0, j
+          assert j.get('kind') == 'live', j
+          assert 'MIS' in (j.get('source') or ''), j
+          print('quote_ok', {k:j.get(k) for k in ('code','price','prev','pct','time','date','source','kind')})
+          PY
