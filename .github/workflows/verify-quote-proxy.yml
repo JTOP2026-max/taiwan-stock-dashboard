@@ -16,7 +16,7 @@ jobs:
       - name: Check health endpoint
         run: |
           set -euo pipefail
-          curl --fail --silent --show-error \
+          curl --fail --silent --show-error --retry 3 --retry-delay 2 \
             https://taiwan-stock-quote-proxy.safecar7249.workers.dev/health \
             | tee health.json
           python - <<'PY'
@@ -27,21 +27,18 @@ jobs:
           print('health_ok', j)
           PY
 
-      - name: Diagnose upstream and proxy
+      - name: Verify live intraday quote through proxy
         run: |
-          set -u
-          echo '--- direct MIS ---'
-          curl -sS -D direct.headers \
-            -H 'User-Agent: Mozilla/5.0' \
-            -H 'Referer: https://mis.twse.com.tw/' \
-            'https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_3008.tw&json=1&delay=0' \
-            -o direct.json || true
-          head -40 direct.headers || true
-          head -c 1500 direct.json || true
-          echo
-          echo '--- worker quote ---'
-          curl -sS -D proxy.headers \
+          set -euo pipefail
+          curl --fail --silent --show-error --retry 3 --retry-delay 2 \
             'https://taiwan-stock-quote-proxy.safecar7249.workers.dev/quote?code=3008' \
-            -o proxy.json || true
-          head -40 proxy.headers || true
-          cat proxy.json || true
+            | tee quote.json
+          python - <<'PY'
+          import json
+          j=json.load(open('quote.json'))
+          assert j.get('ok') is True, j
+          assert j.get('kind') == 'live', j
+          assert j.get('source') == 'TWSE MIS via Cloudflare Worker', j
+          assert float(j.get('price') or 0) > 0, j
+          print('live_quote_ok', {k:j.get(k) for k in ('code','price','time','date','source','kind')})
+          PY
