@@ -9,74 +9,21 @@
 
   async function loadDB(force=false){
     if(!force&&dbCache&&Date.now()-dbLoadedAt<60000)return dbCache;
-    try{
-      const r=await fetch(DB_URL+'?ts='+Date.now(),{cache:'no-store'});
-      if(!r.ok)throw new Error('stocks '+r.status);
-      const j=await r.json();dbCache=j.stocks||{};dbUpdated=j.updated||'';dbLoadedAt=Date.now();return dbCache;
-    }catch(e){return dbCache||{}}
+    try{const r=await fetch(DB_URL+'?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('stocks '+r.status);const j=await r.json();dbCache=j.stocks||{};dbUpdated=j.updated||'';dbLoadedAt=Date.now();return dbCache;}catch(e){return dbCache||{}}
   }
-
   async function proxyQuote(code){
     if(!PROXY_URL)return null;
-    try{
-      const u=`${PROXY_URL.replace(/\/$/,'')}/quote?code=${encodeURIComponent(code)}&_=${Date.now()}`;
-      const r=await fetch(u,{cache:'no-store'});if(!r.ok)return null;
-      const q=await r.json();if(!q?.ok||!(num(q.price)>0))return null;
-      return {price:num(q.price),prev:num(q.prev),ch:num(q.chg),pc:num(q.pct),open:num(q.open),high:num(q.high),low:num(q.low),name:q.name||'',time:q.time||'',date:q.date||'',source:q.source||'Cloudflare 行情代理',kind:'live-proxy'};
-    }catch(e){return null}
+    try{const u=`${PROXY_URL.replace(/\/$/,'')}/quote?code=${encodeURIComponent(code)}&_=${Date.now()}`;const r=await fetch(u,{cache:'no-store'});if(!r.ok)return null;const q=await r.json();if(!q?.ok||!(num(q.price)>0))return null;return {price:num(q.price),prev:num(q.prev),ch:num(q.chg),pc:num(q.pct),open:num(q.open),high:num(q.high),low:num(q.low),name:q.name||'',time:q.time||'',date:q.date||'',source:q.source||'Cloudflare 行情代理',kind:'live-proxy'};}catch(e){return null}
   }
-
   async function misQuote(code){
-    for(const market of ['tse','otc']){
-      try{
-        const u=`https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=${market}_${encodeURIComponent(code)}.tw&json=1&delay=0&_=${Date.now()}`;
-        const r=await fetch(u,{cache:'no-store'});if(!r.ok)continue;
-        const j=await r.json(), row=Array.isArray(j.msgArray)?j.msgArray.find(x=>String(x.c||'')===String(code)):null;
-        if(!row)continue;
-        const price=num(row.z), prev=num(row.y);
-        if(!(price>0))continue;
-        const ch=prev!=null?price-prev:0, pc=prev?ch/prev*100:0;
-        return {price,prev,ch,pc,open:num(row.o),high:num(row.h),low:num(row.l),name:row.n||row.nf||'',time:row.t||'',date:row.d||'',source:'TWSE MIS 最新成交（瀏覽器備援）',kind:'live-direct'};
-      }catch(e){}
-    }
+    for(const market of ['tse','otc']){try{const u=`https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=${market}_${encodeURIComponent(code)}.tw&json=1&delay=0&_=${Date.now()}`;const r=await fetch(u,{cache:'no-store'});if(!r.ok)continue;const j=await r.json(),row=Array.isArray(j.msgArray)?j.msgArray.find(x=>String(x.c||'')===String(code)):null;if(!row)continue;const price=num(row.z),prev=num(row.y);if(!(price>0))continue;const ch=prev!=null?price-prev:0,pc=prev?ch/prev*100:0;return {price,prev,ch,pc,open:num(row.o),high:num(row.h),low:num(row.l),name:row.n||row.nf||'',time:row.t||'',date:row.d||'',source:'TWSE MIS 最新成交（瀏覽器備援）',kind:'live-direct'};}catch(e){}}
     return null;
   }
-
-  function dbQuote(code,db){
-    const x=db?.[code];if(!x||!(num(x.price)>0))return null;
-    return {price:num(x.price),prev:null,ch:null,pc:null,name:x.name||'',time:'',date:dbUpdated||'',source:(x.market==='TPEX'?'TPEx':'TWSE')+' 官方盤後資料（非即時）',kind:'close'};
-  }
-
-  function migrateLegacyLocks(hs){
-    if(localStorage.getItem(MIGRATION_KEY))return false;
-    let changed=false;
-    for(const h of hs){if(h&&h.manualPrice===true){h.manualPrice=false;changed=true;}if(h&&h.priceLocked==null)h.priceLocked=false;}
-    try{localStorage.setItem(MIGRATION_KEY,'1')}catch(e){}
-    return changed;
-  }
-
+  function dbQuote(code,db){const x=db?.[code];if(!x||!(num(x.price)>0))return null;return {price:num(x.price),prev:null,ch:null,pc:null,name:x.name||'',time:'',date:dbUpdated||'',source:(x.market==='TPEX'?'TPEx':'TWSE')+' 官方盤後資料（非即時）',kind:'close'};}
+  function migrateLegacyLocks(hs){if(localStorage.getItem(MIGRATION_KEY))return false;let changed=false;for(const h of hs){if(h&&h.manualPrice===true){h.manualPrice=false;changed=true;}if(h&&h.priceLocked==null)h.priceLocked=false;}try{localStorage.setItem(MIGRATION_KEY,'1')}catch(e){}return changed;}
   async function syncHoldings(force=false){
-    if(syncing||typeof window.getHoldings!=='function'||typeof window.saveHoldings!=='function')return;
-    syncing=true;
-    try{
-      const hs=window.getHoldings();if(!Array.isArray(hs)||!hs.length)return;
-      let changed=migrateLegacyLocks(hs), db=await loadDB(force), ok=0, proxyCount=0, directCount=0;
-      for(const h of hs){
-        if(!h?.c||h.priceLocked===true)continue;
-        let q=await proxyQuote(String(h.c));
-        if(!q)q=await misQuote(String(h.c));
-        if(!q)q=dbQuote(String(h.c),db);
-        if(!q?.price)continue;
-        ok++;if(q.kind==='live-proxy')proxyCount++;if(q.kind==='live-direct')directCount++;
-        const old=Number(h.p), next=Number(q.price);if(old!==next)changed=true;
-        h.p=next;if(q.name)h.n=q.name;if(q.prev!=null){h.prev=q.prev;h.ch=q.ch||0;h.pc=q.pc||0;}
-        h.open=q.open??h.open;h.high=q.high??h.high;h.low=q.low??h.low;
-        h.quoteTime=q.time||'';h.quoteDate=q.date||'';h.quoteSource=q.source;h.quoteKind=q.kind||'';h.manualPrice=false;
-      }
-      if(changed)window.saveHoldings(hs);if(typeof window.renderHoldings==='function')window.renderHoldings(hs);
-      const st=document.getElementById('lookupStatus');
-      if(st&&ok){const closeCount=ok-proxyCount-directCount;st.textContent=`持股行情已同步 ${ok}/${hs.length} 檔｜${nowText()}｜代理 ${proxyCount}、直連 ${directCount}、盤後備援 ${closeCount}｜每30秒刷新`;}
-    }catch(e){console.warn('holding quote sync failed',e)}finally{syncing=false}
+    if(syncing||typeof window.getHoldings!=='function'||typeof window.saveHoldings!=='function')return;syncing=true;
+    try{const hs=window.getHoldings();if(!Array.isArray(hs)||!hs.length)return;let changed=migrateLegacyLocks(hs),db=await loadDB(force),ok=0,proxyCount=0,directCount=0;for(const h of hs){if(!h?.c||h.priceLocked===true)continue;let q=await proxyQuote(String(h.c));if(!q)q=await misQuote(String(h.c));if(!q)q=dbQuote(String(h.c),db);if(!q?.price)continue;ok++;if(q.kind==='live-proxy')proxyCount++;if(q.kind==='live-direct')directCount++;const old=Number(h.p),next=Number(q.price);if(old!==next)changed=true;h.p=next;if(q.name)h.n=q.name;if(q.prev!=null){h.prev=q.prev;h.ch=q.ch||0;h.pc=q.pc||0;}h.open=q.open??h.open;h.high=q.high??h.high;h.low=q.low??h.low;h.quoteTime=q.time||'';h.quoteDate=q.date||'';h.quoteSource=q.source;h.quoteKind=q.kind||'';h.manualPrice=false;}if(changed)window.saveHoldings(hs);if(typeof window.renderHoldings==='function')window.renderHoldings(hs);const st=document.getElementById('lookupStatus');if(st&&ok){const closeCount=ok-proxyCount-directCount;st.textContent=`持股行情已同步 ${ok}/${hs.length} 檔｜${nowText()}｜代理 ${proxyCount}、直連 ${directCount}、盤後備援 ${closeCount}｜每30秒刷新`;}}catch(e){console.warn('holding quote sync failed',e)}finally{syncing=false}
   }
 
   const oldEdit=window.editHoldingValue;
@@ -87,15 +34,22 @@
 
   function loadMarketStructure(){if(document.querySelector('script[data-market-structure]'))return;const s=document.createElement('script');s.src='market-structure.js?v=20260825a';s.async=false;s.dataset.marketStructure='1';document.head.appendChild(s);}
   function loadPeScale(){if(document.querySelector('script[data-pe-scale]'))return;const s=document.createElement('script');s.src='pe-scale-ui.js?v=20260826b';s.async=false;s.dataset.peScale='1';document.head.appendChild(s);}
-  function injectResearchLinks(){
-    if(document.getElementById('v2ResearchLinks'))return;
+
+  function ensureResearchLinks(){
     const top=document.querySelector('header .top');if(!top)return;
-    let box=top.lastElementChild;
-    if(!box||box===top.firstElementChild){box=document.createElement('div');top.appendChild(box)}
-    box.id='v2ResearchLinks';
-    box.style.display='flex';box.style.flexWrap='wrap';box.style.gap='8px';
-    box.innerHTML=`<a href="ai-research.html" class="btn secondary" style="text-decoration:none">🧠 AI 基建研究室</a><a href="pe60-analysis-v2.html" class="btn secondary" style="text-decoration:none">📊 60日PE分析</a><a href="history.html" class="btn secondary" style="text-decoration:none">歷史紀錄</a>`;
+    let actions=top.querySelector('.v2-extra-links');
+    if(!actions){actions=document.createElement('div');actions.className='v2-extra-links';actions.style.cssText='display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-left:auto';top.appendChild(actions);}
+    if(!actions.querySelector('a[href="ai-research.html"]')){const a=document.createElement('a');a.href='ai-research.html';a.className='btn secondary';a.style.textDecoration='none';a.textContent='🧠 AI 基建研究室';actions.appendChild(a);}
+    if(!actions.querySelector('a[href="pe60-analysis-v2.html"]')){const a=document.createElement('a');a.href='pe60-analysis-v2.html';a.className='btn secondary';a.style.textDecoration='none';a.textContent='📊 60日PE分析';actions.appendChild(a);}
   }
-  function start(){injectResearchLinks();loadMarketStructure();loadPeScale();setTimeout(()=>syncHoldings(true),900);setInterval(()=>syncHoldings(false),SYNC_MS);document.addEventListener('visibilitychange',()=>{if(!document.hidden)syncHoldings(true)});window.addEventListener('focus',()=>syncHoldings(true));}
+
+  function watchHeader(){
+    ensureResearchLinks();
+    [300,900,1800,3500].forEach(ms=>setTimeout(ensureResearchLinks,ms));
+    const h=document.querySelector('header');if(!h)return;
+    new MutationObserver(()=>ensureResearchLinks()).observe(h,{childList:true,subtree:true});
+  }
+
+  function start(){watchHeader();loadMarketStructure();loadPeScale();setTimeout(()=>syncHoldings(true),900);setInterval(()=>syncHoldings(false),SYNC_MS);document.addEventListener('visibilitychange',()=>{if(!document.hidden){ensureResearchLinks();syncHoldings(true)}});window.addEventListener('focus',()=>{ensureResearchLinks();syncHoldings(true)});}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
 })();
