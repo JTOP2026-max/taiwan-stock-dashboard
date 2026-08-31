@@ -87,6 +87,15 @@
 
   function loadMarketStructure(){if(document.querySelector('script[data-market-structure]'))return;const s=document.createElement('script');s.src='market-structure.js?v=20260825a';s.async=false;s.dataset.marketStructure='1';document.head.appendChild(s);}
   function loadPeScale(){if(document.querySelector('script[data-pe-scale]'))return;const s=document.createElement('script');s.src='pe-scale-ui.js?v=20260826b';s.async=false;s.dataset.peScale='1';document.head.appendChild(s);}
-  function start(){loadMarketStructure();loadPeScale();setTimeout(()=>syncHoldings(true),900);setInterval(()=>syncHoldings(false),SYNC_MS);document.addEventListener('visibilitychange',()=>{if(!document.hidden)syncHoldings(true)});window.addEventListener('focus',()=>syncHoldings(true));}
+  function injectResearchLinks(){
+    if(document.getElementById('v2ResearchLinks'))return;
+    const top=document.querySelector('header .top');if(!top)return;
+    let box=top.lastElementChild;
+    if(!box||box===top.firstElementChild){box=document.createElement('div');top.appendChild(box)}
+    box.id='v2ResearchLinks';
+    box.style.display='flex';box.style.flexWrap='wrap';box.style.gap='8px';
+    box.innerHTML=`<a href="ai-research.html" class="btn secondary" style="text-decoration:none">🧠 AI 基建研究室</a><a href="pe60-analysis-v2.html" class="btn secondary" style="text-decoration:none">📊 60日PE分析</a><a href="history.html" class="btn secondary" style="text-decoration:none">歷史紀錄</a>`;
+  }
+  function start(){injectResearchLinks();loadMarketStructure();loadPeScale();setTimeout(()=>syncHoldings(true),900);setInterval(()=>syncHoldings(false),SYNC_MS);document.addEventListener('visibilitychange',()=>{if(!document.hidden)syncHoldings(true)});window.addEventListener('focus',()=>syncHoldings(true));}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
 })();
