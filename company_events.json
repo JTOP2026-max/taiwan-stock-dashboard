@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-01 08:41",
-  "count": 1341,
+  "updated": "2026-09-01 14:36",
+  "count": 1330,
   "errors": [],
   "events": [
     {
@@ -12695,17 +12695,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-1453-2026-08-28-0.03000000-0.00000000",
-      "kind": "dividend",
-      "code": "1453",
-      "name": "大將",
-      "date": "2026-08-28",
-      "cash": 0.0,
-      "stock": 0.03,
-      "title": "除權息：現金 0.00 元/股、配股率 3.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-1529-conference-2026-08-28-a9550f16c9",
       "kind": "conference",
       "code": "1529",
@@ -12714,17 +12703,6 @@
       "published": "2026-08-27",
       "title": "本公司受邀參加統一證券國際法人部舉辦之線上法人說明會",
       "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "EV-TWSE-1709-2026-08-28-0.00000000-1.00000000",
-      "kind": "dividend",
-      "code": "1709",
-      "name": "和益",
-      "date": "2026-08-28",
-      "cash": 1.0,
-      "stock": 0.0,
-      "title": "除權息：現金 1.00 元/股、配股率 0.00%",
-      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-1737-conference-2026-08-28-138b9b44f3",
@@ -12747,28 +12725,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-2072-2026-08-28-0.00000000-6.00000000",
-      "kind": "dividend",
-      "code": "2072",
-      "name": "世紀風電",
-      "date": "2026-08-28",
-      "cash": 6.0,
-      "stock": 0.0,
-      "title": "除權息：現金 6.00 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
-      "id": "EV-TWSE-2101-2026-08-28-0.00000000-0.60000000",
-      "kind": "dividend",
-      "code": "2101",
-      "name": "南港",
-      "date": "2026-08-28",
-      "cash": 0.6,
-      "stock": 0.0,
-      "title": "除權息：現金 0.60 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-2239-capital_increase-2026-08-28-107748d819",
       "kind": "capital_increase",
       "code": "2239",
@@ -12777,28 +12733,6 @@
       "published": "2026-08-30",
       "title": "代子公司長春英利汽車工業股份有限公司依「公開發行公司資金\r\n貸與及背書保證處理準則」第二十二條第一項第三款規定公告",
       "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "EV-TWSE-2250-2026-08-28-0.00000000-3.00000000",
-      "kind": "dividend",
-      "code": "2250",
-      "name": "IKKA-KY",
-      "date": "2026-08-28",
-      "cash": 3.0,
-      "stock": 0.0,
-      "title": "除權息：現金 3.00 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
-      "id": "EV-TWSE-2364-2026-08-28-0.10000000-2.00000000",
-      "kind": "dividend",
-      "code": "2364",
-      "name": "倫飛",
-      "date": "2026-08-28",
-      "cash": 2.0,
-      "stock": 0.1,
-      "title": "除權息：現金 2.00 元/股、配股率 10.00%",
-      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-2368-conference-2026-08-28-67f9d60c8f",
@@ -12819,17 +12753,6 @@
       "published": "2026-08-25",
       "title": "本公司受邀參加富邦證舉辦之法人說明會",
       "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "EV-TWSE-2383-2026-08-28-0.00000000-25.00000000",
-      "kind": "dividend",
-      "code": "2383",
-      "name": "台光電",
-      "date": "2026-08-28",
-      "cash": 25.0,
-      "stock": 0.0,
-      "title": "除權息：現金 25.00 元/股、配股率 0.00%",
-      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-2449-conference-2026-08-28-cf7a1ceb45",
@@ -12973,28 +12896,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-5283-2026-08-28-0.15999999-0.20000000",
-      "kind": "dividend",
-      "code": "5283",
-      "name": "禾聯碩",
-      "date": "2026-08-28",
-      "cash": 0.2,
-      "stock": 0.15999999,
-      "title": "除權息：現金 0.20 元/股、配股率 16.00%",
-      "source": "TWSE"
-    },
-    {
-      "id": "EV-TWSE-6183-2026-08-28-0.00000000-3.55000000",
-      "kind": "dividend",
-      "code": "6183",
-      "name": "關貿",
-      "date": "2026-08-28",
-      "cash": 3.55,
-      "stock": 0.0,
-      "title": "除權息：現金 3.55 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-6191-capital_reduction-2026-08-28-09d87cd062",
       "kind": "capital_reduction",
       "code": "6191",
@@ -13053,28 +12954,6 @@
       "published": "2026-08-28",
       "title": "公告本公司更換簽證會計師事務所及簽證會計師",
       "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "EV-TWSE-7730-2026-08-28-0.05000001-1.00000000",
-      "kind": "dividend",
-      "code": "7730",
-      "name": "暉盛-創",
-      "date": "2026-08-28",
-      "cash": 1.0,
-      "stock": 0.05000001,
-      "title": "除權息：現金 1.00 元/股、配股率 5.00%",
-      "source": "TWSE"
-    },
-    {
-      "id": "EV-TWSE-7822-2026-08-28-0.00000000-6.38543600",
-      "kind": "dividend",
-      "code": "7822",
-      "name": "倍利科",
-      "date": "2026-08-28",
-      "cash": 6.385436,
-      "stock": 0.0,
-      "title": "除權息：現金 6.39 元/股、配股率 0.00%",
-      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-8438-conference-2026-08-28-6d1da25c11",
