@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-01 14:36",
+  "updated": "2026-09-02 08:38",
   "trackingStart": "2026-08-18",
-  "count": 68,
+  "count": 69,
   "errors": [],
   "actions": [
     {
@@ -602,6 +602,16 @@
       "exDate": "2026-09-16",
       "stockRatio": 0.0,
       "cashDividend": 0.2,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-2330-2026-09-16-0.00000000-7.00000100",
+      "market": "TWSE",
+      "code": "2330",
+      "name": "台積電",
+      "exDate": "2026-09-16",
+      "stockRatio": 0.0,
+      "cashDividend": 7.000001,
       "type": "息"
     },
     {
