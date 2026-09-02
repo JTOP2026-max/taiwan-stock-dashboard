@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-02 08:38",
-  "count": 1338,
+  "updated": "2026-09-02 14:39",
+  "count": 1333,
   "errors": [],
   "events": [
     {
@@ -12685,28 +12685,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-1531-2026-08-31-0.00000000-1.00000000",
-      "kind": "dividend",
-      "code": "1531",
-      "name": "高林股",
-      "date": "2026-08-31",
-      "cash": 1.0,
-      "stock": 0.0,
-      "title": "除權息：現金 1.00 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
-      "id": "EV-TWSE-1795-2026-08-31-0.01300671-2.56531600",
-      "kind": "dividend",
-      "code": "1795",
-      "name": "美時",
-      "date": "2026-08-31",
-      "cash": 2.565316,
-      "stock": 0.01300671,
-      "title": "除權息：現金 2.57 元/股、配股率 1.30%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-2328-capital_increase-2026-08-31-d9e8e202f0",
       "kind": "capital_increase",
       "code": "2328",
@@ -12817,17 +12795,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-2905-2026-08-31-0.00000000-0.30000000",
-      "kind": "dividend",
-      "code": "2905",
-      "name": "三商",
-      "date": "2026-08-31",
-      "cash": 0.3,
-      "stock": 0.0,
-      "title": "除權息：現金 0.30 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-2915-capital_increase-2026-08-31-91c0921a36",
       "kind": "capital_increase",
       "code": "2915",
@@ -12846,17 +12813,6 @@
       "published": "2026-09-01",
       "title": "澄清並說明本公司及子公司接獲法院訴訟起訴狀相關事宜",
       "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "EV-TWSE-3209-2026-08-31-0.04999999-2.00000000",
-      "kind": "dividend",
-      "code": "3209",
-      "name": "全科",
-      "date": "2026-08-31",
-      "cash": 2.0,
-      "stock": 0.04999999,
-      "title": "除權息：現金 2.00 元/股、配股率 5.00%",
-      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-3712-capital_increase-2026-08-31-d8ee8a430e",
@@ -12939,17 +12895,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-9105-2026-08-31-0.00000000-0.06701100",
-      "kind": "dividend",
-      "code": "9105",
-      "name": "泰金寶-DR",
-      "date": "2026-08-31",
-      "cash": 0.067011,
-      "stock": 0.0,
-      "title": "除權息：現金 0.07 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-9907-conference-2026-08-31-bcf6ecd0cf",
       "kind": "conference",
       "code": "9907",
@@ -12958,17 +12903,6 @@
       "published": "2026-08-28",
       "title": "公告本公司受邀參加凱基證券舉辦之線上法人說明會",
       "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "EV-TWSE-9917-2026-08-31-0.05000000-0.00000000",
-      "kind": "dividend",
-      "code": "9917",
-      "name": "中保科",
-      "date": "2026-08-31",
-      "cash": 0.0,
-      "stock": 0.05,
-      "title": "除權息：現金 0.00 元/股、配股率 5.00%",
-      "source": "TWSE"
     },
     {
       "id": "EV-TWSE-00939-2026-09-01-0.00000000-0.12500000",
@@ -14344,6 +14278,17 @@
       "published": "2026-09-01",
       "title": "受邀參加永豐金證券 2026 Q3產業投資論壇",
       "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "EV-TWSE-4763-2026-09-16-0.00000000-3.05000000",
+      "kind": "dividend",
+      "code": "4763",
+      "name": "材料*-KY",
+      "date": "2026-09-16",
+      "cash": 3.05,
+      "stock": 0.0,
+      "title": "除權息：現金 3.05 元/股、配股率 0.00%",
+      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-6906-conference-2026-09-18-97c5d6b586",

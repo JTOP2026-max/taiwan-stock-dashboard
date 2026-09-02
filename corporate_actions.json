@@ -1,69 +1,9 @@
 {
-  "updated": "2026-09-02 08:38",
+  "updated": "2026-09-02 14:39",
   "trackingStart": "2026-08-18",
-  "count": 69,
+  "count": 64,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-1531-2026-08-31-0.00000000-1.00000000",
-      "market": "TWSE",
-      "code": "1531",
-      "name": "高林股",
-      "exDate": "2026-08-31",
-      "stockRatio": 0.0,
-      "cashDividend": 1.0,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-1795-2026-08-31-0.01300671-2.56531600",
-      "market": "TWSE",
-      "code": "1795",
-      "name": "美時",
-      "exDate": "2026-08-31",
-      "stockRatio": 0.01300671,
-      "cashDividend": 2.565316,
-      "type": "權息"
-    },
-    {
-      "id": "TWSE-2905-2026-08-31-0.00000000-0.30000000",
-      "market": "TWSE",
-      "code": "2905",
-      "name": "三商",
-      "exDate": "2026-08-31",
-      "stockRatio": 0.0,
-      "cashDividend": 0.3,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-3209-2026-08-31-0.04999999-2.00000000",
-      "market": "TWSE",
-      "code": "3209",
-      "name": "全科",
-      "exDate": "2026-08-31",
-      "stockRatio": 0.04999999,
-      "cashDividend": 2.0,
-      "type": "權息"
-    },
-    {
-      "id": "TWSE-9105-2026-08-31-0.00000000-0.06701100",
-      "market": "TWSE",
-      "code": "9105",
-      "name": "泰金寶-DR",
-      "exDate": "2026-08-31",
-      "stockRatio": 0.0,
-      "cashDividend": 0.067011,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-9917-2026-08-31-0.05000000-0.00000000",
-      "market": "TWSE",
-      "code": "9917",
-      "name": "中保科",
-      "exDate": "2026-08-31",
-      "stockRatio": 0.05,
-      "cashDividend": 0.0,
-      "type": "權"
-    },
     {
       "id": "TWSE-00939-2026-09-01-0.00000000-0.12500000",
       "market": "TWSE",
@@ -612,6 +552,16 @@
       "exDate": "2026-09-16",
       "stockRatio": 0.0,
       "cashDividend": 7.000001,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-4763-2026-09-16-0.00000000-3.05000000",
+      "market": "TWSE",
+      "code": "4763",
+      "name": "材料*-KY",
+      "exDate": "2026-09-16",
+      "stockRatio": 0.0,
+      "cashDividend": 3.05,
       "type": "息"
     },
     {
