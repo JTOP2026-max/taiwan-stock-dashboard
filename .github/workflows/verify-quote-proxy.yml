@@ -42,3 +42,14 @@ jobs:
           assert float(j.get('price') or 0) > 0, j
           print('live_quote_ok', {k:j.get(k) for k in ('code','price','time','date','source','kind')})
           PY
+
+      - name: Confirm frontend proxy wiring
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --retry 3 --retry-delay 2 \
+            'https://jtop2026-max.github.io/taiwan-stock-dashboard/quote-sync.js?verify=20260903' \
+            | tee quote-sync.js
+          grep -F "const PROXY_URL='https://taiwan-stock-quote-proxy.safecar7249.workers.dev';" quote-sync.js
+          grep -F 'let q=await proxyQuote(String(h.c));' quote-sync.js
+          grep -F "if(!q)q=dbQuote(String(h.c),db);" quote-sync.js
+          echo FRONTEND_PROXY_WIRING_OK
