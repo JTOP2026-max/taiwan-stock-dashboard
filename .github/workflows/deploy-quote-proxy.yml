@@ -2,6 +2,10 @@ name: Deploy Quote Proxy Worker
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/deploy-quote-proxy.yml'
+      - 'cloudflare-worker/**'
 
 permissions:
   contents: read
@@ -20,3 +24,29 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Verify Worker health
+        run: |
+          curl --fail --silent --show-error --retry 8 --retry-delay 3 \
+            https://taiwan-stock-quote-proxy.safecar7249.workers.dev/health \
+            | tee /tmp/health.json
+          node -e "const q=require('/tmp/health.json'); if(!q.ok||q.service!=='taiwan-stock-quote-proxy') process.exit(1)"
+      - name: Verify live quote through proxy
+        run: |
+          curl --fail --silent --show-error --retry 8 --retry-delay 3 \
+            'https://taiwan-stock-quote-proxy.safecar7249.workers.dev/quote?code=3008' \
+            | tee /tmp/quote.json
+          node -e "const q=require('/tmp/quote.json'); if(!q.ok||!(Number(q.price)>0)||q.kind!=='live') process.exit(1); console.log('live quote verified', q.code, q.price, q.date, q.time, q.source)"
+      - name: Verify deployed dashboard points to proxy
+        run: |
+          for i in 1 2 3 4 5 6 7 8; do
+            curl --fail --silent --show-error \
+              'https://jtop2026-max.github.io/taiwan-stock-dashboard/quote-sync.js?verify=1' \
+              -o /tmp/quote-sync.js || true
+            if grep -Fq "const PROXY_URL='https://taiwan-stock-quote-proxy.safecar7249.workers.dev'" /tmp/quote-sync.js 2>/dev/null; then
+              echo 'deployed dashboard proxy URL verified'
+              exit 0
+            fi
+            sleep 15
+          done
+          echo 'deployed dashboard has not picked up the proxy URL yet' >&2
+          exit 1
