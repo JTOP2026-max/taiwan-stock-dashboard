@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-02 14:39",
+  "updated": "2026-09-03 08:40",
   "trackingStart": "2026-08-18",
-  "count": 64,
+  "count": 65,
   "errors": [],
   "actions": [
     {
@@ -302,6 +302,16 @@
       "exDate": "2026-09-03",
       "stockRatio": 0.0,
       "cashDividend": 0.301938,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00400A-2026-09-07-0.00000000-0.12000000",
+      "market": "TWSE",
+      "code": "00400A",
+      "name": "主動國泰動能高息",
+      "exDate": "2026-09-07",
+      "stockRatio": 0.0,
+      "cashDividend": 0.12,
       "type": "息"
     },
     {
