@@ -1,49 +1,9 @@
 {
-  "updated": "2026-09-07 14:40",
+  "updated": "2026-09-08 08:42",
   "trackingStart": "2026-08-18",
-  "count": 41,
+  "count": 38,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-1203-2026-09-03-0.00000000-1.00000000",
-      "market": "TWSE",
-      "code": "1203",
-      "name": "味王",
-      "exDate": "2026-09-03",
-      "stockRatio": 0.0,
-      "cashDividend": 1.0,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-3661-2026-09-03-0.00000000-32.55165600",
-      "market": "TWSE",
-      "code": "3661",
-      "name": "世芯-KY",
-      "exDate": "2026-09-03",
-      "stockRatio": 0.0,
-      "cashDividend": 32.551656,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-7780-2026-09-03-0.00000000-0.11658800",
-      "market": "TWSE",
-      "code": "7780",
-      "name": "大研生醫*",
-      "exDate": "2026-09-03",
-      "stockRatio": 0.0,
-      "cashDividend": 0.116588,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-8466-2026-09-03-0.00000000-0.30193800",
-      "market": "TWSE",
-      "code": "8466",
-      "name": "美吉吉-KY",
-      "exDate": "2026-09-03",
-      "stockRatio": 0.0,
-      "cashDividend": 0.301938,
-      "type": "息"
-    },
     {
       "id": "TWSE-00400A-2026-09-07-0.00000000-0.12000000",
       "market": "TWSE",
@@ -352,6 +312,16 @@
       "exDate": "2026-09-23",
       "stockRatio": 0.0,
       "cashDividend": 4.0,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-5258-2026-09-23-0.00000000-1.00732600",
+      "market": "TWSE",
+      "code": "5258",
+      "name": "虹堡",
+      "exDate": "2026-09-23",
+      "stockRatio": 0.0,
+      "cashDividend": 1.007326,
       "type": "息"
     },
     {
