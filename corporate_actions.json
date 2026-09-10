@@ -1,39 +1,9 @@
 {
-  "updated": "2026-09-09 14:37",
+  "updated": "2026-09-10 08:38",
   "trackingStart": "2026-08-18",
   "count": 42,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-00400A-2026-09-07-0.00000000-0.12000000",
-      "market": "TWSE",
-      "code": "00400A",
-      "name": "主動國泰動能高息",
-      "exDate": "2026-09-07",
-      "stockRatio": 0.0,
-      "cashDividend": 0.12,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-01010T-2026-09-07-0.00000000-0.09872000",
-      "market": "TWSE",
-      "code": "01010T",
-      "name": "京城樂富R1",
-      "exDate": "2026-09-07",
-      "stockRatio": 0.0,
-      "cashDividend": 0.09872,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-1466-2026-09-07-0.00000000-0.20000000",
-      "market": "TWSE",
-      "code": "1466",
-      "name": "聚隆",
-      "exDate": "2026-09-07",
-      "stockRatio": 0.0,
-      "cashDividend": 0.2,
-      "type": "息"
-    },
     {
       "id": "TWSE-00940-2026-09-08-0.00000000-0.05500000",
       "market": "TWSE",
@@ -252,6 +222,36 @@
       "exDate": "2026-09-15",
       "stockRatio": 0.0,
       "cashDividend": 3.5,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00921-2026-09-16-0.00000000-1.00000000",
+      "market": "TWSE",
+      "code": "00921",
+      "name": "兆豐龍頭等權重",
+      "exDate": "2026-09-16",
+      "stockRatio": 0.0,
+      "cashDividend": 1.0,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00943-2026-09-16-0.00000000-0.25000000",
+      "market": "TWSE",
+      "code": "00943",
+      "name": "兆豐電子高息等權",
+      "exDate": "2026-09-16",
+      "stockRatio": 0.0,
+      "cashDividend": 0.25,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00982T-2026-09-16-0.00000000-1.00000000",
+      "market": "TWSE",
+      "code": "00982T",
+      "name": "平衡兆豐台美動能",
+      "exDate": "2026-09-16",
+      "stockRatio": 0.0,
+      "cashDividend": 1.0,
       "type": "息"
     },
     {
