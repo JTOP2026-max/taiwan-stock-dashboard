@@ -1,49 +1,11 @@
 {
-  "updated": "2026-09-11 14:36",
+  "updated": "2026-09-14 08:39",
   "trackingStart": "2026-08-18",
-  "count": 36,
-  "errors": [],
+  "count": 35,
+  "errors": [
+    "tpex_actions: HTTPSConnectionPool(host='www.tpex.org.tw', port=443): Max retries exceeded with url: /openapi/v1/tpex_exright_prepost (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+  ],
   "actions": [
-    {
-      "id": "TWSE-1438-2026-09-09-0.08000000-0.20000000",
-      "market": "TWSE",
-      "code": "1438",
-      "name": "三地開發",
-      "exDate": "2026-09-09",
-      "stockRatio": 0.08,
-      "cashDividend": 0.2,
-      "type": "權息"
-    },
-    {
-      "id": "TWSE-3059-2026-09-09-0.00000000-0.99861400",
-      "market": "TWSE",
-      "code": "3059",
-      "name": "華晶科",
-      "exDate": "2026-09-09",
-      "stockRatio": 0.0,
-      "cashDividend": 0.998614,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-3706-2026-09-09-0.10000000-3.00000000",
-      "market": "TWSE",
-      "code": "3706",
-      "name": "神達",
-      "exDate": "2026-09-09",
-      "stockRatio": 0.1,
-      "cashDividend": 3.0,
-      "type": "權息"
-    },
-    {
-      "id": "TWSE-6133-2026-09-09-0.00000000-1.00000000",
-      "market": "TWSE",
-      "code": "6133",
-      "name": "金橋",
-      "exDate": "2026-09-09",
-      "stockRatio": 0.0,
-      "cashDividend": 1.0,
-      "type": "息"
-    },
     {
       "id": "TWSE-2062-2026-09-10-0.00000000-1.00000000",
       "market": "TWSE",
@@ -132,6 +94,36 @@
       "exDate": "2026-09-14",
       "stockRatio": 0.0,
       "cashDividend": 2.2,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00936-2026-09-15-0.00000000-0.16000000",
+      "market": "TWSE",
+      "code": "00936",
+      "name": "台新永續高息中小",
+      "exDate": "2026-09-15",
+      "stockRatio": 0.0,
+      "cashDividend": 0.16,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00962-2026-09-15-0.00000000-0.25000000",
+      "market": "TWSE",
+      "code": "00962",
+      "name": "台新AI優息動能",
+      "exDate": "2026-09-15",
+      "stockRatio": 0.0,
+      "cashDividend": 0.25,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-009803-2026-09-15-0.00000000-0.90000000",
+      "market": "TWSE",
+      "code": "009803",
+      "name": "玉山市值動能50",
+      "exDate": "2026-09-15",
+      "stockRatio": 0.0,
+      "cashDividend": 0.9,
       "type": "息"
     },
     {
