@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14 08:39",
+  "updated": "2026-09-14 14:39",
   "count": 1267,
   "errors": [
     "tpex_actions: HTTPSConnectionPool(host='www.tpex.org.tw', port=443): Max retries exceeded with url: /openapi/v1/tpex_exright_prepost (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
