@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15 06:29:11",
+  "updated": "2026-09-15 18:51:46",
   "source": "CNN Fear & Greed",
   "records": [
     {
@@ -1249,7 +1249,12 @@
     },
     {
       "date": "2026-09-14",
-      "score": 31.06,
+      "score": 30.34,
+      "rating": "fear"
+    },
+    {
+      "date": "2026-09-15",
+      "score": 30.34,
       "rating": "fear"
     }
   ]
