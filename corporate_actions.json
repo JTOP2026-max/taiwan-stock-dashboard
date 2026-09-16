@@ -1,39 +1,9 @@
 {
-  "updated": "2026-09-16 08:37",
+  "updated": "2026-09-16 14:37",
   "trackingStart": "2026-08-18",
-  "count": 57,
+  "count": 55,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-00401A-2026-09-14-0.00000000-0.12500000",
-      "market": "TWSE",
-      "code": "00401A",
-      "name": "主動摩根台灣鑫收",
-      "exDate": "2026-09-14",
-      "stockRatio": 0.0,
-      "cashDividend": 0.125,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-2530-2026-09-14-0.00000000-0.46000000",
-      "market": "TWSE",
-      "code": "2530",
-      "name": "華建",
-      "exDate": "2026-09-14",
-      "stockRatio": 0.0,
-      "cashDividend": 0.46,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-5243-2026-09-14-0.00000000-2.20000000",
-      "market": "TWSE",
-      "code": "5243",
-      "name": "乙盛-KY",
-      "exDate": "2026-09-14",
-      "stockRatio": 0.0,
-      "cashDividend": 2.2,
-      "type": "息"
-    },
     {
       "id": "TWSE-00936-2026-09-15-0.00000000-0.16000000",
       "market": "TWSE",
@@ -432,6 +402,16 @@
       "exDate": "2026-09-18",
       "stockRatio": 0.0,
       "cashDividend": 0.77,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00994A-2026-09-18-0.00000000-0.25700000",
+      "market": "TWSE",
+      "code": "00994A",
+      "name": "主動第一金台股優",
+      "exDate": "2026-09-18",
+      "stockRatio": 0.0,
+      "cashDividend": 0.257,
       "type": "息"
     },
     {
