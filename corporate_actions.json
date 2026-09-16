@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-15 14:38",
+  "updated": "2026-09-16 08:37",
   "trackingStart": "2026-08-18",
-  "count": 52,
+  "count": 57,
   "errors": [],
   "actions": [
     {
@@ -375,6 +375,46 @@
       "type": "息"
     },
     {
+      "id": "TWSE-00710B-2026-09-17-0.00000000-0.39000000",
+      "market": "TWSE",
+      "code": "00710B",
+      "name": "復華彭博非投等債",
+      "exDate": "2026-09-17",
+      "stockRatio": 0.0,
+      "cashDividend": 0.39,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00711B-2026-09-17-0.00000000-0.20000000",
+      "market": "TWSE",
+      "code": "00711B",
+      "name": "復華彭博新興債",
+      "exDate": "2026-09-17",
+      "stockRatio": 0.0,
+      "cashDividend": 0.2,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00712-2026-09-17-0.00000000-0.20000000",
+      "market": "TWSE",
+      "code": "00712",
+      "name": "復華富時不動產",
+      "exDate": "2026-09-17",
+      "stockRatio": 0.0,
+      "cashDividend": 0.2,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00929-2026-09-17-0.00000000-0.38000000",
+      "market": "TWSE",
+      "code": "00929",
+      "name": "復華台灣科技優息",
+      "exDate": "2026-09-17",
+      "stockRatio": 0.0,
+      "cashDividend": 0.38,
+      "type": "息"
+    },
+    {
       "id": "TWSE-5306-2026-09-17-0.00000000-1.07462800",
       "market": "TWSE",
       "code": "5306",
@@ -382,6 +422,16 @@
       "exDate": "2026-09-17",
       "stockRatio": 0.0,
       "cashDividend": 1.074628,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00728-2026-09-18-0.00000000-0.77000000",
+      "market": "TWSE",
+      "code": "00728",
+      "name": "第一金工業30",
+      "exDate": "2026-09-18",
+      "stockRatio": 0.0,
+      "cashDividend": 0.77,
       "type": "息"
     },
     {
