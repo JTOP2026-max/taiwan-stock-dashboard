@@ -1,12 +1,7 @@
 {
-  "updated": "2026-09-24 23:30:00",
+  "updated": "2026-09-25 08:34:14",
   "source": "CNN Fear & Greed",
   "records": [
-    {
-      "date": "2025-09-24",
-      "score": 54.57,
-      "rating": "neutral"
-    },
     {
       "date": "2025-09-25",
       "score": 50.66,
@@ -1254,7 +1249,7 @@
     },
     {
       "date": "2026-09-24",
-      "score": 34.0,
+      "score": 36.11,
       "rating": "fear"
     }
   ]
