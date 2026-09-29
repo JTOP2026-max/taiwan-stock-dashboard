@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-29 13:52",
-  "count": 1226,
+  "updated": "2026-09-29 21:02",
+  "count": 1222,
   "errors": [],
   "events": [
     {
@@ -12256,17 +12256,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-00930-2026-09-23-0.00000000-0.81500000",
-      "kind": "dividend",
-      "code": "00930",
-      "name": "永豐ESG低碳高息",
-      "date": "2026-09-23",
-      "cash": 0.815,
-      "stock": 0.0,
-      "title": "除權息：現金 0.81 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-1312-conference-2026-09-23-31c8d45161",
       "kind": "conference",
       "code": "1312",
@@ -12287,17 +12276,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-1442-2026-09-23-0.00000000-2.40000000",
-      "kind": "dividend",
-      "code": "1442",
-      "name": "名軒",
-      "date": "2026-09-23",
-      "cash": 2.4,
-      "stock": 0.0,
-      "title": "除權息：現金 2.40 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-1506-conference-2026-09-23-19f569394f",
       "kind": "conference",
       "code": "1506",
@@ -12316,17 +12294,6 @@
       "published": "2026-09-23",
       "title": "本公司訂定現金增資認股基準日等相關事宜",
       "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "EV-TWSE-1808-2026-09-23-0.00000000-1.50000000",
-      "kind": "dividend",
-      "code": "1808",
-      "name": "潤隆",
-      "date": "2026-09-23",
-      "cash": 1.5,
-      "stock": 0.0,
-      "title": "除權息：現金 1.50 元/股、配股率 0.00%",
-      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-2002-conference-2026-09-23-29a595d3c7",
@@ -12439,17 +12406,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-2542-2026-09-23-0.00000000-4.00000000",
-      "kind": "dividend",
-      "code": "2542",
-      "name": "興富發",
-      "date": "2026-09-23",
-      "cash": 4.0,
-      "stock": 0.0,
-      "title": "除權息：現金 4.00 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-2883-capital_reduction-2026-09-23-a7d34fb10c",
       "kind": "capital_reduction",
       "code": "2883",
@@ -12538,17 +12494,6 @@
       "published": "2026-09-23",
       "title": "公告本公司115年現金增資收足股款暨增資基準日",
       "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "EV-TWSE-5258-2026-09-23-0.00000000-1.00732600",
-      "kind": "dividend",
-      "code": "5258",
-      "name": "虹堡",
-      "date": "2026-09-23",
-      "cash": 1.007326,
-      "stock": 0.0,
-      "title": "除權息：現金 1.01 元/股、配股率 0.00%",
-      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-5515-conference-2026-09-23-3ab015fa35",
@@ -13309,6 +13254,17 @@
       "published": "2026-09-22",
       "title": "本公司舉辦財務業務概況座談會",
       "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "EV-TWSE-1463-2026-10-15-0.00000000-0.12730000",
+      "kind": "dividend",
+      "code": "1463",
+      "name": "強盛新",
+      "date": "2026-10-15",
+      "cash": 0.1273,
+      "stock": 0.0,
+      "title": "除權息：現金 0.13 元/股、配股率 0.00%",
+      "source": "TWSE"
     },
     {
       "id": "EV-TWSE-4552-2026-10-28-0.00000000-0.60000000",

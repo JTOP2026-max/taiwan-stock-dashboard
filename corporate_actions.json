@@ -1,59 +1,9 @@
 {
-  "updated": "2026-09-29 13:51",
+  "updated": "2026-09-29 21:02",
   "trackingStart": "2026-08-18",
-  "count": 16,
+  "count": 12,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-00930-2026-09-23-0.00000000-0.81500000",
-      "market": "TWSE",
-      "code": "00930",
-      "name": "永豐ESG低碳高息",
-      "exDate": "2026-09-23",
-      "stockRatio": 0.0,
-      "cashDividend": 0.815,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-1442-2026-09-23-0.00000000-2.40000000",
-      "market": "TWSE",
-      "code": "1442",
-      "name": "名軒",
-      "exDate": "2026-09-23",
-      "stockRatio": 0.0,
-      "cashDividend": 2.4,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-1808-2026-09-23-0.00000000-1.50000000",
-      "market": "TWSE",
-      "code": "1808",
-      "name": "潤隆",
-      "exDate": "2026-09-23",
-      "stockRatio": 0.0,
-      "cashDividend": 1.5,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-2542-2026-09-23-0.00000000-4.00000000",
-      "market": "TWSE",
-      "code": "2542",
-      "name": "興富發",
-      "exDate": "2026-09-23",
-      "stockRatio": 0.0,
-      "cashDividend": 4.0,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-5258-2026-09-23-0.00000000-1.00732600",
-      "market": "TWSE",
-      "code": "5258",
-      "name": "虹堡",
-      "exDate": "2026-09-23",
-      "stockRatio": 0.0,
-      "cashDividend": 1.007326,
-      "type": "息"
-    },
     {
       "id": "TWSE-1235-2026-09-24-0.04999999-0.50000000",
       "market": "TWSE",
@@ -153,6 +103,16 @@
       "stockRatio": 0.00999999,
       "cashDividend": 0.0,
       "type": "權"
+    },
+    {
+      "id": "TWSE-1463-2026-10-15-0.00000000-0.12730000",
+      "market": "TWSE",
+      "code": "1463",
+      "name": "強盛新",
+      "exDate": "2026-10-15",
+      "stockRatio": 0.0,
+      "cashDividend": 0.1273,
+      "type": "息"
     },
     {
       "id": "TWSE-4552-2026-10-28-0.00000000-0.60000000",
