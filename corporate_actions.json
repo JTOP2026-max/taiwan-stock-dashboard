@@ -1,19 +1,9 @@
 {
-  "updated": "2026-09-30 13:41",
+  "updated": "2026-09-30 20:44",
   "trackingStart": "2026-08-18",
-  "count": 12,
+  "count": 11,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-1235-2026-09-24-0.04999999-0.50000000",
-      "market": "TWSE",
-      "code": "1235",
-      "name": "興泰",
-      "exDate": "2026-09-24",
-      "stockRatio": 0.04999999,
-      "cashDividend": 0.5,
-      "type": "權息"
-    },
     {
       "id": "TWSE-2109-2026-09-29-0.00000000-0.50000000",
       "market": "TWSE",
