@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-30 20:44",
+  "updated": "2026-10-01 14:07",
   "trackingStart": "2026-08-18",
-  "count": 11,
+  "count": 12,
   "errors": [],
   "actions": [
     {
@@ -102,6 +102,16 @@
       "exDate": "2026-10-15",
       "stockRatio": 0.0,
       "cashDividend": 0.1273,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-4155-2026-10-20-0.00000000-0.30000000",
+      "market": "TWSE",
+      "code": "4155",
+      "name": "訊映",
+      "exDate": "2026-10-20",
+      "stockRatio": 0.0,
+      "cashDividend": 0.3,
       "type": "息"
     },
     {
