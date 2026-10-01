@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-01 14:07",
-  "count": 1204,
+  "updated": "2026-10-01 21:28",
+  "count": 1202,
   "errors": [],
   "events": [
     {
@@ -12286,17 +12286,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-2109-2026-09-29-0.00000000-0.50000000",
-      "kind": "dividend",
-      "code": "2109",
-      "name": "華豐",
-      "date": "2026-09-29",
-      "cash": 0.5,
-      "stock": 0.0,
-      "title": "除權息：現金 0.50 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-2231-conference-2026-09-29-ffa57d1fec",
       "kind": "conference",
       "code": "2231",
@@ -12527,17 +12516,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-7631-2026-09-29-0.00000000-0.80000000",
-      "kind": "dividend",
-      "code": "7631",
-      "name": "聚賢研發-創",
-      "date": "2026-09-29",
-      "cash": 0.8,
-      "stock": 0.0,
-      "title": "除權息：現金 0.80 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-8249-conference-2026-09-29-ea67ca951f",
       "kind": "conference",
       "code": "8249",
@@ -12586,17 +12564,6 @@
       "published": "2026-09-23",
       "title": "本公司受邀參加台新證券(股)公司舉辦線上法人說明會",
       "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "EV-TWSE-01004T-2026-09-30-0.00000000-0.22107400",
-      "kind": "dividend",
-      "code": "01004T",
-      "name": "土銀富邦R2",
-      "date": "2026-09-30",
-      "cash": 0.221074,
-      "stock": 0.0,
-      "title": "除權息：現金 0.22 元/股、配股率 0.00%",
-      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-1103-conference-2026-09-30-a8341e7ae7",
@@ -12899,17 +12866,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-2323-2026-10-01-0.00000000-0.20000000",
-      "kind": "dividend",
-      "code": "2323",
-      "name": "中環",
-      "date": "2026-10-01",
-      "cash": 0.2,
-      "stock": 0.0,
-      "title": "除權息：現金 0.20 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-2520-conference-2026-10-01-1e93d82e55",
       "kind": "conference",
       "code": "2520",
@@ -12950,17 +12906,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-9927-2026-10-01-0.00000000-5.00000000",
-      "kind": "dividend",
-      "code": "9927",
-      "name": "泰銘",
-      "date": "2026-10-01",
-      "cash": 5.0,
-      "stock": 0.0,
-      "title": "除權息：現金 5.00 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-9908-conference-2026-10-02-a8341e7ae7",
       "kind": "conference",
       "code": "9908",
@@ -12969,6 +12914,39 @@
       "published": "2026-09-24",
       "title": "公告本公司召開法人說明會相關資訊",
       "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "EV-TWSE-00406A-2026-10-05-0.00000000-0.13800000",
+      "kind": "dividend",
+      "code": "00406A",
+      "name": "主動中信台灣收益",
+      "date": "2026-10-05",
+      "cash": 0.138,
+      "stock": 0.0,
+      "title": "除權息：現金 0.14 元/股、配股率 0.00%",
+      "source": "TWSE"
+    },
+    {
+      "id": "EV-TWSE-00939-2026-10-05-0.00000000-0.12500000",
+      "kind": "dividend",
+      "code": "00939",
+      "name": "統一台灣高息動能",
+      "date": "2026-10-05",
+      "cash": 0.125,
+      "stock": 0.0,
+      "title": "除權息：現金 0.12 元/股、配股率 0.00%",
+      "source": "TWSE"
+    },
+    {
+      "id": "EV-TWSE-00984D-2026-10-05-0.00000000-0.08500000",
+      "kind": "dividend",
+      "code": "00984D",
+      "name": "主動聯博全球非投",
+      "date": "2026-10-05",
+      "cash": 0.085,
+      "stock": 0.0,
+      "title": "除權息：現金 0.09 元/股、配股率 0.00%",
+      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-2308-conference-2026-10-05-d78f8cf2f0",
