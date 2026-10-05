@@ -1,39 +1,9 @@
 {
-  "updated": "2026-10-02 20:47",
+  "updated": "2026-10-05 13:52",
   "trackingStart": "2026-08-18",
-  "count": 10,
+  "count": 7,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-00406A-2026-10-05-0.00000000-0.13800000",
-      "market": "TWSE",
-      "code": "00406A",
-      "name": "主動中信台灣收益",
-      "exDate": "2026-10-05",
-      "stockRatio": 0.0,
-      "cashDividend": 0.138,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00939-2026-10-05-0.00000000-0.12500000",
-      "market": "TWSE",
-      "code": "00939",
-      "name": "統一台灣高息動能",
-      "exDate": "2026-10-05",
-      "stockRatio": 0.0,
-      "cashDividend": 0.125,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00984D-2026-10-05-0.00000000-0.08500000",
-      "market": "TWSE",
-      "code": "00984D",
-      "name": "主動聯博全球非投",
-      "exDate": "2026-10-05",
-      "stockRatio": 0.0,
-      "cashDividend": 0.085,
-      "type": "息"
-    },
     {
       "id": "TWSE-2614-2026-10-06-0.08000000-0.40000000",
       "market": "TWSE",
