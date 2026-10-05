@@ -1,9 +1,39 @@
 {
-  "updated": "2026-10-05 13:52",
+  "updated": "2026-10-05 22:53",
   "trackingStart": "2026-08-18",
-  "count": 7,
+  "count": 17,
   "errors": [],
   "actions": [
+    {
+      "id": "TWSE-00406A-2026-10-05-0.00000000-0.13800000",
+      "market": "TWSE",
+      "code": "00406A",
+      "name": "主動中信台灣收益",
+      "exDate": "2026-10-05",
+      "stockRatio": 0.0,
+      "cashDividend": 0.138,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00939-2026-10-05-0.00000000-0.12500000",
+      "market": "TWSE",
+      "code": "00939",
+      "name": "統一台灣高息動能",
+      "exDate": "2026-10-05",
+      "stockRatio": 0.0,
+      "cashDividend": 0.125,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00984D-2026-10-05-0.00000000-0.08500000",
+      "market": "TWSE",
+      "code": "00984D",
+      "name": "主動聯博全球非投",
+      "exDate": "2026-10-05",
+      "stockRatio": 0.0,
+      "cashDividend": 0.085,
+      "type": "息"
+    },
     {
       "id": "TWSE-2614-2026-10-06-0.08000000-0.40000000",
       "market": "TWSE",
@@ -13,6 +43,46 @@
       "stockRatio": 0.08,
       "cashDividend": 0.4,
       "type": "權息"
+    },
+    {
+      "id": "TWSE-00940-2026-10-07-0.00000000-0.05500000",
+      "market": "TWSE",
+      "code": "00940",
+      "name": "元大台灣價值高息",
+      "exDate": "2026-10-07",
+      "stockRatio": 0.0,
+      "cashDividend": 0.055,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00946-2026-10-07-0.00000000-0.05800000",
+      "market": "TWSE",
+      "code": "00946",
+      "name": "群益科技高息成長",
+      "exDate": "2026-10-07",
+      "stockRatio": 0.0,
+      "cashDividend": 0.058,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00953B-2026-10-07-0.00000000-0.06700000",
+      "market": "TWSE",
+      "code": "00953B",
+      "name": "群益優選非投等債",
+      "exDate": "2026-10-07",
+      "stockRatio": 0.0,
+      "cashDividend": 0.067,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00985B-2026-10-07-0.00000000-0.05300000",
+      "market": "TWSE",
+      "code": "00985B",
+      "name": "群益ESG投等債0-5",
+      "exDate": "2026-10-07",
+      "stockRatio": 0.0,
+      "cashDividend": 0.053,
+      "type": "息"
     },
     {
       "id": "TWSE-6108-2026-10-07-0.00000000-1.00000000",
@@ -32,6 +102,16 @@
       "exDate": "2026-10-07",
       "stockRatio": 0.0,
       "cashDividend": 0.533326,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00400A-2026-10-08-0.00000000-0.12000000",
+      "market": "TWSE",
+      "code": "00400A",
+      "name": "主動國泰動能高息",
+      "exDate": "2026-10-08",
+      "stockRatio": 0.0,
+      "cashDividend": 0.12,
       "type": "息"
     },
     {
@@ -65,6 +145,16 @@
       "type": "息"
     },
     {
+      "id": "TWSE-6931-2026-10-23-0.00000000-0.12000000",
+      "market": "TWSE",
+      "code": "6931",
+      "name": "青松健康",
+      "exDate": "2026-10-23",
+      "stockRatio": 0.0,
+      "cashDividend": 0.12,
+      "type": "息"
+    },
+    {
       "id": "TWSE-4552-2026-10-28-0.00000000-0.60000000",
       "market": "TWSE",
       "code": "4552",
@@ -72,6 +162,16 @@
       "exDate": "2026-10-28",
       "stockRatio": 0.0,
       "cashDividend": 0.6,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-5522-2026-10-29-0.00000000-1.00000000",
+      "market": "TWSE",
+      "code": "5522",
+      "name": "遠雄",
+      "exDate": "2026-10-29",
+      "stockRatio": 0.0,
+      "cashDividend": 1.0,
       "type": "息"
     }
   ]
