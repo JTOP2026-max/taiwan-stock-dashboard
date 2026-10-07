@@ -1,39 +1,9 @@
 {
-  "updated": "2026-10-07 14:09",
+  "updated": "2026-10-07 21:34",
   "trackingStart": "2026-08-18",
-  "count": 17,
+  "count": 14,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-00406A-2026-10-05-0.00000000-0.13800000",
-      "market": "TWSE",
-      "code": "00406A",
-      "name": "主動中信台灣收益",
-      "exDate": "2026-10-05",
-      "stockRatio": 0.0,
-      "cashDividend": 0.138,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00939-2026-10-05-0.00000000-0.12500000",
-      "market": "TWSE",
-      "code": "00939",
-      "name": "統一台灣高息動能",
-      "exDate": "2026-10-05",
-      "stockRatio": 0.0,
-      "cashDividend": 0.125,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00984D-2026-10-05-0.00000000-0.08500000",
-      "market": "TWSE",
-      "code": "00984D",
-      "name": "主動聯博全球非投",
-      "exDate": "2026-10-05",
-      "stockRatio": 0.0,
-      "cashDividend": 0.085,
-      "type": "息"
-    },
     {
       "id": "TWSE-2614-2026-10-06-0.08000000-0.40000000",
       "market": "TWSE",
@@ -135,13 +105,13 @@
       "type": "息"
     },
     {
-      "id": "TWSE-4155-2026-10-20-0.00000000-0.30000000",
+      "id": "TWSE-2028-2026-10-23-0.00000000-0.20000000",
       "market": "TWSE",
-      "code": "4155",
-      "name": "訊映",
-      "exDate": "2026-10-20",
+      "code": "2028",
+      "name": "威致",
+      "exDate": "2026-10-23",
       "stockRatio": 0.0,
-      "cashDividend": 0.3,
+      "cashDividend": 0.2,
       "type": "息"
     },
     {
