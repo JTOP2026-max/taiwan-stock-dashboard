@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-12 14:09",
-  "count": 1168,
+  "updated": "2026-10-12 23:40",
+  "count": 1163,
   "errors": [],
   "events": [
     {
@@ -11996,17 +11996,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-2614-2026-10-06-0.08000000-0.40000000",
-      "kind": "dividend",
-      "code": "2614",
-      "name": "東森",
-      "date": "2026-10-06",
-      "cash": 0.4,
-      "stock": 0.08,
-      "title": "除權息：現金 0.40 元/股、配股率 8.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-2881-capital_increase-2026-10-06-e248e6d3ad",
       "kind": "capital_increase",
       "code": "2881",
@@ -12087,50 +12076,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-00940-2026-10-07-0.00000000-0.05500000",
-      "kind": "dividend",
-      "code": "00940",
-      "name": "元大台灣價值高息",
-      "date": "2026-10-07",
-      "cash": 0.055,
-      "stock": 0.0,
-      "title": "除權息：現金 0.06 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
-      "id": "EV-TWSE-00946-2026-10-07-0.00000000-0.05800000",
-      "kind": "dividend",
-      "code": "00946",
-      "name": "群益科技高息成長",
-      "date": "2026-10-07",
-      "cash": 0.058,
-      "stock": 0.0,
-      "title": "除權息：現金 0.06 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
-      "id": "EV-TWSE-00953B-2026-10-07-0.00000000-0.06700000",
-      "kind": "dividend",
-      "code": "00953B",
-      "name": "群益優選非投等債",
-      "date": "2026-10-07",
-      "cash": 0.067,
-      "stock": 0.0,
-      "title": "除權息：現金 0.07 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
-      "id": "EV-TWSE-00985B-2026-10-07-0.00000000-0.05300000",
-      "kind": "dividend",
-      "code": "00985B",
-      "name": "群益ESG投等債0-5",
-      "date": "2026-10-07",
-      "cash": 0.053,
-      "stock": 0.0,
-      "title": "除權息：現金 0.05 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-1441-capital_increase-2026-10-07-435e4d3085",
       "kind": "capital_increase",
       "code": "1441",
@@ -12201,17 +12146,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-6108-2026-10-07-0.00000000-1.00000000",
-      "kind": "dividend",
-      "code": "6108",
-      "name": "競國",
-      "date": "2026-10-07",
-      "cash": 1.0,
-      "stock": 0.0,
-      "title": "除權息：現金 1.00 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-6120-conference-2026-10-07-795aec3070",
       "kind": "conference",
       "code": "6120",
@@ -12240,17 +12174,6 @@
       "published": "2026-10-07",
       "title": "公告本公司股票初次申請上市時所出具之承諾事項暨其後續\r\n執行情形",
       "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "EV-TWSE-6947-2026-10-07-0.00000000-0.53332600",
-      "kind": "dividend",
-      "code": "6947",
-      "name": "台鎔科技",
-      "date": "2026-10-07",
-      "cash": 0.533326,
-      "stock": 0.0,
-      "title": "除權息：現金 0.53 元/股、配股率 0.00%",
-      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-8114-capital_increase-2026-10-07-6b9490e2ef",
@@ -12624,6 +12547,28 @@
       "published": "2026-10-06",
       "title": "本公司受邀參加國泰證券舉辦之法人說明會，說明本公司營運成果及未來展望",
       "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "EV-TWSE-00943-2026-10-19-0.00000000-0.36000000",
+      "kind": "dividend",
+      "code": "00943",
+      "name": "兆豐電子高息等權",
+      "date": "2026-10-19",
+      "cash": 0.36,
+      "stock": 0.0,
+      "title": "除權息：現金 0.36 元/股、配股率 0.00%",
+      "source": "TWSE"
+    },
+    {
+      "id": "EV-TWSE-00996A-2026-10-19-0.00000000-0.73000000",
+      "kind": "dividend",
+      "code": "00996A",
+      "name": "主動兆豐台灣豐收",
+      "date": "2026-10-19",
+      "cash": 0.73,
+      "stock": 0.0,
+      "title": "除權息：現金 0.73 元/股、配股率 0.00%",
+      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-2889-conference-2026-10-19-13f077fab3",

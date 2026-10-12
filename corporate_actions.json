@@ -1,79 +1,9 @@
 {
-  "updated": "2026-10-12 14:09",
+  "updated": "2026-10-12 23:39",
   "trackingStart": "2026-08-18",
-  "count": 14,
+  "count": 9,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-2614-2026-10-06-0.08000000-0.40000000",
-      "market": "TWSE",
-      "code": "2614",
-      "name": "東森",
-      "exDate": "2026-10-06",
-      "stockRatio": 0.08,
-      "cashDividend": 0.4,
-      "type": "權息"
-    },
-    {
-      "id": "TWSE-00940-2026-10-07-0.00000000-0.05500000",
-      "market": "TWSE",
-      "code": "00940",
-      "name": "元大台灣價值高息",
-      "exDate": "2026-10-07",
-      "stockRatio": 0.0,
-      "cashDividend": 0.055,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00946-2026-10-07-0.00000000-0.05800000",
-      "market": "TWSE",
-      "code": "00946",
-      "name": "群益科技高息成長",
-      "exDate": "2026-10-07",
-      "stockRatio": 0.0,
-      "cashDividend": 0.058,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00953B-2026-10-07-0.00000000-0.06700000",
-      "market": "TWSE",
-      "code": "00953B",
-      "name": "群益優選非投等債",
-      "exDate": "2026-10-07",
-      "stockRatio": 0.0,
-      "cashDividend": 0.067,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00985B-2026-10-07-0.00000000-0.05300000",
-      "market": "TWSE",
-      "code": "00985B",
-      "name": "群益ESG投等債0-5",
-      "exDate": "2026-10-07",
-      "stockRatio": 0.0,
-      "cashDividend": 0.053,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-6108-2026-10-07-0.00000000-1.00000000",
-      "market": "TWSE",
-      "code": "6108",
-      "name": "競國",
-      "exDate": "2026-10-07",
-      "stockRatio": 0.0,
-      "cashDividend": 1.0,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-6947-2026-10-07-0.00000000-0.53332600",
-      "market": "TWSE",
-      "code": "6947",
-      "name": "台鎔科技",
-      "exDate": "2026-10-07",
-      "stockRatio": 0.0,
-      "cashDividend": 0.533326,
-      "type": "息"
-    },
     {
       "id": "TWSE-00400A-2026-10-08-0.00000000-0.12000000",
       "market": "TWSE",
@@ -102,6 +32,26 @@
       "exDate": "2026-10-15",
       "stockRatio": 0.0,
       "cashDividend": 0.1273,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00943-2026-10-19-0.00000000-0.36000000",
+      "market": "TWSE",
+      "code": "00943",
+      "name": "兆豐電子高息等權",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.36,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00996A-2026-10-19-0.00000000-0.73000000",
+      "market": "TWSE",
+      "code": "00996A",
+      "name": "主動兆豐台灣豐收",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.73,
       "type": "息"
     },
     {
