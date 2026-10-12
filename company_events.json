@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-09 21:25",
-  "count": 1172,
+  "updated": "2026-10-12 14:09",
+  "count": 1168,
   "errors": [],
   "events": [
     {
@@ -11913,46 +11913,6 @@
       "title": "股利政策：現金 1.00 元/股、股票 0.00 元/股",
       "status": "董事會決議",
       "source": "TWSE t187ap45_L"
-    },
-    {
-      "id": "TWSE-MOPS-2329-conference-2026-10-02-e5a8ad3eef",
-      "kind": "conference",
-      "code": "2329",
-      "name": "華泰",
-      "date": "2026-10-02",
-      "published": "2026-10-01",
-      "title": "本公司受邀參加凱基證券所舉辦之法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2399-conference-2026-10-02-acdf2829a3",
-      "kind": "conference",
-      "code": "2399",
-      "name": "映泰",
-      "date": "2026-10-02",
-      "published": "2026-10-01",
-      "title": "本公司受邀參加福邦證券舉辦之法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-3231-capital_reduction-2026-10-02-57d46e2d8d",
-      "kind": "capital_reduction",
-      "code": "3231",
-      "name": "緯創",
-      "date": "2026-10-02",
-      "published": "2026-10-06",
-      "title": "公告本公司註銷收回之限制員工權利新股\r\n辦理減資變更登記完成",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-9908-conference-2026-10-02-a8341e7ae7",
-      "kind": "conference",
-      "code": "9908",
-      "name": "大台北",
-      "date": "2026-10-02",
-      "published": "2026-09-24",
-      "title": "公告本公司召開法人說明會相關資訊",
-      "source": "TWSE t187ap04_L"
     },
     {
       "id": "TWSE-MOPS-1440-capital_increase-2026-10-05-18e798e9e3",
