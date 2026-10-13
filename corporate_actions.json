@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-13 14:53",
+  "updated": "2026-10-13 22:20",
   "trackingStart": "2026-08-18",
-  "count": 8,
+  "count": 11,
   "errors": [],
   "actions": [
     {
@@ -13,6 +13,16 @@
       "stockRatio": 0.00999999,
       "cashDividend": 0.0,
       "type": "權"
+    },
+    {
+      "id": "TWSE-00401A-2026-10-15-0.00000000-0.13100000",
+      "market": "TWSE",
+      "code": "00401A",
+      "name": "主動摩根台灣鑫收",
+      "exDate": "2026-10-15",
+      "stockRatio": 0.0,
+      "cashDividend": 0.131,
+      "type": "息"
     },
     {
       "id": "TWSE-1463-2026-10-15-0.00000000-0.12730000",
@@ -72,6 +82,26 @@
       "exDate": "2026-10-28",
       "stockRatio": 0.0,
       "cashDividend": 0.6,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-2762-2026-10-29-0.00000000-1.80719700",
+      "market": "TWSE",
+      "code": "2762",
+      "name": "世界健身-KY",
+      "exDate": "2026-10-29",
+      "stockRatio": 0.0,
+      "cashDividend": 1.807197,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-3563-2026-10-29-0.00000000-1.00000000",
+      "market": "TWSE",
+      "code": "3563",
+      "name": "牧德",
+      "exDate": "2026-10-29",
+      "stockRatio": 0.0,
+      "cashDividend": 1.0,
       "type": "息"
     },
     {
