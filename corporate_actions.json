@@ -1,19 +1,9 @@
 {
-  "updated": "2026-10-14 13:02",
+  "updated": "2026-10-14 20:02",
   "trackingStart": "2026-08-18",
-  "count": 11,
+  "count": 16,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-1449-2026-10-12-0.00999999-0.00000000",
-      "market": "TWSE",
-      "code": "1449",
-      "name": "佳和",
-      "exDate": "2026-10-12",
-      "stockRatio": 0.00999999,
-      "cashDividend": 0.0,
-      "type": "權"
-    },
     {
       "id": "TWSE-00401A-2026-10-15-0.00000000-0.13100000",
       "market": "TWSE",
@@ -32,6 +22,66 @@
       "exDate": "2026-10-15",
       "stockRatio": 0.0,
       "cashDividend": 0.1273,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00851-2026-10-16-0.00000000-2.50000000",
+      "market": "TWSE",
+      "code": "00851",
+      "name": "台新全球AI",
+      "exDate": "2026-10-16",
+      "stockRatio": 0.0,
+      "cashDividend": 2.5,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00904-2026-10-16-0.00000000-2.20000000",
+      "market": "TWSE",
+      "code": "00904",
+      "name": "台新臺灣半導體30",
+      "exDate": "2026-10-16",
+      "stockRatio": 0.0,
+      "cashDividend": 2.2,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00936-2026-10-16-0.00000000-0.16000000",
+      "market": "TWSE",
+      "code": "00936",
+      "name": "台新永續高息中小",
+      "exDate": "2026-10-16",
+      "stockRatio": 0.0,
+      "cashDividend": 0.16,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00947-2026-10-16-0.00000000-2.00000000",
+      "market": "TWSE",
+      "code": "00947",
+      "name": "台新臺灣IC設計",
+      "exDate": "2026-10-16",
+      "stockRatio": 0.0,
+      "cashDividend": 2.0,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00962-2026-10-16-0.00000000-0.25000000",
+      "market": "TWSE",
+      "code": "00962",
+      "name": "台新AI優息動能",
+      "exDate": "2026-10-16",
+      "stockRatio": 0.0,
+      "cashDividend": 0.25,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-009805-2026-10-16-0.00000000-0.30000000",
+      "market": "TWSE",
+      "code": "009805",
+      "name": "台新美國電力基建",
+      "exDate": "2026-10-16",
+      "stockRatio": 0.0,
+      "cashDividend": 0.3,
       "type": "息"
     },
     {
