@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-15 12:50",
+  "updated": "2026-10-15 19:39",
   "trackingStart": "2026-08-18",
-  "count": 16,
+  "count": 44,
   "errors": [],
   "actions": [
     {
@@ -85,6 +85,116 @@
       "type": "息"
     },
     {
+      "id": "TWSE-00714-2026-10-19-0.00000000-0.12300000",
+      "market": "TWSE",
+      "code": "00714",
+      "name": "群益道瓊美國地產",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.123,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00717-2026-10-19-0.00000000-0.14100000",
+      "market": "TWSE",
+      "code": "00717",
+      "name": "富邦美國特別股",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.141,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00730-2026-10-19-0.00000000-0.11000000",
+      "market": "TWSE",
+      "code": "00730",
+      "name": "富邦臺灣優質高息",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.11,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00733-2026-10-19-0.00000000-1.48700000",
+      "market": "TWSE",
+      "code": "00733",
+      "name": "富邦臺灣中小",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 1.487,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00900-2026-10-19-0.00000000-0.07500000",
+      "market": "TWSE",
+      "code": "00900",
+      "name": "富邦特選高股息30",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.075,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00905-2026-10-19-0.00000000-0.60000000",
+      "market": "TWSE",
+      "code": "00905",
+      "name": "FT臺灣Smart",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.6,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00908-2026-10-19-0.00000000-0.14500000",
+      "market": "TWSE",
+      "code": "00908",
+      "name": "富邦入息REITs+",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.145,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00912-2026-10-19-0.00000000-1.80000000",
+      "market": "TWSE",
+      "code": "00912",
+      "name": "中信臺灣智慧50",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 1.8,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00922-2026-10-19-0.00000000-2.10000000",
+      "market": "TWSE",
+      "code": "00922",
+      "name": "國泰台灣領袖50",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 2.1,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00927-2026-10-19-0.00000000-2.00000000",
+      "market": "TWSE",
+      "code": "00927",
+      "name": "群益半導體收益",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 2.0,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00934-2026-10-19-0.00000000-0.50000000",
+      "market": "TWSE",
+      "code": "00934",
+      "name": "中信成長高股息",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.5,
+      "type": "息"
+    },
+    {
       "id": "TWSE-00943-2026-10-19-0.00000000-0.36000000",
       "market": "TWSE",
       "code": "00943",
@@ -92,6 +202,156 @@
       "exDate": "2026-10-19",
       "stockRatio": 0.0,
       "cashDividend": 0.36,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00944-2026-10-19-0.00000000-0.10900000",
+      "market": "TWSE",
+      "code": "00944",
+      "name": "野村趨勢動能高息",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.109,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00945B-2026-10-19-0.00000000-0.09700000",
+      "market": "TWSE",
+      "code": "00945B",
+      "name": "凱基美國非投等債",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.097,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00952-2026-10-19-0.00000000-0.12000000",
+      "market": "TWSE",
+      "code": "00952",
+      "name": "凱基台灣AI50",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.12,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00956-2026-10-19-0.00000000-0.30000000",
+      "market": "TWSE",
+      "code": "00956",
+      "name": "中信日經高股息",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.3,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00960-2026-10-19-0.00000000-0.28000000",
+      "market": "TWSE",
+      "code": "00960",
+      "name": "野村全球航運龍頭",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.28,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00961-2026-10-19-0.00000000-0.09000000",
+      "market": "TWSE",
+      "code": "00961",
+      "name": "FT臺灣永續高息",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.09,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00963-2026-10-19-0.00000000-0.10000000",
+      "market": "TWSE",
+      "code": "00963",
+      "name": "中信全球高股息",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.1,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00964-2026-10-19-0.00000000-0.20000000",
+      "market": "TWSE",
+      "code": "00964",
+      "name": "中信亞太高股息",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.2,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00981T-2026-10-19-0.00000000-0.08200000",
+      "market": "TWSE",
+      "code": "00981T",
+      "name": "平衡凱基雙核收息",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.082,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00982D-2026-10-19-0.00000000-0.05200000",
+      "market": "TWSE",
+      "code": "00982D",
+      "name": "主動富邦動態入息",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.052,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00983D-2026-10-19-0.00000000-0.06100000",
+      "market": "TWSE",
+      "code": "00983D",
+      "name": "主動富邦複合收益",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.061,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00984A-2026-10-19-0.00000000-0.47300000",
+      "market": "TWSE",
+      "code": "00984A",
+      "name": "主動安聯台灣高息",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.473,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00985A-2026-10-19-0.00000000-2.15000000",
+      "market": "TWSE",
+      "code": "00985A",
+      "name": "主動野村台灣50",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 2.15,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00992A-2026-10-19-0.00000000-0.85000000",
+      "market": "TWSE",
+      "code": "00992A",
+      "name": "主動群益科技創新",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.85,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00995A-2026-10-19-0.00000000-0.50000000",
+      "market": "TWSE",
+      "code": "00995A",
+      "name": "主動中信台灣卓越",
+      "exDate": "2026-10-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.5,
       "type": "息"
     },
     {
@@ -162,6 +422,26 @@
       "exDate": "2026-10-29",
       "stockRatio": 0.0,
       "cashDividend": 1.0,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-6165-2026-11-02-0.00000000-5.00000000",
+      "market": "TWSE",
+      "code": "6165",
+      "name": "浪凡",
+      "exDate": "2026-11-02",
+      "stockRatio": 0.0,
+      "cashDividend": 5.0,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-020036-2026-11-04-0.00000000-0.40000000",
+      "market": "TWSE",
+      "code": "020036",
+      "name": "元大金融配息N",
+      "exDate": "2026-11-04",
+      "stockRatio": 0.0,
+      "cashDividend": 0.4,
       "type": "息"
     }
   ]
