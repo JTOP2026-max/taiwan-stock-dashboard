@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-16 12:41",
+  "updated": "2026-10-16 19:33",
   "trackingStart": "2026-08-18",
-  "count": 44,
+  "count": 46,
   "errors": [],
   "actions": [
     {
@@ -362,6 +362,26 @@
       "exDate": "2026-10-19",
       "stockRatio": 0.0,
       "cashDividend": 0.73,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00991B-2026-10-20-0.00000000-0.06700000",
+      "market": "TWSE",
+      "code": "00991B",
+      "name": "貝萊德A級公司債",
+      "exDate": "2026-10-20",
+      "stockRatio": 0.0,
+      "cashDividend": 0.067,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00408A-2026-10-21-0.00000000-0.21000000",
+      "market": "TWSE",
+      "code": "00408A",
+      "name": "主動第一金優股息",
+      "exDate": "2026-10-21",
+      "stockRatio": 0.0,
+      "cashDividend": 0.21,
       "type": "息"
     },
     {
