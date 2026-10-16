@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15 23:19:28",
+  "updated": "2026-10-16 08:25:39",
   "records": [
     {
       "date": "2026-07-22",
@@ -1982,7 +1982,7 @@
     },
     {
       "date": "2026-10-15",
-      "updated": "2026-10-15 23:19:28",
+      "updated": "2026-10-16 08:25:39",
       "core": {
         "idx": 46969.87,
         "chg": -1655.96,
@@ -1999,24 +1999,23 @@
         "dealer": -3983.7886878
       },
       "pc": {
-        "trade": 0.7499,
-        "oi": 0.6084,
-        "date": "2026-10-15"
+        "trade": 0.7498999999999999,
+        "oi": 0.6084
       },
       "breadth": {
         "up": 249,
         "down": 1019
       },
-      "taiwanSentiment": 39,
+      "taiwanSentiment": 16,
       "cnnFearGreed": {
-        "score": 30.1804988662132,
+        "score": 31.5428571428571,
         "rating": "fear",
-        "timestamp": "2026-10-15T15:13:58+00:00",
+        "timestamp": "2026-10-15T23:59:53+00:00",
         "previousClose": 32.3345622119816,
         "previousWeek": 39.8,
         "previousMonth": 27.9714285714286
       },
-      "fearGreed": 30.1804988662132,
+      "fearGreed": 31.5428571428571,
       "sources": {
         "twse": true,
         "institutions": true,
