@@ -1,89 +1,9 @@
 {
-  "updated": "2026-10-19 12:52",
+  "updated": "2026-10-19 21:32",
   "trackingStart": "2026-08-18",
-  "count": 46,
+  "count": 42,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-00401A-2026-10-15-0.00000000-0.13100000",
-      "market": "TWSE",
-      "code": "00401A",
-      "name": "主動摩根台灣鑫收",
-      "exDate": "2026-10-15",
-      "stockRatio": 0.0,
-      "cashDividend": 0.131,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-1463-2026-10-15-0.00000000-0.12730000",
-      "market": "TWSE",
-      "code": "1463",
-      "name": "強盛新",
-      "exDate": "2026-10-15",
-      "stockRatio": 0.0,
-      "cashDividend": 0.1273,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00851-2026-10-16-0.00000000-2.50000000",
-      "market": "TWSE",
-      "code": "00851",
-      "name": "台新全球AI",
-      "exDate": "2026-10-16",
-      "stockRatio": 0.0,
-      "cashDividend": 2.5,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00904-2026-10-16-0.00000000-2.20000000",
-      "market": "TWSE",
-      "code": "00904",
-      "name": "台新臺灣半導體30",
-      "exDate": "2026-10-16",
-      "stockRatio": 0.0,
-      "cashDividend": 2.2,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00936-2026-10-16-0.00000000-0.16000000",
-      "market": "TWSE",
-      "code": "00936",
-      "name": "台新永續高息中小",
-      "exDate": "2026-10-16",
-      "stockRatio": 0.0,
-      "cashDividend": 0.16,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00947-2026-10-16-0.00000000-2.00000000",
-      "market": "TWSE",
-      "code": "00947",
-      "name": "台新臺灣IC設計",
-      "exDate": "2026-10-16",
-      "stockRatio": 0.0,
-      "cashDividend": 2.0,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00962-2026-10-16-0.00000000-0.25000000",
-      "market": "TWSE",
-      "code": "00962",
-      "name": "台新AI優息動能",
-      "exDate": "2026-10-16",
-      "stockRatio": 0.0,
-      "cashDividend": 0.25,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-009805-2026-10-16-0.00000000-0.30000000",
-      "market": "TWSE",
-      "code": "009805",
-      "name": "台新美國電力基建",
-      "exDate": "2026-10-16",
-      "stockRatio": 0.0,
-      "cashDividend": 0.3,
-      "type": "息"
-    },
     {
       "id": "TWSE-00714-2026-10-19-0.00000000-0.12300000",
       "market": "TWSE",
@@ -375,6 +295,16 @@
       "type": "息"
     },
     {
+      "id": "TWSE-4155-2026-10-20-0.00000000-0.30000000",
+      "market": "TWSE",
+      "code": "4155",
+      "name": "訊映",
+      "exDate": "2026-10-20",
+      "stockRatio": 0.0,
+      "cashDividend": 0.3,
+      "type": "息"
+    },
+    {
       "id": "TWSE-00408A-2026-10-21-0.00000000-0.21000000",
       "market": "TWSE",
       "code": "00408A",
@@ -382,6 +312,16 @@
       "exDate": "2026-10-21",
       "stockRatio": 0.0,
       "cashDividend": 0.21,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00929-2026-10-21-0.00000000-0.38000000",
+      "market": "TWSE",
+      "code": "00929",
+      "name": "復華台灣科技優息",
+      "exDate": "2026-10-21",
+      "stockRatio": 0.0,
+      "cashDividend": 0.38,
       "type": "息"
     },
     {
@@ -462,6 +402,26 @@
       "exDate": "2026-11-04",
       "stockRatio": 0.0,
       "cashDividend": 0.4,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-8467-2026-11-04-0.00000000-2.00000000",
+      "market": "TWSE",
+      "code": "8467",
+      "name": "波力-KY",
+      "exDate": "2026-11-04",
+      "stockRatio": 0.0,
+      "cashDividend": 2.0,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-01007T-2026-11-19-0.00000000-0.21531300",
+      "market": "TWSE",
+      "code": "01007T",
+      "name": "兆豐國泰R2",
+      "exDate": "2026-11-19",
+      "stockRatio": 0.0,
+      "cashDividend": 0.215313,
       "type": "息"
     }
   ]
