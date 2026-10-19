@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-16 19:34",
-  "count": 1235,
+  "updated": "2026-10-19 12:52",
+  "count": 1236,
   "errors": [],
   "events": [
     {
@@ -7470,6 +7470,17 @@
       "stock": 0.0,
       "title": "股利政策：現金 0.30 元/股、股票 0.00 元/股",
       "status": "董事會決議",
+      "source": "TWSE t187ap45_L"
+    },
+    {
+      "kind": "dividend_policy",
+      "code": "8908",
+      "name": "欣雄",
+      "date": "2026-03-11",
+      "cash": 1.5,
+      "stock": 0.3,
+      "title": "股利政策：現金 1.50 元/股、股票 0.30 元/股",
+      "status": "現金股利經董事會決議、<br>增資配股經股東會確認",
       "source": "TWSE t187ap45_L"
     },
     {
