@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20 09:05:53",
+  "updated": "2026-10-20 23:21:49",
   "records": [
     {
       "date": "2026-07-22",
@@ -2111,6 +2111,50 @@
         "twse": true,
         "institutions": true,
         "taifexPC": true,
+        "taifexFutures": false,
+        "cnnFearGreed": true
+      }
+    },
+    {
+      "date": "2026-10-20",
+      "updated": "2026-10-20 23:21:49",
+      "core": {
+        "idx": 46292.93,
+        "chg": -529.15,
+        "pct": -1.13,
+        "volTrillion": 0.8,
+        "fut": null,
+        "futChg": null,
+        "basis": null
+      },
+      "inst": {
+        "total": -963.60488198,
+        "foreign": 0.0,
+        "trust": 187.5850843,
+        "dealer": -1151.18996628
+      },
+      "pc": {
+        "trade": null,
+        "oi": null
+      },
+      "breadth": {
+        "up": 316,
+        "down": 913
+      },
+      "taiwanSentiment": 41,
+      "cnnFearGreed": {
+        "score": 27.9912087912088,
+        "rating": "fear",
+        "timestamp": "2026-10-20T15:18:45+00:00",
+        "previousClose": 23.1071428571429,
+        "previousWeek": 44.1142857142857,
+        "previousMonth": 30.4285714285714
+      },
+      "fearGreed": 27.9912087912088,
+      "sources": {
+        "twse": true,
+        "institutions": true,
+        "taifexPC": false,
         "taifexFutures": false,
         "cnnFearGreed": true
       }
