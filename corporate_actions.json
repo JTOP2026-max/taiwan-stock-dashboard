@@ -1,29 +1,9 @@
 {
-  "updated": "2026-10-22 13:01",
+  "updated": "2026-10-22 20:02",
   "trackingStart": "2026-08-18",
-  "count": 13,
+  "count": 12,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-00408A-2026-10-21-0.00000000-0.21000000",
-      "market": "TWSE",
-      "code": "00408A",
-      "name": "主動第一金優股息",
-      "exDate": "2026-10-21",
-      "stockRatio": 0.0,
-      "cashDividend": 0.21,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00929-2026-10-21-0.00000000-0.38000000",
-      "market": "TWSE",
-      "code": "00929",
-      "name": "復華台灣科技優息",
-      "exDate": "2026-10-21",
-      "stockRatio": 0.0,
-      "cashDividend": 0.38,
-      "type": "息"
-    },
     {
       "id": "TWSE-0056-2026-10-22-0.00000000-1.72000000",
       "market": "TWSE",
@@ -52,6 +32,16 @@
       "exDate": "2026-10-23",
       "stockRatio": 0.0,
       "cashDividend": 0.12,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00907-2026-10-27-0.00000000-0.26800000",
+      "market": "TWSE",
+      "code": "00907",
+      "name": "永豐優息存股",
+      "exDate": "2026-10-27",
+      "stockRatio": 0.0,
+      "cashDividend": 0.268,
       "type": "息"
     },
     {
