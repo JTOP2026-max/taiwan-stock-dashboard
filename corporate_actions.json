@@ -1,29 +1,9 @@
 {
-  "updated": "2026-10-21 19:59",
+  "updated": "2026-10-22 13:01",
   "trackingStart": "2026-08-18",
-  "count": 15,
+  "count": 13,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-00991B-2026-10-20-0.00000000-0.06700000",
-      "market": "TWSE",
-      "code": "00991B",
-      "name": "貝萊德A級公司債",
-      "exDate": "2026-10-20",
-      "stockRatio": 0.0,
-      "cashDividend": 0.067,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-4155-2026-10-20-0.00000000-0.30000000",
-      "market": "TWSE",
-      "code": "4155",
-      "name": "訊映",
-      "exDate": "2026-10-20",
-      "stockRatio": 0.0,
-      "cashDividend": 0.3,
-      "type": "息"
-    },
     {
       "id": "TWSE-00408A-2026-10-21-0.00000000-0.21000000",
       "market": "TWSE",
