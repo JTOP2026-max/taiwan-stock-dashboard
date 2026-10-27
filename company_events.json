@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-26 21:15",
-  "count": 1229,
+  "updated": "2026-10-27 13:15",
+  "count": 1221,
   "errors": [],
   "events": [
     {
@@ -11946,86 +11946,6 @@
       "title": "股利政策：現金 0.00 元/股、股票 0.00 元/股",
       "status": "董事會決議",
       "source": "TWSE t187ap45_L"
-    },
-    {
-      "id": "TWSE-MOPS-1225-capital_increase-2026-10-19-166be32141",
-      "kind": "capital_increase",
-      "code": "1225",
-      "name": "福懋油",
-      "date": "2026-10-19",
-      "published": "2026-10-19",
-      "title": "公告本公司資金貸與達\r\n「公開發行公司資金貸與及背書保證處理準則」\r\n第22條第1項第3款標準",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-1504-conference-2026-10-19-4f9d13019d",
-      "kind": "conference",
-      "code": "1504",
-      "name": "東元",
-      "date": "2026-10-19",
-      "published": "2026-10-19",
-      "title": "說明媒體報導",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2385-capital_increase-2026-10-19-5912cf8f36",
-      "kind": "capital_increase",
-      "code": "2385",
-      "name": "群光",
-      "date": "2026-10-19",
-      "published": "2026-10-19",
-      "title": "公告子公司資金貸與達「公開發行公司資金貸與及背書保證處理\r\n準則」第22條第1項第3款標準",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2467-capital_increase-2026-10-19-b3b757bede",
-      "kind": "capital_increase",
-      "code": "2467",
-      "name": "志聖",
-      "date": "2026-10-19",
-      "published": "2026-10-19",
-      "title": "代子公司蘇州創峰光電科技有限公司公告\r\n擬增資蘇州創峰光電智能科技有限公司",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2889-conference-2026-10-19-13f077fab3",
-      "kind": "conference",
-      "code": "2889",
-      "name": "國票金",
-      "date": "2026-10-19",
-      "published": "2026-10-05",
-      "title": "本公司自辦說明會，說明公司營運概況",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-6515-conference-2026-10-19-9bb5849c64",
-      "kind": "conference",
-      "code": "6515",
-      "name": "穎崴",
-      "date": "2026-10-19",
-      "published": "2026-10-15",
-      "title": "本公司受邀參加國泰證券舉辦之海外路演(NDR)",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-6885-capital_reduction-2026-10-19-e6e9b5834a",
-      "kind": "capital_reduction",
-      "code": "6885",
-      "name": "全福生技",
-      "date": "2026-10-19",
-      "published": "2026-10-20",
-      "title": "公告本公司董事會決議辦理現金增資發行新股",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-9955-capital_increase-2026-10-19-c2aecc5a4d",
-      "kind": "capital_increase",
-      "code": "9955",
-      "name": "佳龍",
-      "date": "2026-10-19",
-      "published": "2026-10-19",
-      "title": "公告本公司115年現金增資收足股款暨增資基準日",
-      "source": "TWSE t187ap04_L"
     },
     {
       "id": "TWSE-MOPS-1312-capital_increase-2026-10-20-ea9f50381c",
