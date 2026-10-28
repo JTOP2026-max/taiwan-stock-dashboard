@@ -1,12 +1,7 @@
 {
-  "updated": "2026-10-28 00:01:54",
+  "updated": "2026-10-28 09:24:54",
   "source": "CNN Fear & Greed",
   "records": [
-    {
-      "date": "2025-10-27",
-      "score": 37.34,
-      "rating": "fear"
-    },
     {
       "date": "2025-10-28",
       "score": 39.34,
@@ -1089,172 +1084,172 @@
     },
     {
       "date": "2026-09-10",
-      "score": 32.2,
+      "score": 31.91,
       "rating": "fear"
     },
     {
       "date": "2026-09-11",
-      "score": 32.69,
+      "score": 33.11,
       "rating": "fear"
     },
     {
       "date": "2026-09-14",
-      "score": 30.97,
+      "score": 32.09,
       "rating": "fear"
     },
     {
       "date": "2026-09-15",
-      "score": 27.97,
+      "score": 29.26,
       "rating": "fear"
     },
     {
       "date": "2026-09-16",
-      "score": 27.31,
+      "score": 27.03,
       "rating": "fear"
     },
     {
       "date": "2026-09-17",
-      "score": 28.29,
+      "score": 29.46,
       "rating": "fear"
     },
     {
       "date": "2026-09-18",
-      "score": 30.43,
+      "score": 28.49,
       "rating": "fear"
     },
     {
       "date": "2026-09-21",
-      "score": 34.17,
+      "score": 33.94,
       "rating": "fear"
     },
     {
       "date": "2026-09-22",
-      "score": 35.03,
+      "score": 35.23,
       "rating": "fear"
     },
     {
       "date": "2026-09-23",
-      "score": 32.54,
+      "score": 33.66,
       "rating": "fear"
     },
     {
       "date": "2026-09-24",
-      "score": 35.74,
+      "score": 34.51,
       "rating": "fear"
     },
     {
       "date": "2026-09-25",
-      "score": 36.94,
+      "score": 36.91,
       "rating": "fear"
     },
     {
       "date": "2026-09-28",
-      "score": 34.4,
+      "score": 32.4,
       "rating": "fear"
     },
     {
       "date": "2026-09-29",
-      "score": 28.86,
+      "score": 31.06,
       "rating": "fear"
     },
     {
       "date": "2026-09-30",
-      "score": 30.26,
+      "score": 30.31,
       "rating": "fear"
     },
     {
       "date": "2026-10-01",
-      "score": 28.97,
+      "score": 29.23,
       "rating": "fear"
     },
     {
       "date": "2026-10-02",
-      "score": 39.97,
+      "score": 38.2,
       "rating": "fear"
     },
     {
       "date": "2026-10-05",
-      "score": 43.71,
+      "score": 43.09,
       "rating": "fear"
     },
     {
       "date": "2026-10-06",
-      "score": 46.8,
+      "score": 47.03,
       "rating": "neutral"
     },
     {
       "date": "2026-10-07",
-      "score": 42.14,
+      "score": 44.71,
       "rating": "fear"
     },
     {
       "date": "2026-10-08",
-      "score": 39.8,
+      "score": 39.17,
       "rating": "fear"
     },
     {
       "date": "2026-10-09",
-      "score": 46.49,
-      "rating": "neutral"
+      "score": 43.51,
+      "rating": "fear"
     },
     {
       "date": "2026-10-12",
-      "score": 46.34,
+      "score": 45.23,
       "rating": "neutral"
     },
     {
       "date": "2026-10-13",
-      "score": 44.11,
-      "rating": "fear"
+      "score": 45.6,
+      "rating": "neutral"
     },
     {
       "date": "2026-10-14",
-      "score": 26.66,
+      "score": 28.79,
       "rating": "fear"
     },
     {
       "date": "2026-10-15",
-      "score": 30.34,
+      "score": 32.0,
       "rating": "fear"
     },
     {
       "date": "2026-10-16",
-      "score": 22.07,
+      "score": 18.21,
       "rating": "extreme fear"
     },
     {
       "date": "2026-10-19",
-      "score": 20.8,
+      "score": 19.51,
       "rating": "extreme fear"
     },
     {
       "date": "2026-10-20",
-      "score": 29.57,
+      "score": 28.74,
       "rating": "fear"
     },
     {
       "date": "2026-10-21",
-      "score": 27.23,
+      "score": 30.26,
       "rating": "fear"
     },
     {
       "date": "2026-10-22",
-      "score": 19.44,
+      "score": 19.99,
       "rating": "extreme fear"
     },
     {
       "date": "2026-10-23",
-      "score": 22.98,
+      "score": 16.69,
       "rating": "extreme fear"
     },
     {
       "date": "2026-10-26",
-      "score": 29.29,
+      "score": 29.83,
       "rating": "fear"
     },
     {
       "date": "2026-10-27",
-      "score": 33.11,
+      "score": 33.6,
       "rating": "fear"
     }
   ]
