@@ -1,59 +1,9 @@
 {
-  "updated": "2026-10-30 13:59",
+  "updated": "2026-10-30 21:07",
   "trackingStart": "2026-08-18",
-  "count": 12,
+  "count": 10,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-0056-2026-10-22-0.00000000-1.72000000",
-      "market": "TWSE",
-      "code": "0056",
-      "name": "元大高股息",
-      "exDate": "2026-10-22",
-      "stockRatio": 0.0,
-      "cashDividend": 1.72,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-2028-2026-10-23-0.00000000-0.20000000",
-      "market": "TWSE",
-      "code": "2028",
-      "name": "威致",
-      "exDate": "2026-10-23",
-      "stockRatio": 0.0,
-      "cashDividend": 0.2,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-6931-2026-10-23-0.00000000-0.12000000",
-      "market": "TWSE",
-      "code": "6931",
-      "name": "青松健康",
-      "exDate": "2026-10-23",
-      "stockRatio": 0.0,
-      "cashDividend": 0.12,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00907-2026-10-27-0.00000000-0.26800000",
-      "market": "TWSE",
-      "code": "00907",
-      "name": "永豐優息存股",
-      "exDate": "2026-10-27",
-      "stockRatio": 0.0,
-      "cashDividend": 0.268,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-4552-2026-10-28-0.00000000-0.60000000",
-      "market": "TWSE",
-      "code": "4552",
-      "name": "力達-KY",
-      "exDate": "2026-10-28",
-      "stockRatio": 0.0,
-      "cashDividend": 0.6,
-      "type": "息"
-    },
     {
       "id": "TWSE-2762-2026-10-29-0.00000000-1.80719700",
       "market": "TWSE",
@@ -92,6 +42,36 @@
       "exDate": "2026-11-02",
       "stockRatio": 0.0,
       "cashDividend": 5.0,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00406A-2026-11-03-0.00000000-0.13800000",
+      "market": "TWSE",
+      "code": "00406A",
+      "name": "主動中信台灣收益",
+      "exDate": "2026-11-03",
+      "stockRatio": 0.0,
+      "cashDividend": 0.138,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00939-2026-11-03-0.00000000-0.15000000",
+      "market": "TWSE",
+      "code": "00939",
+      "name": "統一台灣高息動能",
+      "exDate": "2026-11-03",
+      "stockRatio": 0.0,
+      "cashDividend": 0.15,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00984D-2026-11-03-0.00000000-0.08500000",
+      "market": "TWSE",
+      "code": "00984D",
+      "name": "主動聯博全球非投",
+      "exDate": "2026-11-03",
+      "stockRatio": 0.0,
+      "cashDividend": 0.085,
       "type": "息"
     },
     {
