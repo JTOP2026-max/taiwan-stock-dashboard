@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-29 21:14",
-  "count": 1282,
+  "updated": "2026-10-30 13:59",
+  "count": 1308,
   "errors": [],
   "events": [
     {
@@ -621,17 +621,6 @@
     },
     {
       "kind": "dividend_policy",
-      "code": "2327",
-      "name": "國巨*",
-      "date": "2026-02-25",
-      "cash": 6.0,
-      "stock": 0.0,
-      "title": "股利政策：現金 6.00 元/股、股票 0.00 元/股",
-      "status": "董事會決議",
-      "source": "TWSE t187ap45_L"
-    },
-    {
-      "kind": "dividend_policy",
       "code": "2329",
       "name": "華泰",
       "date": "2026-02-25",
@@ -881,17 +870,6 @@
       "stock": 0.0,
       "title": "股利政策：現金 0.00 元/股、股票 0.00 元/股",
       "status": "股東會確認",
-      "source": "TWSE t187ap45_L"
-    },
-    {
-      "kind": "dividend_policy",
-      "code": "6271",
-      "name": "同欣電",
-      "date": "2026-02-25",
-      "cash": 3.0,
-      "stock": 0.0,
-      "title": "股利政策：現金 3.00 元/股、股票 0.00 元/股",
-      "status": "董事會決議",
       "source": "TWSE t187ap45_L"
     },
     {
@@ -11071,17 +11049,6 @@
     },
     {
       "kind": "dividend_policy",
-      "code": "6799",
-      "name": "來頡",
-      "date": "2026-07-30",
-      "cash": 0.0,
-      "stock": 0.0,
-      "title": "股利政策：現金 0.00 元/股、股票 0.00 元/股",
-      "status": "董事會決議",
-      "source": "TWSE t187ap45_L"
-    },
-    {
-      "kind": "dividend_policy",
       "code": "1477",
       "name": "聚陽",
       "date": "2026-07-31",
@@ -11946,297 +11913,6 @@
       "title": "股利政策：現金 0.00 元/股、股票 0.00 元/股",
       "status": "董事會決議",
       "source": "TWSE t187ap45_L"
-    },
-    {
-      "id": "EV-TWSE-0056-2026-10-22-0.00000000-1.72000000",
-      "kind": "dividend",
-      "code": "0056",
-      "name": "元大高股息",
-      "date": "2026-10-22",
-      "cash": 1.72,
-      "stock": 0.0,
-      "title": "除權息：現金 1.72 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
-      "id": "TWSE-MOPS-1533-conference-2026-10-22-982293c3c3",
-      "kind": "conference",
-      "code": "1533",
-      "name": "車王電",
-      "date": "2026-10-22",
-      "published": "2026-10-21",
-      "title": "本公司受邀參加凱基證券舉辦之線上法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-1721-conference-2026-10-22-aeba3a0fa4",
-      "kind": "conference",
-      "code": "1721",
-      "name": "國慶科技",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "公告本公司原定115年10月23日受邀參加永豐金證券舉辦之\r\n線上法人說明會，如因颱風或豪雨停班影響，將延期舉辦",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2049-capital_increase-2026-10-22-c3a334e62c",
-      "kind": "capital_increase",
-      "code": "2049",
-      "name": "上銀",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "代重要子公司邁萃斯精密(股)公司公告\r\n董事會決議辦理現金增資相關事宜",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2345-capital_reduction-2026-10-22-794766fb48",
-      "kind": "capital_reduction",
-      "code": "2345",
-      "name": "智邦",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "公告本公司董事會決議辦理現金增資發行普通股",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2371-capital_increase-2026-10-22-c2de48a3c9",
-      "kind": "capital_increase",
-      "code": "2371",
-      "name": "大同",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "代子公司大同開發(股)公司公告擬對子公司志生不動產(股)公司進行現金增資",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2514-conference-2026-10-22-19f569394f",
-      "kind": "conference",
-      "code": "2514",
-      "name": "龍邦",
-      "date": "2026-10-22",
-      "published": "2026-10-21",
-      "title": "本公司受邀參加元大證券舉辦之線上法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2630-conference-2026-10-22-0cec1a0a08",
-      "kind": "conference",
-      "code": "2630",
-      "name": "亞航",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "本公司原訂於115年10月23日受邀參加台新證券舉辦之法人說\r\n明會，如因颱風影響停止上班，將延期舉辦",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2880-capital_increase-2026-10-22-c956701da3",
-      "kind": "capital_increase",
-      "code": "2880",
-      "name": "華南金",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "代子公司華南永昌證券投資信託股份有限公司公告董事會\r\n決議與第一金投信、兆豐投信及合庫投信進行吸收合併，\r\n並由第一金投信為存續公司。",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2881-capital_increase-2026-10-22-0452537f0d",
-      "kind": "capital_increase",
-      "code": "2881",
-      "name": "富邦金",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "富邦金控代子公司富邦證券公告股東會重要決議事項",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2881-capital_increase-2026-10-22-4d2f675ed0",
-      "kind": "capital_increase",
-      "code": "2881",
-      "name": "富邦金",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "富邦金控代子公司富邦證券公告\r\n董事會代行股東會決議辦理私募\r\n現金增資發行普通股",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2881-capital_increase-2026-10-22-d654920393",
-      "kind": "capital_increase",
-      "code": "2881",
-      "name": "富邦金",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "富邦金控代子公司富邦證券公告認購富邦期貨現金增資",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2886-capital_increase-2026-10-22-97754cbda1",
-      "kind": "capital_increase",
-      "code": "2886",
-      "name": "兆豐金",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "代本公司之子公司兆豐投信公告董事會決議與第一金投信、\r\n合庫投信、華南永昌投信辦理合併相關事宜",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2892-capital_increase-2026-10-22-ed616e2e38",
-      "kind": "capital_increase",
-      "code": "2892",
-      "name": "第一金",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "代子公司第一金投信公告董事會決議與兆豐投信、\r\n合庫投信、華南永昌投信辦理合併相關事宜",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-3023-capital_reduction-2026-10-22-fe5a28c14f",
-      "kind": "capital_reduction",
-      "code": "3023",
-      "name": "信邦",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "公告董事會決議發行國內第九次無擔保轉換公司債",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-3023-capital_reduction-2026-10-22-46833aacc0",
-      "kind": "capital_reduction",
-      "code": "3023",
-      "name": "信邦",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "公告董事會決議發行國內第十次無擔保轉換公司債",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-3090-capital_reduction-2026-10-22-a341786dd7",
-      "kind": "capital_reduction",
-      "code": "3090",
-      "name": "日電貿",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "代子公司力禾科技股份有限公司公告現金增資發行新股及\r\n增資基準日等相關事宜。",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-3406-capital_increase-2026-10-22-dca4989199",
-      "kind": "capital_increase",
-      "code": "3406",
-      "name": "玉晶光",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "公告本公司115年私募普通股收足股款暨增資基準日",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-3494-capital_increase-2026-10-22-2aa9922f40",
-      "kind": "capital_increase",
-      "code": "3494",
-      "name": "誠研",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "公告本公司115年第一次私募普通股收足股款\r\n暨增資基準日",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-4155-capital_reduction-2026-10-22-dec054ff28",
-      "kind": "capital_reduction",
-      "code": "4155",
-      "name": "訊映",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "公告本公司原訂於115年10月23日發放現金減資退還股款；\r\n如受颱風影響，部分地區現金減資退還股款發放日將順延至次\r\n一營業日",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-5243-capital_reduction-2026-10-22-5cde935d56",
-      "kind": "capital_reduction",
-      "code": "5243",
-      "name": "乙盛-KY",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "代重要子公司Multiwin De Mexico S.A. de C.V.\r\n公告董事會決議減資事宜",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-5521-conference-2026-10-22-795aec3070",
-      "kind": "conference",
-      "code": "5521",
-      "name": "工信",
-      "date": "2026-10-22",
-      "published": "2026-10-21",
-      "title": "本公司受邀參加台新證券舉辦之線上法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-5880-capital_increase-2026-10-22-8534b26f35",
-      "kind": "capital_increase",
-      "code": "5880",
-      "name": "合庫金",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "本公司代子公司合作金庫證券投資信託股份有限公司\r\n公告董事會決議與第一金投信、兆豐投信、華南永昌投信\r\n辦理合併相關事宜。",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-6442-capital_increase-2026-10-22-c03cbf58c8",
-      "kind": "capital_increase",
-      "code": "6442",
-      "name": "光聖",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "公告本公司現金增資發\r\n行新股案，向金管會申請延\r\n長募集期間三個月",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-6531-capital_increase-2026-10-22-620f635939",
-      "kind": "capital_increase",
-      "code": "6531",
-      "name": "愛普*",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "公告本公司現金增資發行普通股參與發行海外存託憑證已依\r\n中國證券監督管理委員會發布之「境內企業境外發行證券和\r\n上市管理試行辦法」辦理備案",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-6625-conference-2026-10-22-2d8d5db16e",
-      "kind": "conference",
-      "code": "6625",
-      "name": "必應",
-      "date": "2026-10-22",
-      "published": "2026-10-21",
-      "title": "本公司受邀參加台新證券舉辦之法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-6902-conference-2026-10-22-304494a770",
-      "kind": "conference",
-      "code": "6902",
-      "name": "GOGOLOOK",
-      "date": "2026-10-22",
-      "published": "2026-10-21",
-      "title": "公告本公司受邀參加寬量國際舉辦之20th QIC CEO WEEK",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-7823-capital_increase-2026-10-22-6de60b5855",
-      "kind": "capital_increase",
-      "code": "7823",
-      "name": "奧義賽博-KY創",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "代重要子公司奧義智慧科技股份有限公司公告\r\n現金增資認股基準日",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-8021-capital_increase-2026-10-22-e0e2af5294",
-      "kind": "capital_increase",
-      "code": "8021",
-      "name": "尖點",
-      "date": "2026-10-22",
-      "published": "2026-10-22",
-      "title": "本公司115年度現金增資遇颱風影響繳款期間調整方式",
-      "source": "TWSE t187ap04_L"
     },
     {
       "id": "TWSE-MOPS-1303-conference-2026-10-23-2d8d5db16e",
@@ -13194,6 +12870,66 @@
       "source": "TWSE t187ap04_L"
     },
     {
+      "id": "TWSE-MOPS-2327-capital_increase-2026-10-29-9148d91bb3",
+      "kind": "capital_increase",
+      "code": "2327",
+      "name": "國巨*",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司董事會決議115年上半年度不分派盈餘",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2327-capital_increase-2026-10-29-e7a60dc1fd",
+      "kind": "capital_increase",
+      "code": "2327",
+      "name": "國巨*",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司董事會決議通過對子公司國新投資股份有限公司增資案",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2327-capital_increase-2026-10-29-a0dfefac3b",
+      "kind": "capital_increase",
+      "code": "2327",
+      "name": "國巨*",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司董事會決議通過間接增資設立百分之百持有之大陸子公司 \r\n國巨智造（上海）傳感技術有限公司",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2327-capital_increase-2026-10-29-072c569a87",
+      "kind": "capital_increase",
+      "code": "2327",
+      "name": "國巨*",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "董事會決議增資設立大陸地區100%持股子公司",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2327-capital_increase-2026-10-29-de06f102fd",
+      "kind": "capital_increase",
+      "code": "2327",
+      "name": "國巨*",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司大陸地區投資事業投資架構調整事宜",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2327-capital_reduction-2026-10-29-45c691478f",
+      "kind": "capital_reduction",
+      "code": "2327",
+      "name": "國巨*",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "代子公司國新投資股份有限公司公告董事會決議現金增資",
+      "source": "TWSE t187ap04_L"
+    },
+    {
       "id": "TWSE-MOPS-2327-conference-2026-10-29-fb5a8f18e5",
       "kind": "conference",
       "code": "2327",
@@ -13201,6 +12937,47 @@
       "date": "2026-10-29",
       "published": "2026-10-22",
       "title": "本公司受邀參加由摩根士丹利證券舉辦之線上法說會，說明115年第三季營運成果",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "kind": "dividend_policy",
+      "code": "2327",
+      "name": "國巨*",
+      "date": "2026-10-29",
+      "cash": 0.0,
+      "stock": 0.0,
+      "title": "股利政策：現金 0.00 元/股、股票 0.00 元/股",
+      "status": "董事會決議",
+      "source": "TWSE t187ap45_L"
+    },
+    {
+      "id": "TWSE-MOPS-2342-capital_reduction-2026-10-29-e1d999d088",
+      "kind": "capital_reduction",
+      "code": "2342",
+      "name": "茂矽",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司董事會決議辦理限制員工權利新股收回註銷\r\n減資事宜",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2354-capital_increase-2026-10-29-b93c482c09",
+      "kind": "capital_increase",
+      "code": "2354",
+      "name": "鴻準",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "代重要子公司Q-Run Holdings Limited 公告決議認購私募基金\r\nQuda Capital Fund I",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2354-capital_increase-2026-10-29-72c466d156",
+      "kind": "capital_increase",
+      "code": "2354",
+      "name": "鴻準",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "代重要子公司Q-Run Holdings Limited 公告決議認購私募基金\r\nPrimeMovers Equity Fund II LP",
       "source": "TWSE t187ap04_L"
     },
     {
@@ -13254,6 +13031,36 @@
       "source": "TWSE t187ap04_L"
     },
     {
+      "id": "TWSE-MOPS-2395-capital_increase-2026-10-29-9a61c8d6f9",
+      "kind": "capital_increase",
+      "code": "2395",
+      "name": "研華",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司董事會決議115年度限制員工權利新股\r\n增資基準日",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2409-capital_increase-2026-10-29-d4b447a8cb",
+      "kind": "capital_increase",
+      "code": "2409",
+      "name": "友達",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司及子公司依公開發行公司資金貸與及背書保證處理準則\r\n第二十二條第一項第二及第三款公告",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2409-capital_increase-2026-10-29-f1c0dde9db",
+      "kind": "capital_increase",
+      "code": "2409",
+      "name": "友達",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "本公司董事會核准新增資本支出預算",
+      "source": "TWSE t187ap04_L"
+    },
+    {
       "id": "TWSE-MOPS-2409-conference-2026-10-29-471894d59a",
       "kind": "conference",
       "code": "2409",
@@ -13261,6 +13068,76 @@
       "date": "2026-10-29",
       "published": "2026-10-01",
       "title": "公告本公司將於10月29日召開法人說明會",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2438-capital_reduction-2026-10-29-9fc0b72b7c",
+      "kind": "capital_reduction",
+      "code": "2438",
+      "name": "翔耀",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "代重要子公司嵩達光電科技股份有限公司公告\r\n董事會決議辦理現金增資案",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2439-capital_reduction-2026-10-29-e1d999d088",
+      "kind": "capital_reduction",
+      "code": "2439",
+      "name": "美律",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司董事會決議辦理限制員工權利新股收回註銷\r\n減資事宜",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2455-capital_reduction-2026-10-29-804f391aac",
+      "kind": "capital_reduction",
+      "code": "2455",
+      "name": "全新",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司董事會決議發行國內第四次無擔保轉換公司債",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2455-capital_reduction-2026-10-29-7a4fcf21a5",
+      "kind": "capital_reduction",
+      "code": "2455",
+      "name": "全新",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司董事會決議發行國內第五次無擔保轉換公司債",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2464-capital_increase-2026-10-29-3c27b0ba49",
+      "kind": "capital_increase",
+      "code": "2464",
+      "name": "盟立",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司115年現金增資股款催繳期間屆滿暨催繳股數發放事宜",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2481-capital_increase-2026-10-29-ceb2922bc0",
+      "kind": "capital_increase",
+      "code": "2481",
+      "name": "強茂",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "代子公司JOYSTAR INTERNATIONAL CO.,LTd公告處分私募\r\n有價證券VTEAM SIEGFRIED SUPPLY CHAIN FINANCE FUND",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2481-capital_increase-2026-10-29-a98852cf12",
+      "kind": "capital_increase",
+      "code": "2481",
+      "name": "強茂",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "代子公司Wisdom Bright Inc.公告處分私募有價證券",
       "source": "TWSE t187ap04_L"
     },
     {
@@ -13273,6 +13150,96 @@
       "stock": 0.0,
       "title": "除權息：現金 1.81 元/股、配股率 0.00%",
       "source": "TWSE"
+    },
+    {
+      "id": "TWSE-MOPS-2881-capital_increase-2026-10-29-326eb04a0a",
+      "kind": "capital_increase",
+      "code": "2881",
+      "name": "富邦金",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "富邦金控代子公司富邦人壽公告參與富邦智能運算股份有限公司現金增資",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2881-capital_increase-2026-10-29-063c3fba69",
+      "kind": "capital_increase",
+      "code": "2881",
+      "name": "富邦金",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "富邦金控代子公司富邦人壽公告取得AIP Fund F-1, SCSp",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2881-capital_increase-2026-10-29-645a9083e1",
+      "kind": "capital_increase",
+      "code": "2881",
+      "name": "富邦金",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "富邦人壽公告取得Blue Owl Digital Infrastructure Fund",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2881-capital_reduction-2026-10-29-0afb5b6a39",
+      "kind": "capital_reduction",
+      "code": "2881",
+      "name": "富邦金",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "富邦金控代子公司富邦人壽公告擬以公開募集方式發行\r\n10年期(含)以上累積次順位公司債",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2887-capital_increase-2026-10-29-3bda6cb37d",
+      "kind": "capital_increase",
+      "code": "2887",
+      "name": "台新新光金",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "本公司擬全額認購子公司台新證券\r\n以私募方式辦理現金增資發行之普通股新股",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2887-capital_reduction-2026-10-29-272c0cc666",
+      "kind": "capital_reduction",
+      "code": "2887",
+      "name": "台新新光金",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "本公司擬申請發行國內無擔保一般順位普通公司債，\r\n總額不超過新臺幣100億元整",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2891-capital_increase-2026-10-29-baaee5e043",
+      "kind": "capital_increase",
+      "code": "2891",
+      "name": "中信金",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "代台灣人壽公告\r\n決議投資IFM Global Infrastructure  \r\n(Offshore), L.P.",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-3231-capital_increase-2026-10-29-0469576a71",
+      "kind": "capital_increase",
+      "code": "3231",
+      "name": "緯創",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司及子公司鼎創有限公司處分\r\n磐儀科技股份有限公司私募普通股",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-3257-capital_increase-2026-10-29-04e1da73f4",
+      "kind": "capital_increase",
+      "code": "3257",
+      "name": "虹冠電",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "代子公司Wisdom Bright Inc.公告處份私募有價證券\r\nVTeam Siegfried Supply Chain Finance Fund",
+      "source": "TWSE t187ap04_L"
     },
     {
       "id": "EV-TWSE-3563-2026-10-29-0.00000000-1.00000000",
@@ -13306,6 +13273,16 @@
       "source": "TWSE t187ap04_L"
     },
     {
+      "id": "TWSE-MOPS-4766-capital_reduction-2026-10-29-4323b685d5",
+      "kind": "capital_reduction",
+      "code": "4766",
+      "name": "南寶",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "代重要子公司台灣艾富克股份有限公司公告\r\n董事會決議辦理現金減資",
+      "source": "TWSE t187ap04_L"
+    },
+    {
       "id": "EV-TWSE-5522-2026-10-29-0.00000000-1.00000000",
       "kind": "dividend",
       "code": "5522",
@@ -13315,6 +13292,36 @@
       "stock": 0.0,
       "title": "除權息：現金 1.00 元/股、配股率 0.00%",
       "source": "TWSE"
+    },
+    {
+      "id": "TWSE-MOPS-6141-capital_reduction-2026-10-29-47bca3fc2d",
+      "kind": "capital_reduction",
+      "code": "6141",
+      "name": "柏承",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司訂定減資基準日暨減資換發股票作業\r\n計畫書等相關事宜",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-6176-capital_increase-2026-10-29-335e0df935",
+      "kind": "capital_increase",
+      "code": "6176",
+      "name": "瑞儀",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司董事會決議事項",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-6176-capital_reduction-2026-10-29-060f5764d7",
+      "kind": "capital_reduction",
+      "code": "6176",
+      "name": "瑞儀",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司董事會決議發行員工認股權憑證",
+      "source": "TWSE t187ap04_L"
     },
     {
       "id": "TWSE-MOPS-6176-conference-2026-10-29-cd82ca3525",
@@ -13337,6 +13344,47 @@
       "source": "TWSE t187ap04_L"
     },
     {
+      "id": "TWSE-MOPS-6271-capital_increase-2026-10-29-9148d91bb3",
+      "kind": "capital_increase",
+      "code": "6271",
+      "name": "同欣電",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司董事會決議115年上半年度不分派盈餘",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-6271-capital_increase-2026-10-29-c4b39b0352",
+      "kind": "capital_increase",
+      "code": "6271",
+      "name": "同欣電",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "本公司依公開發&#12175;公司資&#12198;貸與及背書保證處理準則\r\n第&#12038;&#12055;&#12038;條第&#12032;項第三款公告",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "kind": "dividend_policy",
+      "code": "6271",
+      "name": "同欣電",
+      "date": "2026-10-29",
+      "cash": 0.0,
+      "stock": 0.0,
+      "title": "股利政策：現金 0.00 元/股、股票 0.00 元/股",
+      "status": "董事會決議",
+      "source": "TWSE t187ap45_L"
+    },
+    {
+      "id": "TWSE-MOPS-6533-capital_increase-2026-10-29-c2aecc5a4d",
+      "kind": "capital_increase",
+      "code": "6533",
+      "name": "晶心科",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司115年現金增資收足股款暨增資基準日",
+      "source": "TWSE t187ap04_L"
+    },
+    {
       "id": "TWSE-MOPS-6581-conference-2026-10-29-ff575f3d3c",
       "kind": "conference",
       "code": "6581",
@@ -13347,6 +13395,37 @@
       "source": "TWSE t187ap04_L"
     },
     {
+      "id": "TWSE-MOPS-6799-capital_increase-2026-10-29-73ff9031e3",
+      "kind": "capital_increase",
+      "code": "6799",
+      "name": "來頡",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司董事會決議 115 年第 3 季盈餘不分派",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-6799-capital_reduction-2026-10-29-86e70296a6",
+      "kind": "capital_reduction",
+      "code": "6799",
+      "name": "來頡",
+      "date": "2026-10-29",
+      "published": "2026-10-29",
+      "title": "公告本公司董事會決議註銷限制員工權利新股之減資基準日",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "kind": "dividend_policy",
+      "code": "6799",
+      "name": "來頡",
+      "date": "2026-10-29",
+      "cash": 0.0,
+      "stock": 0.0,
+      "title": "股利政策：現金 0.00 元/股、股票 0.00 元/股",
+      "status": "董事會決議",
+      "source": "TWSE t187ap45_L"
+    },
+    {
       "id": "TWSE-MOPS-8467-conference-2026-10-29-e861890676",
       "kind": "conference",
       "code": "8467",
@@ -13354,6 +13433,16 @@
       "date": "2026-10-29",
       "published": "2026-10-27",
       "title": "公告本公司法人說明會相關訊息",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-1410-conference-2026-10-30-5ce0702b27",
+      "kind": "conference",
+      "code": "1410",
+      "name": "南染",
+      "date": "2026-10-30",
+      "published": "2026-10-29",
+      "title": "本公司115年10月30日召開法人說明會",
       "source": "TWSE t187ap04_L"
     },
     {
@@ -13374,6 +13463,56 @@
       "date": "2026-10-30",
       "published": "2026-10-19",
       "title": "光寶科技115年第三季法人說明會",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2317-conference-2026-10-30-e82afb2429",
+      "kind": "conference",
+      "code": "2317",
+      "name": "鴻海",
+      "date": "2026-10-30",
+      "published": "2026-10-29",
+      "title": "公告本公司參與投資人說明會",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2439-conference-2026-10-30-a7e9679193",
+      "kind": "conference",
+      "code": "2439",
+      "name": "美律",
+      "date": "2026-10-30",
+      "published": "2026-10-29",
+      "title": "本公司受邀參加凱基證券舉辦之法人說明會，公布本公司 2026年第3季營運成果。",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-2630-conference-2026-10-30-b8292fd4c3",
+      "kind": "conference",
+      "code": "2630",
+      "name": "亞航",
+      "date": "2026-10-30",
+      "published": "2026-10-29",
+      "title": "本公司原訂於115年10月23日受邀參加台新證券舉辦之法人說明會，因颱風影響延期至115年10月30日舉辦。",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-3017-conference-2026-10-30-0428214676",
+      "kind": "conference",
+      "code": "3017",
+      "name": "奇鋐",
+      "date": "2026-10-30",
+      "published": "2026-10-29",
+      "title": "本公司受邀參加鴻海科技日專題演講。",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-4137-conference-2026-10-30-ef8aaf6119",
+      "kind": "conference",
+      "code": "4137",
+      "name": "麗豐-KY",
+      "date": "2026-10-30",
+      "published": "2026-10-29",
+      "title": "本公司受邀參加中國信託證券舉辦之2026年Q2法人說明會",
       "source": "TWSE t187ap04_L"
     },
     {
@@ -13580,6 +13719,26 @@
       "source": "TWSE t187ap04_L"
     },
     {
+      "id": "TWSE-MOPS-4915-conference-2026-11-05-0ebd94970c",
+      "kind": "conference",
+      "code": "4915",
+      "name": "致伸",
+      "date": "2026-11-05",
+      "published": "2026-10-29",
+      "title": "本公司受邀參加元大證券所舉辦之2026年第三季法人說明會",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-1605-conference-2026-11-06-4002b48f1b",
+      "kind": "conference",
+      "code": "1605",
+      "name": "華新",
+      "date": "2026-11-06",
+      "published": "2026-10-29",
+      "title": "本公司自辦法人說明會說明115年度第三季財務報告相關資訊",
+      "source": "TWSE t187ap04_L"
+    },
+    {
       "id": "TWSE-MOPS-2474-conference-2026-11-06-982293c3c3",
       "kind": "conference",
       "code": "2474",
@@ -13630,6 +13789,16 @@
       "source": "TWSE t187ap04_L"
     },
     {
+      "id": "TWSE-MOPS-8081-conference-2026-11-06-5f34e5bf36",
+      "kind": "conference",
+      "code": "8081",
+      "name": "致新",
+      "date": "2026-11-06",
+      "published": "2026-10-29",
+      "title": "本公司受邀參加元大證券舉辦之法人說明會",
+      "source": "TWSE t187ap04_L"
+    },
+    {
       "id": "TWSE-MOPS-8210-conference-2026-11-06-d93fe16f24",
       "kind": "conference",
       "code": "8210",
@@ -13647,6 +13816,16 @@
       "date": "2026-11-09",
       "published": "2026-10-27",
       "title": "本公司將於11月9日舉行線上法人說明會",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-3703-conference-2026-11-09-2cdc016714",
+      "kind": "conference",
+      "code": "3703",
+      "name": "欣陸",
+      "date": "2026-11-09",
+      "published": "2026-10-29",
+      "title": "本公司召開線上法人說明會說明2026年第三季財務報告相關資訊",
       "source": "TWSE t187ap04_L"
     },
     {
@@ -13720,6 +13899,26 @@
       "source": "TWSE t187ap04_L"
     },
     {
+      "id": "TWSE-MOPS-3017-conference-2026-11-10-184470d23b",
+      "kind": "conference",
+      "code": "3017",
+      "name": "奇鋐",
+      "date": "2026-11-10",
+      "published": "2026-10-29",
+      "title": "本公司受邀參加富邦證券法人說明會(中文場)。",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-3017-conference-2026-11-10-0e52d4b2d9",
+      "kind": "conference",
+      "code": "3017",
+      "name": "奇鋐",
+      "date": "2026-11-10",
+      "published": "2026-10-29",
+      "title": "本公司受邀參加富邦證券法人說明會(英文場)",
+      "source": "TWSE t187ap04_L"
+    },
+    {
       "id": "TWSE-MOPS-3090-conference-2026-11-10-49c7c9c58e",
       "kind": "conference",
       "code": "3090",
@@ -13747,6 +13946,36 @@
       "date": "2026-11-10",
       "published": "2026-10-27",
       "title": "本公司受邀參加大和證券於香港舉辦之「Daiwa Investment Conference Hong Kong 2026」",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-4576-conference-2026-11-11-b5bbc1a53b",
+      "kind": "conference",
+      "code": "4576",
+      "name": "大銀微系統",
+      "date": "2026-11-11",
+      "published": "2026-10-29",
+      "title": "公告本公司召開線上法人說明會",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-6414-conference-2026-11-11-23f746b3c6",
+      "kind": "conference",
+      "code": "6414",
+      "name": "樺漢",
+      "date": "2026-11-11",
+      "published": "2026-10-29",
+      "title": "本公司受邀參加凱基證券舉辦之2026年第三季法人說明會，說明本公司營運成果及未來展望",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-6446-conference-2026-11-11-5f34e5bf36",
+      "kind": "conference",
+      "code": "6446",
+      "name": "藥華藥",
+      "date": "2026-11-11",
+      "published": "2026-10-29",
+      "title": "本公司受邀參加元大證券舉辦之法人說明會",
       "source": "TWSE t187ap04_L"
     },
     {
@@ -13780,6 +14009,16 @@
       "source": "TWSE t187ap04_L"
     },
     {
+      "id": "TWSE-MOPS-6446-conference-2026-11-13-057020386f",
+      "kind": "conference",
+      "code": "6446",
+      "name": "藥華藥",
+      "date": "2026-11-13",
+      "published": "2026-10-29",
+      "title": "本公司受邀參加黑石財經舉辦之法說會「戰略臺灣投資論壇」",
+      "source": "TWSE t187ap04_L"
+    },
+    {
       "id": "TWSE-MOPS-2459-conference-2026-11-16-c8ab4b80ca",
       "kind": "conference",
       "code": "2459",
@@ -13797,6 +14036,16 @@
       "date": "2026-11-16",
       "published": "2026-10-20",
       "title": "公告本公司召開「2026年第三季線上法人說明會」",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-6446-conference-2026-11-16-3d8b2d0fca",
+      "kind": "conference",
+      "code": "6446",
+      "name": "藥華藥",
+      "date": "2026-11-16",
+      "published": "2026-10-29",
+      "title": "本公司受邀參加傑富瑞(Jefferies)舉辦之法說會「Jefferies \r\nLondon Healthcare Conference」",
       "source": "TWSE t187ap04_L"
     },
     {
@@ -13878,6 +14127,16 @@
       "date": "2026-11-27",
       "published": "2026-10-21",
       "title": "公告本公司召開2026年第三季法人說明會",
+      "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "TWSE-MOPS-6446-conference-2026-12-01-1df0a0e1bb",
+      "kind": "conference",
+      "code": "6446",
+      "name": "藥華藥",
+      "date": "2026-12-01",
+      "published": "2026-10-29",
+      "title": "本公司受邀參加花旗環球證券舉辦之法說會「Citi’s 2026 Global \r\nHealthcare Conference」",
       "source": "TWSE t187ap04_L"
     },
     {
