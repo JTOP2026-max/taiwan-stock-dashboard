@@ -1,39 +1,9 @@
 {
-  "updated": "2026-11-02 14:23",
+  "updated": "2026-11-03 00:11",
   "trackingStart": "2026-08-18",
   "count": 10,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-2762-2026-10-29-0.00000000-1.80719700",
-      "market": "TWSE",
-      "code": "2762",
-      "name": "世界健身-KY",
-      "exDate": "2026-10-29",
-      "stockRatio": 0.0,
-      "cashDividend": 1.807197,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-3563-2026-10-29-0.00000000-1.00000000",
-      "market": "TWSE",
-      "code": "3563",
-      "name": "牧德",
-      "exDate": "2026-10-29",
-      "stockRatio": 0.0,
-      "cashDividend": 1.0,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-5522-2026-10-29-0.00000000-1.00000000",
-      "market": "TWSE",
-      "code": "5522",
-      "name": "遠雄",
-      "exDate": "2026-10-29",
-      "stockRatio": 0.0,
-      "cashDividend": 1.0,
-      "type": "息"
-    },
     {
       "id": "TWSE-6165-2026-11-02-0.00000000-5.00000000",
       "market": "TWSE",
@@ -72,6 +42,36 @@
       "exDate": "2026-11-03",
       "stockRatio": 0.0,
       "cashDividend": 0.085,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00946-2026-11-04-0.00000000-0.05800000",
+      "market": "TWSE",
+      "code": "00946",
+      "name": "群益科技高息成長",
+      "exDate": "2026-11-04",
+      "stockRatio": 0.0,
+      "cashDividend": 0.058,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00953B-2026-11-04-0.00000000-0.06700000",
+      "market": "TWSE",
+      "code": "00953B",
+      "name": "群益優選非投等債",
+      "exDate": "2026-11-04",
+      "stockRatio": 0.0,
+      "cashDividend": 0.067,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00985B-2026-11-04-0.00000000-0.05300000",
+      "market": "TWSE",
+      "code": "00985B",
+      "name": "群益ESG投等債0-5",
+      "exDate": "2026-11-04",
+      "stockRatio": 0.0,
+      "cashDividend": 0.053,
       "type": "息"
     },
     {
