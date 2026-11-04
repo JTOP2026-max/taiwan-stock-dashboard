@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04 14:39",
+  "updated": "2026-11-04 22:40",
   "count": 1333,
   "errors": [],
   "events": [
@@ -13139,17 +13139,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-6165-2026-11-02-0.00000000-5.00000000",
-      "kind": "dividend",
-      "code": "6165",
-      "name": "浪凡",
-      "date": "2026-11-02",
-      "cash": 5.0,
-      "stock": 0.0,
-      "title": "除權息：現金 5.00 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-6442-capital_increase-2026-11-02-fe5165f6c6",
       "kind": "capital_increase",
       "code": "6442",
@@ -14218,6 +14207,17 @@
       "published": "2026-11-03",
       "title": "受邀參加 Twenty-Fifth Annual Asia Pacific Summit",
       "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "EV-TWSE-2344-2026-11-18-0.00000000-2.00000000",
+      "kind": "dividend",
+      "code": "2344",
+      "name": "華邦電",
+      "date": "2026-11-18",
+      "cash": 2.0,
+      "stock": 0.0,
+      "title": "除權息：現金 2.00 元/股、配股率 0.00%",
+      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-2356-conference-2026-11-18-74396ba875",

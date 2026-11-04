@@ -1,19 +1,9 @@
 {
-  "updated": "2026-11-04 14:39",
+  "updated": "2026-11-04 22:40",
   "trackingStart": "2026-08-18",
   "count": 11,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-6165-2026-11-02-0.00000000-5.00000000",
-      "market": "TWSE",
-      "code": "6165",
-      "name": "浪凡",
-      "exDate": "2026-11-02",
-      "stockRatio": 0.0,
-      "cashDividend": 5.0,
-      "type": "息"
-    },
     {
       "id": "TWSE-00406A-2026-11-03-0.00000000-0.13800000",
       "market": "TWSE",
@@ -102,6 +92,16 @@
       "exDate": "2026-11-06",
       "stockRatio": 0.0,
       "cashDividend": 0.12,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-2344-2026-11-18-0.00000000-2.00000000",
+      "market": "TWSE",
+      "code": "2344",
+      "name": "華邦電",
+      "exDate": "2026-11-18",
+      "stockRatio": 0.0,
+      "cashDividend": 2.0,
       "type": "息"
     },
     {
