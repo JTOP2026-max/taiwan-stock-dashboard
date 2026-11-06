@@ -1,89 +1,9 @@
 {
-  "updated": "2026-11-05 22:45",
+  "updated": "2026-11-06 14:58",
   "trackingStart": "2026-08-18",
-  "count": 11,
+  "count": 3,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-00406A-2026-11-03-0.00000000-0.13800000",
-      "market": "TWSE",
-      "code": "00406A",
-      "name": "主動中信台灣收益",
-      "exDate": "2026-11-03",
-      "stockRatio": 0.0,
-      "cashDividend": 0.138,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00939-2026-11-03-0.00000000-0.15000000",
-      "market": "TWSE",
-      "code": "00939",
-      "name": "統一台灣高息動能",
-      "exDate": "2026-11-03",
-      "stockRatio": 0.0,
-      "cashDividend": 0.15,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00984D-2026-11-03-0.00000000-0.08500000",
-      "market": "TWSE",
-      "code": "00984D",
-      "name": "主動聯博全球非投",
-      "exDate": "2026-11-03",
-      "stockRatio": 0.0,
-      "cashDividend": 0.085,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00946-2026-11-04-0.00000000-0.05800000",
-      "market": "TWSE",
-      "code": "00946",
-      "name": "群益科技高息成長",
-      "exDate": "2026-11-04",
-      "stockRatio": 0.0,
-      "cashDividend": 0.058,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00953B-2026-11-04-0.00000000-0.06700000",
-      "market": "TWSE",
-      "code": "00953B",
-      "name": "群益優選非投等債",
-      "exDate": "2026-11-04",
-      "stockRatio": 0.0,
-      "cashDividend": 0.067,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00985B-2026-11-04-0.00000000-0.05300000",
-      "market": "TWSE",
-      "code": "00985B",
-      "name": "群益ESG投等債0-5",
-      "exDate": "2026-11-04",
-      "stockRatio": 0.0,
-      "cashDividend": 0.053,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-020036-2026-11-04-0.00000000-0.40000000",
-      "market": "TWSE",
-      "code": "020036",
-      "name": "元大金融配息N",
-      "exDate": "2026-11-04",
-      "stockRatio": 0.0,
-      "cashDividend": 0.4,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-8467-2026-11-04-0.00000000-2.00000000",
-      "market": "TWSE",
-      "code": "8467",
-      "name": "波力-KY",
-      "exDate": "2026-11-04",
-      "stockRatio": 0.0,
-      "cashDividend": 2.0,
-      "type": "息"
-    },
     {
       "id": "TWSE-00400A-2026-11-06-0.00000000-0.12000000",
       "market": "TWSE",
