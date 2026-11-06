@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-06 14:58",
+  "updated": "2026-11-06 22:23",
   "trackingStart": "2026-08-18",
-  "count": 3,
+  "count": 4,
   "errors": [],
   "actions": [
     {
@@ -12,6 +12,16 @@
       "exDate": "2026-11-06",
       "stockRatio": 0.0,
       "cashDividend": 0.12,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00940-2026-11-10-0.00000000-0.06000000",
+      "market": "TWSE",
+      "code": "00940",
+      "name": "元大台灣價值高息",
+      "exDate": "2026-11-10",
+      "stockRatio": 0.0,
+      "cashDividend": 0.06,
       "type": "息"
     },
     {
