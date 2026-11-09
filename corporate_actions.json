@@ -1,9 +1,19 @@
 {
-  "updated": "2026-11-09 14:49",
+  "updated": "2026-11-10 00:34",
   "trackingStart": "2026-08-18",
-  "count": 3,
+  "count": 5,
   "errors": [],
   "actions": [
+    {
+      "id": "TWSE-00400A-2026-11-06-0.00000000-0.12000000",
+      "market": "TWSE",
+      "code": "00400A",
+      "name": "主動國泰動能高息",
+      "exDate": "2026-11-06",
+      "stockRatio": 0.0,
+      "cashDividend": 0.12,
+      "type": "息"
+    },
     {
       "id": "TWSE-00940-2026-11-10-0.00000000-0.06000000",
       "market": "TWSE",
@@ -32,6 +42,16 @@
       "exDate": "2026-11-19",
       "stockRatio": 0.0,
       "cashDividend": 0.215313,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-1707-2026-12-30-0.00000000-1.90000000",
+      "market": "TWSE",
+      "code": "1707",
+      "name": "葡萄王",
+      "exDate": "2026-12-30",
+      "stockRatio": 0.0,
+      "cashDividend": 1.9,
       "type": "息"
     }
   ]
