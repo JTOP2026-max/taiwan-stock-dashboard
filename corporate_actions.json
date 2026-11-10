@@ -1,19 +1,9 @@
 {
-  "updated": "2026-11-10 15:28",
+  "updated": "2026-11-10 22:59",
   "trackingStart": "2026-08-18",
-  "count": 5,
+  "count": 8,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-00400A-2026-11-06-0.00000000-0.12000000",
-      "market": "TWSE",
-      "code": "00400A",
-      "name": "主動國泰動能高息",
-      "exDate": "2026-11-06",
-      "stockRatio": 0.0,
-      "cashDividend": 0.12,
-      "type": "息"
-    },
     {
       "id": "TWSE-00940-2026-11-10-0.00000000-0.06000000",
       "market": "TWSE",
@@ -22,6 +12,36 @@
       "exDate": "2026-11-10",
       "stockRatio": 0.0,
       "cashDividend": 0.06,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00690-2026-11-17-0.00000000-2.00000000",
+      "market": "TWSE",
+      "code": "00690",
+      "name": "兆豐藍籌30",
+      "exDate": "2026-11-17",
+      "stockRatio": 0.0,
+      "cashDividend": 2.0,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00932-2026-11-17-0.00000000-0.23000000",
+      "market": "TWSE",
+      "code": "00932",
+      "name": "兆豐永續高息等權",
+      "exDate": "2026-11-17",
+      "stockRatio": 0.0,
+      "cashDividend": 0.23,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00943-2026-11-17-0.00000000-0.35000000",
+      "market": "TWSE",
+      "code": "00943",
+      "name": "兆豐電子高息等權",
+      "exDate": "2026-11-17",
+      "stockRatio": 0.0,
+      "cashDividend": 0.35,
       "type": "息"
     },
     {
@@ -42,6 +62,16 @@
       "exDate": "2026-11-19",
       "stockRatio": 0.0,
       "cashDividend": 0.215313,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-6655-2026-11-24-0.00000000-2.60000000",
+      "market": "TWSE",
+      "code": "6655",
+      "name": "科定",
+      "exDate": "2026-11-24",
+      "stockRatio": 0.0,
+      "cashDividend": 2.6,
       "type": "息"
     },
     {
