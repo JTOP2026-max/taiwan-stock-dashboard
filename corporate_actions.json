@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-11 14:43",
+  "updated": "2026-11-11 22:31",
   "trackingStart": "2026-08-18",
-  "count": 9,
+  "count": 11,
   "errors": [],
   "actions": [
     {
@@ -12,6 +12,16 @@
       "exDate": "2026-11-10",
       "stockRatio": 0.0,
       "cashDividend": 0.06,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00401A-2026-11-13-0.00000000-0.13800000",
+      "market": "TWSE",
+      "code": "00401A",
+      "name": "主動摩根台灣鑫收",
+      "exDate": "2026-11-13",
+      "stockRatio": 0.0,
+      "cashDividend": 0.138,
       "type": "息"
     },
     {
@@ -82,6 +92,16 @@
       "exDate": "2026-12-03",
       "stockRatio": 0.0,
       "cashDividend": 0.624652,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-7780-2026-12-04-0.00000000-0.14137200",
+      "market": "TWSE",
+      "code": "7780",
+      "name": "大研生醫*",
+      "exDate": "2026-12-04",
+      "stockRatio": 0.0,
+      "cashDividend": 0.141372,
       "type": "息"
     },
     {

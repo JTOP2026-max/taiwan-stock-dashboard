@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-11 14:43",
-  "count": 1525,
+  "updated": "2026-11-11 22:31",
+  "count": 1527,
   "errors": [],
   "events": [
     {
@@ -15301,6 +15301,17 @@
       "source": "TWSE t187ap04_L"
     },
     {
+      "id": "EV-TWSE-00401A-2026-11-13-0.00000000-0.13800000",
+      "kind": "dividend",
+      "code": "00401A",
+      "name": "主動摩根台灣鑫收",
+      "date": "2026-11-13",
+      "cash": 0.138,
+      "stock": 0.0,
+      "title": "除權息：現金 0.14 元/股、配股率 0.00%",
+      "source": "TWSE"
+    },
+    {
       "id": "TWSE-MOPS-1256-conference-2026-11-13-a6d8c39ce4",
       "kind": "conference",
       "code": "1256",
@@ -16226,6 +16237,17 @@
       "published": "2026-11-05",
       "title": "本公司受邀參加國泰證券所舉辦之第四季產業論壇",
       "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "EV-TWSE-7780-2026-12-04-0.00000000-0.14137200",
+      "kind": "dividend",
+      "code": "7780",
+      "name": "大研生醫*",
+      "date": "2026-12-04",
+      "cash": 0.141372,
+      "stock": 0.0,
+      "title": "除權息：現金 0.14 元/股、配股率 0.00%",
+      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-2308-conference-2026-12-07-8d019778cd",
