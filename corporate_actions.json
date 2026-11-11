@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-10 22:59",
+  "updated": "2026-11-11 14:43",
   "trackingStart": "2026-08-18",
-  "count": 8,
+  "count": 9,
   "errors": [],
   "actions": [
     {
@@ -72,6 +72,16 @@
       "exDate": "2026-11-24",
       "stockRatio": 0.0,
       "cashDividend": 2.6,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-1437-2026-12-03-0.00000000-0.62465200",
+      "market": "TWSE",
+      "code": "1437",
+      "name": "勤益控",
+      "exDate": "2026-12-03",
+      "stockRatio": 0.0,
+      "cashDividend": 0.624652,
       "type": "息"
     },
     {
