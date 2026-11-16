@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-16 14:45",
+  "updated": "2026-11-17 00:00",
   "trackingStart": "2026-08-18",
-  "count": 37,
+  "count": 42,
   "errors": [],
   "actions": [
     {
@@ -305,6 +305,46 @@
       "type": "息"
     },
     {
+      "id": "TWSE-00731-2026-11-18-0.00000000-1.82800000",
+      "market": "TWSE",
+      "code": "00731",
+      "name": "復華富時高息低波",
+      "exDate": "2026-11-18",
+      "stockRatio": 0.0,
+      "cashDividend": 1.828,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00929-2026-11-18-0.00000000-0.38000000",
+      "market": "TWSE",
+      "code": "00929",
+      "name": "復華台灣科技優息",
+      "exDate": "2026-11-18",
+      "stockRatio": 0.0,
+      "cashDividend": 0.38,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00949-2026-11-18-0.00000000-3.02000000",
+      "market": "TWSE",
+      "code": "00949",
+      "name": "復華日本龍頭",
+      "exDate": "2026-11-18",
+      "stockRatio": 0.0,
+      "cashDividend": 3.02,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00991B-2026-11-18-0.00000000-0.07300000",
+      "market": "TWSE",
+      "code": "00991B",
+      "name": "貝萊德A級公司債",
+      "exDate": "2026-11-18",
+      "stockRatio": 0.0,
+      "cashDividend": 0.073,
+      "type": "息"
+    },
+    {
       "id": "TWSE-2344-2026-11-18-0.00000000-2.00000000",
       "market": "TWSE",
       "code": "2344",
@@ -342,6 +382,16 @@
       "exDate": "2026-11-30",
       "stockRatio": 0.0,
       "cashDividend": 0.5,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-020038-2026-12-03-0.00000000-0.49100000",
+      "market": "TWSE",
+      "code": "020038",
+      "name": "元大ESG配息N",
+      "exDate": "2026-12-03",
+      "stockRatio": 0.0,
+      "cashDividend": 0.491,
       "type": "息"
     },
     {
