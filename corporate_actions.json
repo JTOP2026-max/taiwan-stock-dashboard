@@ -1,19 +1,9 @@
 {
-  "updated": "2026-11-17 16:05",
+  "updated": "2026-11-18 00:11",
   "trackingStart": "2026-08-18",
   "count": 42,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-00401A-2026-11-13-0.00000000-0.13800000",
-      "market": "TWSE",
-      "code": "00401A",
-      "name": "主動摩根台灣鑫收",
-      "exDate": "2026-11-13",
-      "stockRatio": 0.0,
-      "cashDividend": 0.138,
-      "type": "息"
-    },
     {
       "id": "TWSE-00775B-2026-11-16-0.00000000-0.35000000",
       "market": "TWSE",
@@ -412,6 +402,16 @@
       "exDate": "2026-12-04",
       "stockRatio": 0.0,
       "cashDividend": 0.141372,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-1817-2026-12-21-0.00000000-1.80000000",
+      "market": "TWSE",
+      "code": "1817",
+      "name": "凱撒衛",
+      "exDate": "2026-12-21",
+      "stockRatio": 0.0,
+      "cashDividend": 1.8,
       "type": "息"
     },
     {
