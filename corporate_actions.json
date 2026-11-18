@@ -1,49 +1,9 @@
 {
-  "updated": "2026-11-18 15:41",
+  "updated": "2026-11-18 23:47",
   "trackingStart": "2026-08-18",
-  "count": 42,
+  "count": 43,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-00775B-2026-11-16-0.00000000-0.35000000",
-      "market": "TWSE",
-      "code": "00775B",
-      "name": "台新投等債15+",
-      "exDate": "2026-11-16",
-      "stockRatio": 0.0,
-      "cashDividend": 0.35,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00936-2026-11-16-0.00000000-0.16000000",
-      "market": "TWSE",
-      "code": "00936",
-      "name": "台新永續高息中小",
-      "exDate": "2026-11-16",
-      "stockRatio": 0.0,
-      "cashDividend": 0.16,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00951-2026-11-16-0.00000000-2.00000000",
-      "market": "TWSE",
-      "code": "00951",
-      "name": "台新日本半導體",
-      "exDate": "2026-11-16",
-      "stockRatio": 0.0,
-      "cashDividend": 2.0,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00962-2026-11-16-0.00000000-0.08000000",
-      "market": "TWSE",
-      "code": "00962",
-      "name": "台新AI優息動能",
-      "exDate": "2026-11-16",
-      "stockRatio": 0.0,
-      "cashDividend": 0.08,
-      "type": "息"
-    },
     {
       "id": "TWSE-006208-2026-11-17-0.00000000-3.88000000",
       "market": "TWSE",
@@ -355,6 +315,46 @@
       "type": "息"
     },
     {
+      "id": "TWSE-0051-2026-11-20-0.00000000-4.50000000",
+      "market": "TWSE",
+      "code": "0051",
+      "name": "元大中型100",
+      "exDate": "2026-11-20",
+      "stockRatio": 0.0,
+      "cashDividend": 4.5,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-0055-2026-11-20-0.00000000-2.70000000",
+      "market": "TWSE",
+      "code": "0055",
+      "name": "元大MSCI金融",
+      "exDate": "2026-11-20",
+      "stockRatio": 0.0,
+      "cashDividend": 2.7,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00771-2026-11-20-0.00000000-0.21000000",
+      "market": "TWSE",
+      "code": "00771",
+      "name": "元大US高息特別股",
+      "exDate": "2026-11-20",
+      "stockRatio": 0.0,
+      "cashDividend": 0.21,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-00850-2026-11-20-0.00000000-1.00000000",
+      "market": "TWSE",
+      "code": "00850",
+      "name": "元大臺灣ESG永續",
+      "exDate": "2026-11-20",
+      "stockRatio": 0.0,
+      "cashDividend": 1.0,
+      "type": "息"
+    },
+    {
       "id": "TWSE-6655-2026-11-24-0.00000000-2.60000000",
       "market": "TWSE",
       "code": "6655",
@@ -392,6 +392,16 @@
       "exDate": "2026-12-03",
       "stockRatio": 0.0,
       "cashDividend": 0.624652,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-3701-2026-12-04-0.00000000-0.19989200",
+      "market": "TWSE",
+      "code": "3701",
+      "name": "大眾控",
+      "exDate": "2026-12-04",
+      "stockRatio": 0.0,
+      "cashDividend": 0.199892,
       "type": "息"
     },
     {
