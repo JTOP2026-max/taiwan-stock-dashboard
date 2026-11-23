@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-20 23:35",
-  "count": 1381,
+  "updated": "2026-11-23 15:51",
+  "count": 1350,
   "errors": [],
   "events": [
     {
@@ -11959,46 +11959,6 @@
       "source": "TWSE t187ap45_L"
     },
     {
-      "id": "TWSE-MOPS-1256-conference-2026-11-13-a6d8c39ce4",
-      "kind": "conference",
-      "code": "1256",
-      "name": "鮮活果汁-KY",
-      "date": "2026-11-13",
-      "published": "2026-11-09",
-      "title": "本公司受邀參加兆豐證券舉辦之法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-1436-conference-2026-11-13-4b8af454c2",
-      "kind": "conference",
-      "code": "1436",
-      "name": "華友聯",
-      "date": "2026-11-13",
-      "published": "2026-11-12",
-      "title": "本公司受邀參加群益金鼎證券舉辦之法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-1795-conference-2026-11-13-19f569394f",
-      "kind": "conference",
-      "code": "1795",
-      "name": "美時",
-      "date": "2026-11-13",
-      "published": "2026-11-04",
-      "title": "本公司受邀參加元大證券舉辦之線上法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-1810-conference-2026-11-13-7c2eb8c790",
-      "kind": "conference",
-      "code": "1810",
-      "name": "和成",
-      "date": "2026-11-13",
-      "published": "2026-11-11",
-      "title": "本公司受邀參加群益證券舉辦之線上法人說明會,說明營運狀況",
-      "source": "TWSE t187ap04_L"
-    },
-    {
       "kind": "dividend_policy",
       "code": "2206",
       "name": "三陽工業",
@@ -12008,296 +11968,6 @@
       "title": "股利政策：現金 0.00 元/股、股票 0.00 元/股",
       "status": "董事會決議",
       "source": "TWSE t187ap45_L"
-    },
-    {
-      "id": "TWSE-MOPS-2317-conference-2026-11-13-e82afb2429",
-      "kind": "conference",
-      "code": "2317",
-      "name": "鴻海",
-      "date": "2026-11-13",
-      "published": "2026-11-12",
-      "title": "公告本公司參與投資人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2327-conference-2026-11-13-ece6247b92",
-      "kind": "conference",
-      "code": "2327",
-      "name": "國巨*",
-      "date": "2026-11-13",
-      "published": "2026-11-09",
-      "title": "本公司受邀參加由UBS舉辦之\"UBS Future Now 2026: \r\nAsia Technology and Innovation Conference\"",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2342-capital_reduction-2026-11-13-e6a412759b",
-      "kind": "capital_reduction",
-      "code": "2342",
-      "name": "茂矽",
-      "date": "2026-11-13",
-      "published": "2026-11-16",
-      "title": "公告本公司註銷收回限制員工權利新股辦理變更登記完成",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2356-conference-2026-11-13-436756c633",
-      "kind": "conference",
-      "code": "2356",
-      "name": "英業達",
-      "date": "2026-11-13",
-      "published": "2026-11-03",
-      "title": "公告本公司參與實體投資人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2376-conference-2026-11-13-ed1e41c3ab",
-      "kind": "conference",
-      "code": "2376",
-      "name": "技嘉",
-      "date": "2026-11-13",
-      "published": "2026-11-12",
-      "title": "公告本公司受邀參加由臺灣指數公司與寬量國際舉辦之線上法說會「璞玉藏金、優息引路：發掘台灣中堅企業的百業冠軍」",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2458-conference-2026-11-13-cb79fe1c44",
-      "kind": "conference",
-      "code": "2458",
-      "name": "義隆",
-      "date": "2026-11-13",
-      "published": "2026-11-12",
-      "title": "本公司受邀參加黑石財經主辦之「第三屆戰略臺灣投資論壇」",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2467-conference-2026-11-13-c24a229bcb",
-      "kind": "conference",
-      "code": "2467",
-      "name": "志聖",
-      "date": "2026-11-13",
-      "published": "2026-11-12",
-      "title": "本公司受邀參加櫃買中心與凱基證券聯合舉辦之「2026 TPEx & KGI HK Corporate Day 」，會中就本公司115年第3季之財務報告相關資訊暨營運概況進行說明。",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2481-conference-2026-11-13-3839df9b46",
-      "kind": "conference",
-      "code": "2481",
-      "name": "強茂",
-      "date": "2026-11-13",
-      "published": "2026-11-12",
-      "title": "本公司受邀參加統一證券舉辦之法人說明會。",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2528-capital_reduction-2026-11-13-2b9a931c76",
-      "kind": "capital_reduction",
-      "code": "2528",
-      "name": "皇普",
-      "date": "2026-11-13",
-      "published": "2026-11-17",
-      "title": "公告本公司註銷收回已發行之限制員工權利新股完成變更登記",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-2636-conference-2026-11-13-41e9cd9b39",
-      "kind": "conference",
-      "code": "2636",
-      "name": "台驊控股",
-      "date": "2026-11-13",
-      "published": "2026-11-03",
-      "title": "本公司將舉辦法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-3533-conference-2026-11-13-1097eefcf7",
-      "kind": "conference",
-      "code": "3533",
-      "name": "嘉澤",
-      "date": "2026-11-13",
-      "published": "2026-11-02",
-      "title": "本公司受邀參加大和國泰證券舉辦之線上法說會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-3665-conference-2026-11-13-6e72331b7d",
-      "kind": "conference",
-      "code": "3665",
-      "name": "貿聯-KY",
-      "date": "2026-11-13",
-      "published": "2026-11-05",
-      "title": "本公司受邀參加新加坡商瑞銀舉辦的2026年第三季財報英語之線上法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-4746-conference-2026-11-13-73375d8513",
-      "kind": "conference",
-      "code": "4746",
-      "name": "台耀",
-      "date": "2026-11-13",
-      "published": "2026-11-11",
-      "title": "本公司受邀參加永豐金證券舉辦之線上法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-4930-conference-2026-11-13-d03b0ecb60",
-      "kind": "conference",
-      "code": "4930",
-      "name": "燦星網",
-      "date": "2026-11-13",
-      "published": "2026-11-04",
-      "title": "本公司受邀參加元大證券舉辦之線上法說會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-4994-conference-2026-11-13-a74f74cf41",
-      "kind": "conference",
-      "code": "4994",
-      "name": "傳奇",
-      "date": "2026-11-13",
-      "published": "2026-11-12",
-      "title": "公告本公司召開法說會相關內容",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-5258-conference-2026-11-13-54890f4de0",
-      "kind": "conference",
-      "code": "5258",
-      "name": "虹堡",
-      "date": "2026-11-13",
-      "published": "2026-11-11",
-      "title": "公告本公司受邀參加台新綜合證券舉辦之線上法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-6116-conference-2026-11-13-d90a4124d0",
-      "kind": "conference",
-      "code": "6116",
-      "name": "彩晶",
-      "date": "2026-11-13",
-      "published": "2026-11-12",
-      "title": "公告本公司受邀參加統一證券舉辦之法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-6184-conference-2026-11-13-9e1f9aa93d",
-      "kind": "conference",
-      "code": "6184",
-      "name": "大豐電",
-      "date": "2026-11-13",
-      "published": "2026-11-09",
-      "title": "本公司受邀參加國泰綜合證券舉辦之法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-6415-conference-2026-11-13-646ef7b1ae",
-      "kind": "conference",
-      "code": "6415",
-      "name": "矽力*-KY",
-      "date": "2026-11-13",
-      "published": "2026-11-12",
-      "title": "本公司受邀參加JP Morgan所舉辦之線上法說會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-6415-conference-2026-11-13-2ffc0d360f",
-      "kind": "conference",
-      "code": "6415",
-      "name": "矽力*-KY",
-      "date": "2026-11-13",
-      "published": "2026-11-04",
-      "title": "本公司受邀參加UBS所舉辦之線上法說會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-6446-conference-2026-11-13-057020386f",
-      "kind": "conference",
-      "code": "6446",
-      "name": "藥華藥",
-      "date": "2026-11-13",
-      "published": "2026-10-29",
-      "title": "本公司受邀參加黑石財經舉辦之法說會「戰略臺灣投資論壇」",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-6472-conference-2026-11-13-e0fc3a051f",
-      "kind": "conference",
-      "code": "6472",
-      "name": "保瑞",
-      "date": "2026-11-13",
-      "published": "2026-11-05",
-      "title": "本公司受邀參加Morgan Stanley舉辦之線上法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-6477-conference-2026-11-13-dc931ac3a1",
-      "kind": "conference",
-      "code": "6477",
-      "name": "安集",
-      "date": "2026-11-13",
-      "published": "2026-11-10",
-      "title": "公告本公司受邀參加法人說明會相關資訊",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-6807-conference-2026-11-13-6517c92fe5",
-      "kind": "conference",
-      "code": "6807",
-      "name": "峰源-KY",
-      "date": "2026-11-13",
-      "published": "2026-11-09",
-      "title": "本公司受邀&#21442;加永豐金證券所舉辦之法說會，說明115年第三季營運成果",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-6890-conference-2026-11-13-7270ee4655",
-      "kind": "conference",
-      "code": "6890",
-      "name": "來億-KY",
-      "date": "2026-11-13",
-      "published": "2026-11-10",
-      "title": "本公司受邀參加Bofa舉辦之線上法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-6902-conference-2026-11-13-5f34e5bf36",
-      "kind": "conference",
-      "code": "6902",
-      "name": "GOGOLOOK",
-      "date": "2026-11-13",
-      "published": "2026-11-12",
-      "title": "本公司受邀參加元大證券舉辦之法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-8072-conference-2026-11-13-2a322d2d83",
-      "kind": "conference",
-      "code": "8072",
-      "name": "陞泰",
-      "date": "2026-11-13",
-      "published": "2026-11-12",
-      "title": "陞泰科技115年度法人說明會召開事宜",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-8374-conference-2026-11-13-129393e253",
-      "kind": "conference",
-      "code": "8374",
-      "name": "羅昇",
-      "date": "2026-11-13",
-      "published": "2026-11-05",
-      "title": "公告本公司受邀參加元大證券舉辦之線上法人說明會",
-      "source": "TWSE t187ap04_L"
-    },
-    {
-      "id": "TWSE-MOPS-8996-conference-2026-11-13-4228fd464c",
-      "kind": "conference",
-      "code": "8996",
-      "name": "高力",
-      "date": "2026-11-13",
-      "published": "2026-11-11",
-      "title": "公告本公司受邀參加黑石財經「第三屆戰略臺灣投資論壇」法人說明會",
-      "source": "TWSE t187ap04_L"
     },
     {
       "id": "TWSE-MOPS-1102-conference-2026-11-16-1701ed8803",
@@ -13340,17 +13010,6 @@
       "source": "TWSE t187ap04_L"
     },
     {
-      "id": "EV-TWSE-01007T-2026-11-19-0.00000000-0.21531300",
-      "kind": "dividend",
-      "code": "01007T",
-      "name": "兆豐國泰R2",
-      "date": "2026-11-19",
-      "cash": 0.215313,
-      "stock": 0.0,
-      "title": "除權息：現金 0.22 元/股、配股率 0.00%",
-      "source": "TWSE"
-    },
-    {
       "id": "TWSE-MOPS-1303-conference-2026-11-19-20133614ce",
       "kind": "conference",
       "code": "1303",
@@ -14268,6 +13927,16 @@
       "source": "TWSE t187ap04_L"
     },
     {
+      "id": "TWSE-MOPS-8101-conference-2026-11-24-3903363f93",
+      "kind": "conference",
+      "code": "8101",
+      "name": "華冠",
+      "date": "2026-11-24",
+      "published": "2026-11-22",
+      "title": "本公司受邀參加福邦證券舉辦線上法人說明會。",
+      "source": "TWSE t187ap04_L"
+    },
+    {
       "id": "TWSE-MOPS-1101-conference-2026-11-25-cd82ca3525",
       "kind": "conference",
       "code": "1101",
@@ -14771,6 +14440,28 @@
       "published": "2026-11-09",
       "title": "本公司受邀參加元大證券法人說明會之日期、地點更新",
       "source": "TWSE t187ap04_L"
+    },
+    {
+      "id": "EV-TWSE-4414-2026-12-08-0.00000000-0.00915000",
+      "kind": "dividend",
+      "code": "4414",
+      "name": "如興",
+      "date": "2026-12-08",
+      "cash": 0.00915,
+      "stock": 0.0,
+      "title": "除權息：現金 0.01 元/股、配股率 0.00%",
+      "source": "TWSE"
+    },
+    {
+      "id": "EV-TWSE-6277-2026-12-08-0.00000000-2.30000000",
+      "kind": "dividend",
+      "code": "6277",
+      "name": "宏正",
+      "date": "2026-12-08",
+      "cash": 2.3,
+      "stock": 0.0,
+      "title": "除權息：現金 2.30 元/股、配股率 0.00%",
+      "source": "TWSE"
     },
     {
       "id": "TWSE-MOPS-1590-conference-2026-12-09-0bf05a386b",

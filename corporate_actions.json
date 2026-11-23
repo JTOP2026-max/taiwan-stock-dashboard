@@ -1,19 +1,9 @@
 {
-  "updated": "2026-11-20 23:34",
+  "updated": "2026-11-23 15:51",
   "trackingStart": "2026-08-18",
-  "count": 15,
+  "count": 16,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-01007T-2026-11-19-0.00000000-0.21531300",
-      "market": "TWSE",
-      "code": "01007T",
-      "name": "兆豐國泰R2",
-      "exDate": "2026-11-19",
-      "stockRatio": 0.0,
-      "cashDividend": 0.215313,
-      "type": "息"
-    },
     {
       "id": "TWSE-0051-2026-11-20-0.00000000-4.50000000",
       "market": "TWSE",
@@ -132,6 +122,26 @@
       "exDate": "2026-12-04",
       "stockRatio": 0.0,
       "cashDividend": 0.141372,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-4414-2026-12-08-0.00000000-0.00915000",
+      "market": "TWSE",
+      "code": "4414",
+      "name": "如興",
+      "exDate": "2026-12-08",
+      "stockRatio": 0.0,
+      "cashDividend": 0.00915,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-6277-2026-12-08-0.00000000-2.30000000",
+      "market": "TWSE",
+      "code": "6277",
+      "name": "宏正",
+      "exDate": "2026-12-08",
+      "stockRatio": 0.0,
+      "cashDividend": 2.3,
       "type": "息"
     },
     {
