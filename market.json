@@ -17,8 +17,9 @@
     "dealer": -479.49023157
   },
   "pc": {
-    "trade": null,
-    "oi": null
+    "trade": 0.5421,
+    "oi": 0.309,
+    "date": "2026-11-23"
   },
   "breadth": {
     "up": 811,
@@ -37,7 +38,7 @@
   "sources": {
     "twse": true,
     "institutions": true,
-    "taifexPC": false,
+    "taifexPC": true,
     "taifexFutures": false,
     "cnnFearGreed": true
   }
