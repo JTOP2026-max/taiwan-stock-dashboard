@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-25 16:49",
+  "updated": "2026-11-26 01:22",
   "trackingStart": "2026-08-18",
-  "count": 14,
+  "count": 15,
   "errors": [],
   "actions": [
     {
@@ -102,6 +102,16 @@
       "exDate": "2026-12-08",
       "stockRatio": 0.0,
       "cashDividend": 0.00915,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-4912-2026-12-08-0.00000000-1.00000000",
+      "market": "TWSE",
+      "code": "4912",
+      "name": "聯德控股-KY",
+      "exDate": "2026-12-08",
+      "stockRatio": 0.0,
+      "cashDividend": 1.0,
       "type": "息"
     },
     {
