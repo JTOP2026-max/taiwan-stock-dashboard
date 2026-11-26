@@ -1,39 +1,9 @@
 {
-  "updated": "2026-11-26 01:22",
+  "updated": "2026-11-26 16:35",
   "trackingStart": "2026-08-18",
-  "count": 15,
+  "count": 14,
   "errors": [],
   "actions": [
-    {
-      "id": "TWSE-00901-2026-11-24-0.00000000-7.00000000",
-      "market": "TWSE",
-      "code": "00901",
-      "name": "永豐智能車供應鏈",
-      "exDate": "2026-11-24",
-      "stockRatio": 0.0,
-      "cashDividend": 7.0,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-00930-2026-11-24-0.00000000-0.75000000",
-      "market": "TWSE",
-      "code": "00930",
-      "name": "永豐ESG低碳高息",
-      "exDate": "2026-11-24",
-      "stockRatio": 0.0,
-      "cashDividend": 0.75,
-      "type": "息"
-    },
-    {
-      "id": "TWSE-6655-2026-11-24-0.00000000-2.60000000",
-      "market": "TWSE",
-      "code": "6655",
-      "name": "科定",
-      "exDate": "2026-11-24",
-      "stockRatio": 0.0,
-      "cashDividend": 2.6,
-      "type": "息"
-    },
     {
       "id": "TWSE-009817-2026-11-26-0.00000000-0.33000000",
       "market": "TWSE",
@@ -125,6 +95,16 @@
       "type": "息"
     },
     {
+      "id": "TWSE-2330-2026-12-10-0.00000000-7.00000100",
+      "market": "TWSE",
+      "code": "2330",
+      "name": "台積電",
+      "exDate": "2026-12-10",
+      "stockRatio": 0.0,
+      "cashDividend": 7.000001,
+      "type": "息"
+    },
+    {
       "id": "TWSE-6438-2026-12-10-0.00000000-3.00000000",
       "market": "TWSE",
       "code": "6438",
@@ -132,6 +112,16 @@
       "exDate": "2026-12-10",
       "stockRatio": 0.0,
       "cashDividend": 3.0,
+      "type": "息"
+    },
+    {
+      "id": "TWSE-6994-2026-12-11-0.00000000-0.60670000",
+      "market": "TWSE",
+      "code": "6994",
+      "name": "富威電力",
+      "exDate": "2026-12-11",
+      "stockRatio": 0.0,
+      "cashDividend": 0.6067,
       "type": "息"
     },
     {
